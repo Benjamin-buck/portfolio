@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Inter, Lexend } from "next/font/google";
 import Navbar from "@/components/global/Navbar";
 
 const inter = Inter({
   subsets: ["latin"],
+});
+
+const lexend = Lexend({
+  subsets: ["latin"],
+  variable: "--font-lexend",
 });
 
 export const metadata: Metadata = {
@@ -20,7 +25,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} mx-auto container max-md:mx-4 mt-4`}>
+      <body
+        className={`${inter.className} ${lexend.variable} mx-auto container max-md:mx-4 mt-4`}
+      >
         <Navbar />
         {children}
       </body>

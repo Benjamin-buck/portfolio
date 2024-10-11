@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        lexend: ["var(--font-lexend)"]
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
