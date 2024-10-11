@@ -24,7 +24,9 @@ const Navbar = () => {
             {label}
           </Link>
         ))}
-        <button className="button-style">My Portfolio</button>
+        <Link href='/portfolio'>
+          <button className="button-style">My Portfolio</button>
+        </Link>
       </div>
       <HiMenu className="max-md:block hidden text-3xl mr-4" />
     </nav>
