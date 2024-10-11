@@ -35,8 +35,10 @@ const Hero = () => {
           />
         </div>
       </div>
-      <h2 className="text-2xl font-lexend font-bold mt-12">Technologies</h2>
-      <div className="flex text-6xl mt-4 gap-10 flex-wrap">
+      <h2 className="text-2xl mx-4 font-lexend font-bold mt-12">
+        Technologies
+      </h2>
+      <div className="flex mx-4 text-6xl mt-4 gap-10 flex-wrap">
         <div className="flex gap-2 items-center">
           <FaReact />
           <h3 className="text-2xl font-semibold max-lg:hidden max-lg:gap-2">

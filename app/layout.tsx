@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} ${lexend.variable} mx-auto container max-md:mx-4 mt-4`}
+        className={`${inter.className} ${lexend.variable} mx-auto container mt-4`}
       >
         <Navbar />
         {children}

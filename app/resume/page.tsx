@@ -9,7 +9,7 @@ import React from "react";
 
 const page = () => {
   return (
-    <div className="mt-10 mx-[14rem] border py-6 px-10">
+    <div className="mt-10 mx-[14rem] max-xl:mx-4 border py-6 px-10">
       <h1 className="text-4xl font-lexend font-bold">{details.name}</h1>
       <p>{details.address}</p>
       <p>{details.phone}</p>
