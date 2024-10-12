@@ -9,9 +9,9 @@ import { TbBrandRedux } from "react-icons/tb";
 const Hero = () => {
   return (
     <section>
-      <div className=" flex justify-between">
-        <div className="w-[45%] pt-[200px]  max-xl:w-auto max-xl:px-4">
-          <h2 className="text-5xl font-lexend font-bold leading-[60px] max-md:text-3xl">
+      <div className="flex justify-between max-xl:flex-col-reverse">
+        <div className="w-[45%] mt-[120px] max-xl:mt-2 max-xl:w-auto max-xl:px-4 max-md:pt-2">
+          <h2 className="text-5xl mt-12 font-lexend font-bold leading-[60px] max-md:text-3xl">
             Hi, Im <span className="gradient-text">Benjamin</span>, a junior
             React & Next.js Developer.
           </h2>
@@ -25,13 +25,13 @@ const Hero = () => {
           </p>
           <button className="button-style mt-8">My Portfolio</button>
         </div>
-        <div className="pt-[160px]">
+        <div className="mt-[120px] max-md:mt-12 mx-4 max-xl:flex max-xl:justify-center">
           <Image
-            src="/texteditor.png"
+            src="/hero.png"
             width={660}
             height={382}
             alt="Code screenshot"
-            className="rounded-md max-xl:hidden shadow-black shadow-sm"
+            className="rounded-md"
           />
         </div>
       </div>
