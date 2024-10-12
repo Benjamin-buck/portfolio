@@ -1,15 +1,25 @@
+"use client"
 import { navigationLinks } from "@/constants/data";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import { HiMenu } from "react-icons/hi";
 
 const Navbar = () => {
+  const [mobileNav, setMobileNav] = useState(false)
+  const handleClick = () => {
+    if(mobileNav) {
+      setMobileNav(false)
+    } else {
+      setMobileNav(true)
+    }
+  }
   return (
     <nav className="flex justify-between items-center">
       <div id="logo">
         <Link href="/" className="flex gap-2 items-center">
-          <Image src="/logo.png" width={48} height={48} alt="Logo icon" />
-          <h1 className="font-lexend text-2xl font-bold uppercase max-md:text-xl">
+          <Image src="/logo.png" width={48} height={48} alt="Logo icon" className="z-50" />
+          <h1 className="font-lexend text-2xl font-bold uppercase max-md:text-xl z-50">
             Benjamin Alan
           </h1>
         </Link>
@@ -28,7 +38,19 @@ const Navbar = () => {
           <button className="button-style">My Portfolio</button>
         </Link>
       </div>
-      <HiMenu className="max-md:block hidden text-3xl mr-4" />
+      <HiMenu className="max-md:block hidden text-3xl mr-4" onClick={handleClick} />
+      {mobileNav && (
+        <div className="w-full h-[100vh] bg-white absolute top-0 left-0">
+          <div className="mt-[5rem] flex flex-col ">
+          {navigationLinks.map(({label, href}) => (
+            <Link href={href} className="text-2xl border-y py-4 font-semibold text-gray-600 hover:bg-black hover:text-white text-center" key={label} >{label}</Link>
+          ))}
+          <Link href="/portfolio" className="text-2xl border-y py-4 font-semibold text-gray-600 hover:bg-black hover:text-white text-center">Portfolio</Link>
+          </div>
+          
+        </div>
+      )}
+      
     </nav>
   );
 };

@@ -17,8 +17,8 @@ const page = () => {
 
       {/* Cards grid */}
       <div className='grid grid-cols-4 gap-2 mt-4 max-md:grid-cols-2 max-sm:grid-cols-1 max-sm:mx-8 max-sm:gap-8'>
-        {portfolio.projects.map(({label, image, description}) => (
-          <PortfolioCards label={label} image={image} description={description} />
+        {portfolio.projects.map(({label, image, description, slug}) => (
+          <PortfolioCards label={label} key={label} image={image} slug={slug} description={description} />
         ))}
       </div>
     </main>
