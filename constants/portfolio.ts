@@ -3,25 +3,13 @@ export const portfolio = {
   description: 'Take a look at some of my recent projects.',
   projects: [
     {
-      slug: '/github',
+      href: 'https://github.com/Benjamin-buck/github-clone',
       label: 'GitHub User Interface Clone', 
       description: 'This is a project where I talk about a lot of cool shit',
-      image: '/github-logo.webp' 
+      image: '/github.png' 
     },
     {
-      slug: '/29382',
-      label: 'Project 1', 
-      description: 'This is a project',
-      image: '/webservices.jpeg' 
-    },
-    {
-      slug: '/29382',
-      label: 'Project 1', 
-      description: 'This is a project',
-      image: '/webservices.jpeg' 
-    },
-    {
-      slug: '/29382',
+      href: 'http://google.ca/',
       label: 'Project 1', 
       description: 'This is a project',
       image: '/webservices.jpeg' 
