@@ -11,7 +11,7 @@ interface Props {
 
 const PortfolioCards = ({ label, image, description, href }: Props) => {
   return (
-    <div className="border border-gray-200 col-span-1  rounded-md overflow-hidden">
+    <div className="border border-gray-200 col-span-1  rounded-md overflow-hidden shadow-sm">
       <Image
         src={image}
         width={500}
