@@ -1,5 +1,6 @@
 import PortfolioCards from "@/components/cards/PortfolioCards";
 import { portfolio } from "@/constants/portfolio";
+import { allProjects } from "@/constants/projects/AllProjects";
 import prisma from "@/prisma/client";
 import React from "react";
 
@@ -25,12 +26,12 @@ const page = async () => {
 
       {/* Cards grid */}
       <div className="grid grid-cols-4 gap-2 mt-4 max-md:grid-cols-2 max-sm:grid-cols-1 max-sm:mx-8 max-sm:gap-8">
-        {projects.map((project) => (
+        {allProjects.map((project) => (
           <PortfolioCards
             label={project.title}
             key={project.title}
             image={project.image}
-            href={`/portfolio/` + project.id}
+            href={project.href}
             description={project.description}
             status={project.status}
           />
