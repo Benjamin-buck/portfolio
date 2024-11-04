@@ -15,11 +15,7 @@ const Navbar = () => {
   return (
     <nav className="flex justify-between items-center">
       <div id="logo">
-        <Link
-          href="/"
-          className="flex gap-2 items-center"
-          onClick={displayMobileNav}
-        >
+        <Link href="/" className="flex gap-2 items-center">
           <Image
             src="/logo.png"
             width={48}

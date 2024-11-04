@@ -23,16 +23,17 @@ const PortfolioCards = ({ label, image, description, href, status }: Props) => {
       />
       <div className="px-4 py-3">
         <div
-          className={`px-2 py-0.5 w-fit text-white text-sm rounded mb-2 ${
-            status === "In Progress" && "bg-orange-300"
-          }`}
+          className={`px-2 py-0.5 w-fit text-white text-sm rounded mb-2 
+            ${status === "In Progress" && "bg-orange-300"}
+            ${status === "Done" && "bg-green-500"}
+            `}
         >
           {status}
         </div>
         <Link href={href} className="text-xl font-semibold">
           {label}
         </Link>
-        <p className="text-gray-500">{description}</p>
+        <p className="text-gray-500 ">{description}</p>
       </div>
     </div>
   );

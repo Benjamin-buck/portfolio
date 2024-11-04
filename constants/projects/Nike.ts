@@ -1,6 +1,6 @@
 export const Nike = {
   title: "Nike User Interface Clone",
   description: "This is a project.",
-  status: "In Progress",
+  status: "Done",
   image: "/github.png",
 };
