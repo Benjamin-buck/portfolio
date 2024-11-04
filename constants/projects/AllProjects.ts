@@ -1,12 +1,21 @@
 import { GitHub } from "./GitHub";
+import { Nike } from "./Nike";
 
 export const allProjects = [
   {
-    id: "1",
+    id: 1,
     title: GitHub.title,
     description: GitHub.description,
     image: GitHub.image,
     status: GitHub.status,
     href: "/portfolio/github",
+  },
+  {
+    id: 2,
+    title: Nike.title,
+    description: Nike.description,
+    image: "/coming-soon.png",
+    status: Nike.status,
+    href: "/portfolio/nike",
   },
 ];
