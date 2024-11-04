@@ -32,6 +32,7 @@ const page = async () => {
             image={project.image}
             href={`/portfolio/` + project.id}
             description={project.description}
+            status={project.status}
           />
         ))}
       </div>

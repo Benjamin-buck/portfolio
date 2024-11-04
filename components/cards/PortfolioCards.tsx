@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -7,9 +8,10 @@ interface Props {
   image: string;
   description: string;
   href: string;
+  status: string;
 }
 
-const PortfolioCards = ({ label, image, description, href }: Props) => {
+const PortfolioCards = ({ label, image, description, href, status }: Props) => {
   return (
     <div className="border border-gray-200 col-span-1  rounded-md overflow-hidden shadow-sm">
       <Image
@@ -20,6 +22,13 @@ const PortfolioCards = ({ label, image, description, href }: Props) => {
         alt="Project image"
       />
       <div className="px-4 py-3">
+        <div
+          className={`px-2 py-0.5 w-fit text-white text-sm rounded mb-2 ${
+            status === "In Progress" && "bg-orange-300"
+          }`}
+        >
+          {status}
+        </div>
         <Link href={href} className="text-xl font-semibold">
           {label}
         </Link>
