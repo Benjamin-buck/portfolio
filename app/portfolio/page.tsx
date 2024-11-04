@@ -1,11 +1,9 @@
 import PortfolioCards from "@/components/cards/PortfolioCards";
 import { portfolio } from "@/constants/portfolio";
 import { allProjects } from "@/constants/projects/AllProjects";
-import prisma from "@/prisma/client";
 import React from "react";
 
 const page = async () => {
-  const projects = await prisma.project.findMany();
   return (
     <main>
       <div className="mt-12 flex justify-between items-center border-b pb-5 max-sm:mx-8 max-sm:flex-col max-sm:items-start max-sm: gap-2">
