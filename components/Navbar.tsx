@@ -15,7 +15,11 @@ const Navbar = () => {
   return (
     <nav className="flex justify-between items-center">
       <div id="logo">
-        <Link href="/" className="flex gap-2 items-center">
+        <Link
+          href="/"
+          className="flex gap-2 items-center"
+          onClick={displayMobileNav}
+        >
           <Image
             src="/logo.png"
             width={48}
@@ -64,6 +68,7 @@ const Navbar = () => {
             <Link
               href="/portfolio"
               className="text-2xl border-y py-4 font-semibold text-gray-600 hover:bg-black hover:text-white text-center"
+              onClick={displayMobileNav}
             >
               Portfolio
             </Link>
