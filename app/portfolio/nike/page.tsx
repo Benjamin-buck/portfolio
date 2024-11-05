@@ -7,7 +7,7 @@ import { FaCheckCircle } from "react-icons/fa";
 const NikePage = () => {
   const project = Nike;
   return (
-    <div className="mx-4">
+    <div className="mx-4 mb-8">
       <div className="w-full my-5 overflow-hidden gap-2">
         <Image
           src="/nike-1.png"
@@ -18,14 +18,16 @@ const NikePage = () => {
         />
       </div>
       <div className="flex gap-2 my-5">
-        <Link href={project.github}>
+        <Link href={project.github} target="_blank">
           <button className="px-5 py-2 bg-black rounded-md text-white">
             Github Repo
           </button>
         </Link>
-        <button className="px-5 py-2 bg-black rounded-md text-white bg-blue">
-          Live Demo
-        </button>
+        <Link href={project.demo} target="_blank">
+          <button className="px-5 py-2 bg-black rounded-md text-white bg-blue">
+            Live Demo
+          </button>
+        </Link>
       </div>
       <div className="border-t pt-4 flex gap-3 max-md:flex-col">
         <div className="w-[70%] max-lg:w-full">

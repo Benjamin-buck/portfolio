@@ -7,7 +7,7 @@ import { FaCheckCircle } from "react-icons/fa";
 const page = () => {
   const project = GitHub;
   return (
-    <div className="mx-4">
+    <div className="mx-4 mb-8">
       <div className="w-full my-5 grid grid-cols-2 object-fill overflow-hidden gap-2">
         <Image
           src="/github-1.png"

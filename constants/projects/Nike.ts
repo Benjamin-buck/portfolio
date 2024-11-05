@@ -2,10 +2,11 @@ export const Nike = {
   title: "Nike User Interface Clone",
   description:
     "The goal of this project was to create a Nike branded landing page. The project aims to showcase my skills with front-end layout and design utilizing tailwind.",
-  status: "In Progress",
+  status: "Done",
   image: "/nike-1.png",
-  technology: ["HTML", "CSS", "JavaScript"],
-  github: "https://github.com/Benjamin-buck/github-clone",
+  technology: ["HTML", "CSS", "JavaScript", "Next.JS", "Tailwindcss"],
+  github: "https://github.com/Benjamin-buck/Nike-Clone",
+  demo: "https://nike.benjaminalan.io/",
   features: [
     {
       label: "Mobile Responsive",
@@ -13,9 +14,9 @@ export const Nike = {
         "The app is completely mobile responsive and seamlessly collapses according to the size of the device.",
     },
     {
-      label: "Pixel Perfect",
+      label: "Stunning Layout",
       description:
-        "The project very closely replicates the current user interface and user interaction with a fine attention to detail.",
+        "The project features a stunning, well thought out layout including a full responsive mobile navigation, a beautiful hero section, products section, and more...",
     },
   ],
 };
