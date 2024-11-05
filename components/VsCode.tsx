@@ -87,7 +87,7 @@ const VsCode = () => {
                 <span className="text-purple-400">import </span>
                 <span className="text-green-300">React </span>
                 <span className="text-purple-400">from </span>
-                <span className="text-orange-300">'react'</span>
+                <span className="text-orange-300">&apos;react&apos;</span>
               </p>
               <p>
                 <span className="mx-8 my-1 text-gray-400">2</span>
@@ -98,7 +98,9 @@ const VsCode = () => {
               <p>
                 <span className="mx-8 my-1 text-gray-400">3</span>
                 <span className="text-red-400 ml-10">name: </span>
-                <span className="text-cyan-300">'Benjamin Alan', </span>
+                <span className="text-cyan-300">
+                  &apos;Benjamin Alan&apos;,{" "}
+                </span>
               </p>
               <p>
                 <span className="mx-8 my-1 text-gray-400">4</span>
@@ -114,7 +116,9 @@ const VsCode = () => {
                 <span className="mx-8 my-1 text-gray-400">6</span>
                 <span className="text-red-400 ml-10">languages: </span>
                 <span className="text-cyan-300">
-                  ['html', 'css', 'js', 'react', 'nextjs', 'tailwind', 'redux']{" "}
+                  [&apos;html&apos;, &apos;css&apos;, &apos;js&apos;,
+                  &apos;react&apos;, &apos;nextjs&apos;, &apos;tailwind&apos;,
+                  &apos;redux&apos;]{" "}
                 </span>
               </p>
               <p>
