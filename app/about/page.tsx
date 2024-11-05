@@ -29,6 +29,25 @@ const page = () => {
           focus on delivering clean code, user-centric design, and seamless
           functionality.
         </p>
+        <h2 className="text-3xl font-bold mt-10">Education</h2>
+        <div className="border my-2" />
+        <div>
+          <h3 className="text-2xl">Algonquin College</h3>
+          <h4 className="font-semibold">
+            Interactive Media Design with a specialty in Web Development
+          </h4>
+          <p>
+            Completed a 2 year diploma program at Algonquin College with a focus
+            in User Experience / User Interface Design & Web Development.
+          </p>
+        </div>
+        <div className="mt-6">
+          <h3 className="text-2xl">Self Study</h3>
+          <h4 className="font-semibold">
+            Enrolled in online courses to further my web development knowledge /
+            education.
+          </h4>
+        </div>
       </div>
     </div>
   );

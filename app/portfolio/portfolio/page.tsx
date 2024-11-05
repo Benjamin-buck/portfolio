@@ -1,16 +1,16 @@
-import { GitHub } from "@/constants/projects/GitHub";
+import { Portfolio } from "@/constants/projects/Portfolio";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { FaCheckCircle } from "react-icons/fa";
 
 const page = () => {
-  const project = GitHub;
+  const project = Portfolio;
   return (
     <div className="mx-4 mb-8">
       <div className="w-full my-5 grid grid-cols-2 object-fill overflow-hidden gap-2">
         <Image
-          src="/github-landing.png"
+          src="/portfolio.png"
           className="h-auto w-full rounded-md overflow-hidden max-xl:col-span-2 col-span-1"
           width={1198}
           height={400}
@@ -18,10 +18,10 @@ const page = () => {
         />
 
         <Image
-          src="/github-dashboard.png"
-          className="h-auto w-full rounded-md overflow-hidden max-xl:col-span-2 col-span-1"
-          width={1198}
-          height={400}
+          src="/portfolio-1.png"
+          className="h-full w-auto rounded-md overflow-hidden"
+          width={800}
+          height={800}
           alt="Github 2"
         />
       </div>
@@ -31,9 +31,12 @@ const page = () => {
             Github Repo
           </button>
         </Link>
-        <button className="px-5 py-2 bg-black rounded-md text-white bg-blue">
-          Live Demo
-        </button>
+
+        <Link href="/">
+          <button className="px-5 py-2 bg-black rounded-md text-white bg-blue">
+            Live Demo
+          </button>
+        </Link>
       </div>
       <div className="border-t pt-4 flex gap-3 max-md:flex-col">
         <div className="w-[70%] max-lg:w-full">

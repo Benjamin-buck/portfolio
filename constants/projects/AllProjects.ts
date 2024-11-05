@@ -1,16 +1,17 @@
 import { Apple } from "./Apple";
 import { GitHub } from "./GitHub";
 import { Nike } from "./Nike";
+import { Portfolio } from "./Portfolio";
 
 export const allProjects = [
   {
     id: 2,
-    title: "Benjamin Alan Portfolio",
-    description: "Description coming soon",
-    image: "/coming-soon.png",
-    status: "Done",
-    href: "/portfolio",
-    disabled: true,
+    title: Portfolio.title,
+    description: Portfolio.description,
+    image: Portfolio.image,
+    status: Portfolio.status,
+    href: "/portfolio/portfolio",
+    disabled: false,
   },
   {
     id: 1,
