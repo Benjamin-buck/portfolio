@@ -9,11 +9,23 @@ interface Props {
   description: string;
   href: string;
   status: string;
+  disabled?: boolean;
 }
 
-const PortfolioCards = ({ label, image, description, href, status }: Props) => {
+const PortfolioCards = ({
+  label,
+  image,
+  description,
+  href,
+  status,
+  disabled,
+}: Props) => {
   return (
-    <div className="border border-gray-200 col-span-1  rounded-md overflow-hidden shadow-sm">
+    <div
+      className={`border border-gray-200 col-span-1  rounded-md overflow-hidden shadow-sm 
+    ${disabled && "bg-gray-300 text-gray-600"}
+    `}
+    >
       <Image
         src={image}
         width={500}
@@ -30,7 +42,13 @@ const PortfolioCards = ({ label, image, description, href, status }: Props) => {
         >
           {status}
         </div>
-        <Link href={href} className="text-xl font-semibold">
+        <Link
+          href={href}
+          disabled={true}
+          className={`text-xl font-semibold ${
+            disabled && "cursor-not-allowed"
+          }`}
+        >
           {label}
         </Link>
         <p className="text-gray-500 line-clamp-4">{description}</p>

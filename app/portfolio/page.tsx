@@ -5,7 +5,7 @@ import React from "react";
 
 const page = async () => {
   return (
-    <main>
+    <main className="mb-8">
       <div className="mt-12 flex justify-between items-center border-b pb-5 max-sm:mx-8 max-sm:flex-col max-sm:items-start max-sm: gap-2">
         <div>
           <h1 className="text-3xl font-lexend font-semibold">
@@ -32,6 +32,7 @@ const page = async () => {
             href={project.href}
             description={project.description}
             status={project.status}
+            disabled={project.disabled}
           />
         ))}
       </div>
