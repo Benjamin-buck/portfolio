@@ -44,7 +44,6 @@ const PortfolioCards = ({
         </div>
         <Link
           href={href}
-          disabled={true}
           className={`text-xl font-semibold ${
             disabled && "cursor-not-allowed"
           }`}
