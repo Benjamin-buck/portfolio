@@ -81,6 +81,47 @@ const VsCode = () => {
                 <IoMdClose />
               </div>
             </div>
+            <div className="mt-2 h-[600px]">
+              <p>
+                <span className="mx-8 my-1 text-gray-400">1</span>{" "}
+                <span className="text-purple-400">import </span>
+                <span className="text-green-300">React </span>
+                <span className="text-purple-400">from </span>
+                <span className="text-orange-300">'react'</span>
+              </p>
+              <p>
+                <span className="mx-8 my-1 text-gray-400">2</span>
+                <span className="text-purple-400">const </span>
+                <span className="text-green-300">benjaminAlan </span>=
+                <span className="text-purple-400"> &#123; </span>
+              </p>
+              <p>
+                <span className="mx-8 my-1 text-gray-400">3</span>
+                <span className="text-red-400 ml-10">name: </span>
+                <span className="text-cyan-300">'Benjamin Alan', </span>
+              </p>
+              <p>
+                <span className="mx-8 my-1 text-gray-400">4</span>
+                <span className="text-red-400 ml-10">age: </span>
+                <span className="text-cyan-300">27, </span>
+              </p>
+              <p>
+                <span className="mx-8 my-1 text-gray-400">5</span>
+                <span className="text-red-400 ml-10">yearsOfExperience: </span>
+                <span className="text-cyan-300">6, </span>
+              </p>
+              <p>
+                <span className="mx-8 my-1 text-gray-400">6</span>
+                <span className="text-red-400 ml-10">languages: </span>
+                <span className="text-cyan-300">
+                  ['html', 'css', 'js', 'react', 'nextjs', 'tailwind', 'redux']{" "}
+                </span>
+              </p>
+              <p>
+                <span className="mx-8 my-1 text-gray-400">7</span>
+                <span className="text-purple-400"> &#125; </span>
+              </p>
+            </div>
           </div>
         </div>
 
@@ -97,3 +138,8 @@ const VsCode = () => {
 };
 
 export default VsCode;
+
+const benjaminAlan = {
+  name: "Benjamin Alan",
+  age: 27,
+};
