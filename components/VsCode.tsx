@@ -138,8 +138,3 @@ const VsCode = () => {
 };
 
 export default VsCode;
-
-const benjaminAlan = {
-  name: "Benjamin Alan",
-  age: 27,
-};
