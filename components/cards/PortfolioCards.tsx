@@ -33,7 +33,7 @@ const PortfolioCards = ({ label, image, description, href, status }: Props) => {
         <Link href={href} className="text-xl font-semibold">
           {label}
         </Link>
-        <p className="text-gray-500 ">{description}</p>
+        <p className="text-gray-500 line-clamp-4">{description}</p>
       </div>
     </div>
   );

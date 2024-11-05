@@ -14,7 +14,7 @@ export const allProjects = [
     id: 2,
     title: Nike.title,
     description: Nike.description,
-    image: "/coming-soon.png",
+    image: Nike.image,
     status: Nike.status,
     href: "/portfolio/nike",
   },
