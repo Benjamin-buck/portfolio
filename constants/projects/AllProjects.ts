@@ -2,8 +2,18 @@ import { Apple } from "./Apple";
 import { GitHub } from "./GitHub";
 import { Nike } from "./Nike";
 import { Portfolio } from "./Portfolio";
+import { Serenity } from "./Serenity";
 
 export const allProjects = [
+  {
+    id: 1,
+    title: Serenity.title,
+    description: Serenity.description,
+    image: Serenity.image,
+    status: Serenity.status,
+    href: "/portfolio/serenity",
+    disabled: false,
+  },
   {
     id: 2,
     title: Portfolio.title,
@@ -14,7 +24,7 @@ export const allProjects = [
     disabled: false,
   },
   {
-    id: 1,
+    id: 3,
     title: GitHub.title,
     description: GitHub.description,
     image: GitHub.image,
@@ -22,7 +32,7 @@ export const allProjects = [
     href: "/portfolio/github",
   },
   {
-    id: 2,
+    id: 4,
     title: "Ping-Panda",
     description: "Description coming soon",
     image: "/coming-soon.png",
@@ -31,7 +41,7 @@ export const allProjects = [
     disabled: true,
   },
   {
-    id: 2,
+    id: 5,
     title: "Bugs.io",
     description: "Description coming soon",
     image: "/coming-soon.png",
@@ -40,7 +50,7 @@ export const allProjects = [
     disabled: true,
   },
   {
-    id: 2,
+    id: 6,
     title: Apple.title,
     description: Apple.description,
     image: Apple.image,
@@ -49,7 +59,7 @@ export const allProjects = [
     disabled: Apple.disabled,
   },
   {
-    id: 3,
+    id: 7,
     title: Nike.title,
     description: Nike.description,
     image: Nike.image,
