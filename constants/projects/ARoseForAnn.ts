@@ -1,12 +1,11 @@
-export const Serenity = {
-  title: "Serenity Landscaping",
-  description:
-    "A production website / application for a local landscaping company.",
+export const ARoseForAnn = {
+  title: "A Rose For Ann",
+  description: "Creating a band website for a client project.",
   status: "Done",
-  image: "/serenity.png",
-  technology: ["HTML", "CSS", "JavaScript", "Next.JS", "GSAP"],
-  github: "https://github.com/Benjamin-buck/serenity",
-  live: "https://serenity-sage.vercel.app/",
+  image: "/aroseforann.png",
+  technology: ["HTML", "CSS", "JavaScript"],
+  github: "https://github.com/Benjamin-buck/github-clone",
+  live: "http://aroseforann.com/",
   features: [
     {
       label: "Mobile Responsive",

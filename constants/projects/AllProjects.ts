@@ -1,10 +1,20 @@
 import { Apple } from "./Apple";
+import { ARoseForAnn } from "./ARoseForAnn";
 import { GitHub } from "./GitHub";
 import { Nike } from "./Nike";
 import { Portfolio } from "./Portfolio";
 import { Serenity } from "./Serenity";
 
 export const allProjects = [
+  {
+    id: 8,
+    title: ARoseForAnn.title,
+    description: ARoseForAnn.description,
+    image: ARoseForAnn.image,
+    status: ARoseForAnn.status,
+    href: "/portfolio/aroseforann",
+    disabled: false,
+  },
   {
     id: 1,
     title: Serenity.title,
