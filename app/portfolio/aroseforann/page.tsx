@@ -10,7 +10,7 @@ const page = () => {
     <div className="mx-4 mb-8">
       <div className="w-full my-5 grid grid-cols-2 object-fill overflow-hidden gap-2">
         <Image
-          src="/ARoseForAnn.png"
+          src="/aroseforann.png"
           className="h-auto w-full rounded-md overflow-hidden max-xl:col-span-2 col-span-1"
           width={1198}
           height={400}
