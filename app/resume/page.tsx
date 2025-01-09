@@ -47,7 +47,9 @@ const page = () => {
               <p>{duration}</p>
               <ul>
                 {responsibilities.map((responsibility) => (
-                  <li className="list-disc ml-[50px]">{responsibility}</li>
+                  <li key={responsibility} className="list-disc ml-[50px]">
+                    {responsibility}
+                  </li>
                 ))}
               </ul>
             </div>
