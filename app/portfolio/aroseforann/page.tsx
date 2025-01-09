@@ -6,7 +6,7 @@ import React, { useEffect, useState } from "react";
 import { FaCheckCircle } from "react-icons/fa";
 import { ClipLoader } from "react-spinners";
 
-const page = () => {
+const ARoseForAnnProject = () => {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     setTimeout(() => {
@@ -91,4 +91,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default ARoseForAnnProject;

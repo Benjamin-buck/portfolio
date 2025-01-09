@@ -5,7 +5,7 @@ import { allProjects } from "@/constants/projects/AllProjects";
 import React, { useEffect, useState } from "react";
 import { ClipLoader } from "react-spinners";
 
-const page = () => {
+const Portfolio = () => {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     setTimeout(() => {
@@ -53,4 +53,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Portfolio;
