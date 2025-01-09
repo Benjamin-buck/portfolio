@@ -34,7 +34,42 @@ const page = () => {
         ))}
       </div>
       <div className="mt-4">
-        <h2 className="text-xl font-bold">{experience.title}</h2>
+        <h2 className="text-xl font-bold mb-2">{experience.title}</h2>
+        {experience.jobs.map(
+          ({ employer, location, team, role, duration, responsibilities }) => (
+            <div className="mb-6">
+              <h5 className="font-bold">
+                {employer} - {location}
+              </h5>
+              <p>
+                <span className="underline">{team}</span>: {role}
+              </p>
+              <p>{duration}</p>
+              <ul>
+                {responsibilities.map((responsibility) => (
+                  <li className="list-disc ml-[50px]">{responsibility}</li>
+                ))}
+              </ul>
+            </div>
+          )
+        )}
+      </div>
+
+      {/* Projects / Portfolio Section */}
+      <div>
+        <h2 className="text-xl font-bold mb-2">Projects / Portfolio</h2>
+        <p>
+          All my latest projects are available and updated{" "}
+          <Link href="/portfolio" className="text-blue underline">
+            here.
+          </Link>
+        </p>
+      </div>
+
+      {/* Education Section */}
+      <div className="my-5">
+        <h2 className="text-xl font-bold mb-2">Education</h2>
+        <div></div>
       </div>
     </div>
   );
