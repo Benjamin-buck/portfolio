@@ -92,6 +92,8 @@ export const education = [
   {
     type: "College Diploma",
     program: "Interactive Media and Design",
+    programUrl:
+      "https://www.algonquincollege.com/mediaanddesign/program/interactive-media-design/",
     school: "Algonquin College",
     description:
       "Earned a diploma in web development and graphic design from Algonquin College in August of 2020. Focusing primarily on team leadership, UX / UI / Web development, I learned the fundamentals necessary to lead teams of developers to build high-performing software applications.",
@@ -99,6 +101,13 @@ export const education = [
       "MT6130 - Web Development 1",
       "MTM6201 - Web Development 2",
       "MTM6231 - Content Management Systems 1",
+      "MTM6162 - Design Foundations",
+      "MTM6260 - User Experience Design 1",
+      "MTM6302 - Web Development 3",
+      "MTM6306 - User Experience Design 2",
+      "MTM6303 - Content Management Systems 2",
+      "MTM6404 - Web Applications",
+      "MTM6407 - Web Development 4",
     ],
   },
 ];

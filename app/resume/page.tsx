@@ -1,5 +1,6 @@
 import {
   details,
+  education,
   experience,
   objective,
   technicalSkills,
@@ -71,7 +72,25 @@ const page = () => {
       {/* Education Section */}
       <div className="my-5">
         <h2 className="text-xl font-bold mb-2">Education</h2>
-        <div></div>
+        {education.map((item) => (
+          <div key={item.program}>
+            <h5 className="font-bold">
+              {item.type} -{" "}
+              <Link className="text-blue underline" href={item.programUrl}>
+                {item.program}
+              </Link>{" "}
+              - {item.school}
+            </h5>
+            <p>{item.description}</p>
+            <ul>
+              {item.coursesCompleted.map((item) => (
+                <li key={item} className="list-disc ml-[50px]">
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
     </div>
   );
