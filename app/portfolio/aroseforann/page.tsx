@@ -46,7 +46,7 @@ const page = () => {
               </button>
             </Link>
             <Link href={project.live}>
-              <button className="px-5 py-2 bg-black rounded-md text-white bg-blue">
+              <button className="px-5 py-2 bg-black rounded-md text-white">
                 Live Demo
               </button>
             </Link>
