@@ -37,7 +37,7 @@ const page = () => {
         <h2 className="text-xl font-bold mb-2">{experience.title}</h2>
         {experience.jobs.map(
           ({ employer, location, team, role, duration, responsibilities }) => (
-            <div className="mb-6">
+            <div key={role} className="mb-6">
               <h5 className="font-bold">
                 {employer} - {location}
               </h5>
