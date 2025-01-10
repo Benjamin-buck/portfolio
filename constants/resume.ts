@@ -110,4 +110,28 @@ export const education = [
       "MTM6407 - Web Development 4",
     ],
   },
+  {
+    type: "Self Learning",
+    program: "",
+    programUrl:
+      "https://www.algonquincollege.com/mediaanddesign/program/interactive-media-design/",
+    school: "React / Next.js / Typescript / Web Development",
+    description:
+      "Completed various self-learning courses to enhance my skills and abilities.",
+    coursesCompleted: [
+      "Code With Mosh - React 18 for Beginners",
+      "Code With Mosh - React Intermediate Topics",
+      "Code With Mosh - The Ultimate Next.Js Series",
+      "Code With Mosh - Mastering Next.js 13 with Typescript",
+      "Code With Mosh - Next.js Projects: Build an issue tracker",
+    ],
+  },
+];
+
+export const skills = [
+  "Strong problem-solving skills and attention to detail.",
+  "Excellent communication and teamwork abilities.",
+  "Eager to learn new technologies and frameworks. Can pick up new knowledge quickly and efficiently.",
+  "Ability to work in Agile development environments.",
+  "Excellent visual design skills.",
 ];

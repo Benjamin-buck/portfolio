@@ -3,6 +3,7 @@ import {
   education,
   experience,
   objective,
+  skills,
   technicalSkills,
 } from "@/constants/resume";
 import Link from "next/link";
@@ -12,8 +13,6 @@ const page = () => {
   return (
     <div className="mt-10 mx-[14rem] max-xl:mx-4 border py-6 px-10">
       <h1 className="text-4xl font-lexend font-bold">{details.name}</h1>
-      <p>{details.address}</p>
-      <p>{details.phone}</p>
       <p>{details.email}</p>
       <div className="flex gap-3 text-blue underline">
         {details.links.map(({ label, href }) => (
@@ -73,12 +72,14 @@ const page = () => {
       <div className="my-5">
         <h2 className="text-xl font-bold mb-2">Education</h2>
         {education.map((item) => (
-          <div key={item.program}>
+          <div className="mb-5" key={item.program}>
             <h5 className="font-bold">
-              {item.type} -{" "}
-              <Link className="text-blue underline" href={item.programUrl}>
-                {item.program}
-              </Link>{" "}
+              {item.type} {" - "}
+              {item.program && (
+                <Link className="text-blue underline" href={item.programUrl}>
+                  {item.program}
+                </Link>
+              )}{" "}
               - {item.school}
             </h5>
             <p>{item.description}</p>
@@ -92,6 +93,18 @@ const page = () => {
           </div>
         ))}
       </div>
+
+      <div className="mb-5">
+        <h2 className="text-xl font-bold mb-2">Additional Skills</h2>
+        <ul>
+          {skills.map((skill) => (
+            <li key={skill} className="list-disc ml-[50px]">
+              {skill}
+            </li>
+          ))}
+        </ul>
+      </div>
+      <p>References available upon request.</p>
     </div>
   );
 };
