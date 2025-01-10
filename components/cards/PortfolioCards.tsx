@@ -30,7 +30,7 @@ const PortfolioCards = ({
         src={image}
         width={500}
         height={300}
-        className="w-auto"
+        className="object-cover h-[200px]"
         alt="Project image"
       />
       <div className="px-4 py-3">

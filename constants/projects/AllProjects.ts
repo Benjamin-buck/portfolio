@@ -4,6 +4,7 @@ import { GitHub } from "./GitHub";
 import { Nike } from "./Nike";
 import { Portfolio } from "./Portfolio";
 import { Serenity } from "./Serenity";
+import { TransportCanada } from "./TransportCanada";
 
 export const allProjects = [
   {
@@ -22,6 +23,15 @@ export const allProjects = [
     image: Serenity.image,
     status: Serenity.status,
     href: "/portfolio/serenity",
+    disabled: false,
+  },
+  {
+    id: 2,
+    title: TransportCanada.title,
+    description: TransportCanada.description,
+    image: TransportCanada.image,
+    status: TransportCanada.status,
+    href: "/portfolio/transportcanada",
     disabled: false,
   },
   {
