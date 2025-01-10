@@ -83,7 +83,7 @@ const page = () => {
             <h2 className="text-2xl font-semibold mt-6 border-b pb-2">Roles</h2>
             {project.roles &&
               project.roles.map((role) => (
-                <div className="my-3">
+                <div key={role.title} className="my-3">
                   <h4 className="font-bold">{role.title}</h4>
                   <p>{role.description}</p>
                 </div>
