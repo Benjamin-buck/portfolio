@@ -1,3 +1,4 @@
+import ProjectImages from "@/components/ProjectImages";
 import { TransportCanada } from "@/constants/projects/TransportCanada";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,19 +9,21 @@ const page = () => {
   const project = TransportCanada;
   return (
     <div className="mx-4 mb-8">
-      <div className="w-full my-5 grid grid-cols-2 object-fill overflow-hidden gap-2">
-        <Image
-          src="/transport-1.png"
-          className="h-auto w-full rounded-md overflow-hidden max-xl:col-span-2 col-span-1"
-          width={1198}
-          height={400}
-          alt="Github 1"
-        />
-      </div>
+      <ProjectImages
+        image1="/transport-1.png"
+        image2="/transport-1.png"
+        image3="/transport-1.png"
+        image4="/transport-1.png"
+      />
       <div className="flex gap-2 my-5">
         <Link href="https://tc.canada.ca/en/dangerous-goods/tdg-online">
-          <button className="px-5 py-2 bg-black rounded-md text-white bg-blue">
+          <button className="px-5 py-2 rounded-md text-white bg-blue">
             TDG Online
+          </button>
+        </Link>
+        <Link href="https://tc.canada.ca/en/dangerous-goods/client-identification-database-cid">
+          <button className="px-5 py-2 rounded-md text-white bg-black">
+            Client Identification Database (CID)
           </button>
         </Link>
       </div>
