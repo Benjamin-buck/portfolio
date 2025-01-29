@@ -1,6 +1,5 @@
 import ProjectImages from "@/components/ProjectImages";
 import { TransportCanada } from "@/constants/projects/TransportCanada";
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { FaCheckCircle } from "react-icons/fa";

@@ -1,4 +1,3 @@
-import { Odor_Mean_Chey } from "next/font/google";
 import Image from "next/image";
 import React from "react";
 
