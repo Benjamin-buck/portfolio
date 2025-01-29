@@ -5,8 +5,18 @@ import { Nike } from "./Nike";
 import { Portfolio } from "./Portfolio";
 import { Serenity } from "./Serenity";
 import { TransportCanada } from "./TransportCanada";
+import { Nexdev } from "./Nexdev";
 
 export const allProjects = [
+  {
+    id: 9,
+    title: Nexdev.title,
+    description: Nexdev.description,
+    image: Nexdev.image,
+    status: Nexdev.status,
+    href: "/portfolio/nexdev",
+    disabled: false,
+  },
   {
     id: 8,
     title: ARoseForAnn.title,

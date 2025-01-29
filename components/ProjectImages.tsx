@@ -6,8 +6,9 @@ interface Images {
   image2: string;
   image3: string;
   image4: string;
+  image5: string;
 }
-const ProjectImages = ({ image1, image2, image3, image4 }: Images) => {
+const ProjectImages = ({ image1, image2, image3, image4, image5 }: Images) => {
   return (
     <div className="grid grid-cols-2 h-[400px] mt-[20px] gap-3 max-lg:grid-cols-1 max-md:h-[200px] max-lg:h-[300px]">
       <div className="w-full h-full rounded-lg shadow-md border border-gray-200 object-fill overflow-hidden">
@@ -49,7 +50,7 @@ const ProjectImages = ({ image1, image2, image3, image4 }: Images) => {
         </div>
         <div className="w-full h-full rounded-lg shadow-md border border-gray-200 object-fill overflow-hidden">
           <Image
-            src="/transport-1.png"
+            src={image5}
             className="object-fill w-full"
             height={1000}
             width={1000}

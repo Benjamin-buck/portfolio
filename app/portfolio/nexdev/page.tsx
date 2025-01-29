@@ -1,29 +1,29 @@
 import ProjectImages from "@/components/ProjectImages";
-import { TransportCanada } from "@/constants/projects/TransportCanada";
+import { Nexdev } from "@/constants/projects/Nexdev";
 import Link from "next/link";
 import React from "react";
 import { FaCheckCircle } from "react-icons/fa";
 
 const page = () => {
-  const project = TransportCanada;
+  const project = Nexdev;
   return (
     <div className="mx-4 mb-8">
       <ProjectImages
-        image1="/transport-1.png"
-        image2="/transport-1.png"
-        image3="/transport-1.png"
-        image4="/transport-1.png"
-        image5="/transport-1.png"
+        image1="/nexdev.png"
+        image2="/nexdev-1.png"
+        image3="/nexdev.png"
+        image4="/nexdev.png"
+        image5="/nexdev.png"
       />
       <div className="flex gap-2 my-5">
-        <Link href="https://tc.canada.ca/en/dangerous-goods/tdg-online">
+        <Link href="https://nexdev-silk.vercel.app/">
           <button className="px-5 py-2 rounded-md text-white bg-blue">
-            TDG Online
+            Live Demo
           </button>
         </Link>
-        <Link href="https://tc.canada.ca/en/dangerous-goods/client-identification-database-cid">
+        <Link href="https://github.com/Benjamin-buck/nexdev">
           <button className="px-5 py-2 rounded-md text-white bg-black">
-            Client Identification Database (CID)
+            GitHub Repository
           </button>
         </Link>
       </div>
@@ -34,38 +34,6 @@ const page = () => {
             <p className="max-w-[80%] max-lg:max-w-auto">
               {project.description}
             </p>
-          </div>
-
-          {/* Apps Worked On */}
-          <div className="my-8">
-            <h2 className="text-2xl font-semibold mt-6 border-b pb-2">Apps</h2>
-            <p>
-              Worked in various roles over the last 5 years to assist the
-              development team to create / maintain the following applications:
-            </p>
-            <ul>
-              <li className="list-disc ml-[50px]">
-                Client Identification Database (CID)
-              </li>
-              <li className="list-disc ml-[50px]">
-                CANUTEC Registration System (CRS)
-              </li>
-              <li className="list-disc ml-[50px]">
-                Regulatory Oversight Management (ROM)
-              </li>
-              <li className="list-disc ml-[50px]">
-                Facilities Design Registrations (FDR)
-              </li>
-              <li className="list-disc ml-[50px]">
-                Transport Canada - Approvals
-              </li>
-              <li className="list-disc ml-[50px]">
-                Emergency Response Guidebook (ERG)
-              </li>
-              <li className="list-disc ml-[50px]">
-                Dangerous Goods Accident Incident System (DGAIS)
-              </li>
-            </ul>
           </div>
 
           {/* Features */}

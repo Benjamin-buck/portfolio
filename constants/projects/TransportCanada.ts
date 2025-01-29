@@ -2,7 +2,7 @@ export const TransportCanada = {
   title: "Transport Canada",
   description:
     "Worked with Transport Canada to design and develop various Transport Canada applications.",
-  status: "In Progress",
+  status: "Done",
   image: "/transport.jpg",
   technology: [
     ".NET CORE",
