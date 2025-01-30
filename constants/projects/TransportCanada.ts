@@ -4,15 +4,7 @@ export const TransportCanada = {
     "Worked with Transport Canada to design and develop various Transport Canada applications.",
   status: "Done",
   image: "/transport.jpg",
-  technology: [
-    ".NET CORE",
-    "Razor Pages",
-    "Microsoft Dynamics",
-    "DevOps",
-    "Figma",
-    "API's",
-    "Microsoft Azure",
-  ],
+  technology: ["Can't disclose for security reasons"],
   github: "https://github.com/Benjamin-buck/serenity",
   live: "https://serenity-sage.vercel.app/",
   features: [
