@@ -66,7 +66,7 @@ const IndividualProjectPage = () => {
 
             <ul>
               {project.projectDetails.technology.map((tech) => (
-                <li className="flex gap-2 items-center mt-2">
+                <li key={tech} className="flex gap-2 items-center mt-2">
                   <BiCheckCircle /> {tech}
                 </li>
               ))}
