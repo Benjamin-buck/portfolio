@@ -4,9 +4,6 @@ import { portfolio } from "@/constants/portfolio";
 import { myProjects } from "@/constants/projects/myProjects";
 import Image from "next/image";
 import Link from "next/link";
-
-import React, { useEffect, useState } from "react";
-import { IoEnter } from "react-icons/io5";
 import { RxEnter } from "react-icons/rx";
 
 const Portfolio = () => {

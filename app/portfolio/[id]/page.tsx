@@ -1,13 +1,11 @@
 "use client";
 import ProjectImages from "@/components/ProjectImages";
 import { myProjects } from "@/constants/projects/myProjects";
-import Image from "next/image";
+
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import React from "react";
-import { BiCheckCircle, BiCheckShield } from "react-icons/bi";
-import { FaCheckCircle } from "react-icons/fa";
-import { GiBulletBill } from "react-icons/gi";
+import { BiCheckCircle } from "react-icons/bi";
 
 const IndividualProjectPage = () => {
   const params = useParams<{ id: string }>();
