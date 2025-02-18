@@ -18,14 +18,14 @@ const Portfolio = () => {
           <p>{portfolio.description}</p>
         </div>
       </div>
-      <div className="w-full border border-orange-300 rounded-[5px] mb-5 bg-orange-100 px-6 py-3 text-orange-700">
+      <div className=" mx-8 md:mx-0 border border-orange-300 rounded-[5px] mb-5 bg-orange-100 px-6 py-3 text-orange-700">
         <p className="font-bold">Site Under Maintenance:</p>
         <p>
           I&apos;m currently updating my portfolio to include more recent
           projects. Check back soon to see the latest additions!
         </p>
       </div>
-      <div className="grid grid-cols-12 gap-6">
+      <div className="grid grid-cols-12 gap-6 mx-8 md:mx-0">
         {myProjects.map((project) => (
           <div
             key={project.id}
