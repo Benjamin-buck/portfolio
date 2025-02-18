@@ -10,53 +10,43 @@ interface Images {
 }
 const ProjectImages = ({ image1, image2, image3, image4, image5 }: Images) => {
   return (
-    <div className="grid grid-cols-2 h-[400px] mt-[20px] gap-3 max-lg:grid-cols-1 max-md:h-[200px] max-lg:h-[300px]">
-      <div className="w-full h-full rounded-lg shadow-md border border-gray-200 object-fill overflow-hidden">
+    <div className="grid grid-cols-12 gap-4 h-[330px] w-full">
+      <Image
+        src={image1}
+        width={800}
+        height={800}
+        alt="Gallery Image"
+        className="col-span-12 md:col-span-6  object-cover w-full rounded-[10px] h-[327px] border border-gray-100 shadow-sm"
+      />
+      <div className="col-span-6 grid-cols-2 gap-4 hidden md:grid">
         <Image
-          src={image1}
-          className="object-fill h-full"
-          height={1920}
-          width={1080}
-          alt="Photo"
+          src={image2}
+          height={800}
+          width={800}
+          className="w-full h-[150px] object-cover rounded-[10px] border border-gray-100 shadow-sm"
+          alt="Gallery Image"
         />
-      </div>
-      <div className="w-full h-full  grid grid-cols-2 gap-3 max-lg:hidden">
-        <div className="w-full h-full rounded-lg shadow-md border border-gray-200 object-fill overflow-hidden">
-          <Image
-            src={image2}
-            className="object-fill w-full"
-            height={1000}
-            width={1000}
-            alt="Photo"
-          />
-        </div>
-        <div className="w-full h-full rounded-lg shadow-md border border-gray-200 object-fill overflow-hidden">
-          <Image
-            src={image3}
-            className="object-fill w-full"
-            height={1000}
-            width={1000}
-            alt="Photo"
-          />
-        </div>
-        <div className="w-full h-full rounded-lg shadow-md border border-gray-200 object-fill overflow-hidden">
-          <Image
-            src={image4}
-            className="object-fill w-full"
-            height={1000}
-            width={1000}
-            alt="Photo"
-          />
-        </div>
-        <div className="w-full h-full rounded-lg shadow-md border border-gray-200 object-fill overflow-hidden">
-          <Image
-            src={image5}
-            className="object-fill w-full"
-            height={1000}
-            width={1000}
-            alt="Photo"
-          />
-        </div>
+        <Image
+          src={image3}
+          height={800}
+          width={800}
+          className="w-full h-[150px] object-cover rounded-[10px] border border-gray-100 shadow-sm"
+          alt="Gallery Image"
+        />
+        <Image
+          src={image4}
+          height={800}
+          width={800}
+          className="w-full h-[150px] object-cover rounded-[10px] border border-gray-100 shadow-sm"
+          alt="Gallery Image"
+        />
+        <Image
+          src={image5}
+          height={800}
+          width={800}
+          className="w-full h-[150px] object-cover rounded-[10px] border border-gray-100 shadow-sm"
+          alt="Gallery Image"
+        />
       </div>
     </div>
   );
