@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { FaReact } from "react-icons/fa";
 import { RiNextjsFill } from "react-icons/ri";
@@ -23,7 +24,9 @@ const Hero = () => {
             delivering clean code, user-centric design, and seamless
             functionality.
           </p>
-          <button className="button-style mt-8">My Portfolio</button>
+          <Link href="/portfolio">
+            <button className="button-style mt-8">My Portfolio</button>
+          </Link>
         </div>
         <div className="mt-[120px] max-md:mt-12 mx-4 max-xl:flex max-xl:justify-center">
           <Image
