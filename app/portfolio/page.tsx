@@ -21,13 +21,16 @@ const Portfolio = () => {
       <div className="w-full border border-orange-300 rounded-[5px] mb-5 bg-orange-100 px-6 py-3 text-orange-700">
         <p className="font-bold">Site Under Maintenance:</p>
         <p>
-          I'm currently updating my portfolio to include more recent projects.
-          Check back soon to see the latest additions!
+          I&apos;m currently updating my portfolio to include more recent
+          projects. Check back soon to see the latest additions!
         </p>
       </div>
       <div className="grid grid-cols-12 gap-6">
         {myProjects.map((project) => (
-          <div className="col-span-12 lg:col-span-4 xl:col-span-3">
+          <div
+            key={project.id}
+            className="col-span-12 lg:col-span-4 xl:col-span-3"
+          >
             <Image
               src={project.images[0]}
               width={500}
