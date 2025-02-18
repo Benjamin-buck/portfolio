@@ -48,10 +48,12 @@ const IndividualProjectPage = () => {
                 Features
               </h2>
               {project.features.map((feature) => (
-                <div className="mt-4">
+                <div key={feature.heading} className="mt-4">
                   <h2 className="text-lg font-bold">{feature.heading}</h2>
                   {feature.content.map((bullet) => (
-                    <p className="pl-3 py-1">- {bullet}</p>
+                    <p key={bullet} className="pl-3 py-1">
+                      - {bullet}
+                    </p>
                   ))}
                 </div>
               ))}
