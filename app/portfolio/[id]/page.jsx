@@ -8,9 +8,8 @@ import React from "react";
 import { BiCheckCircle } from "react-icons/bi";
 
 const IndividualProjectPage = () => {
-  const params = useParams<{ id: string }>();
+  const params = useParams();
   const project = getProjectById(params.id, myProjects);
-
 
   function getProjectById(params, projectsArray) {
     const id = parseInt(params);
