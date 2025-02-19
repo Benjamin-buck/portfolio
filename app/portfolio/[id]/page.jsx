@@ -11,12 +11,8 @@ const IndividualProjectPage = () => {
   const params = useParams<{ id: string }>();
   const project = getProjectById(params.id, myProjects);
 
-  type getProjectById = {
-    params: string;
-    array: object[];
-  };
 
-  function getProjectById(params: string, projectsArray: object[]) {
+  function getProjectById(params, projectsArray) {
     const id = parseInt(params);
     for (let i = 0; i < projectsArray.length; i++) {
       if (projectsArray[i].id === id) {
