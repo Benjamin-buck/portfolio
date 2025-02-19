@@ -35,6 +35,7 @@ const IndividualProjectPage = () => {
           <div className="grid grid-cols-2 gap-3">
             {project.images.map((image) => (
               <Image
+                key={image}
                 src={image}
                 height={1200}
                 width={1200}
