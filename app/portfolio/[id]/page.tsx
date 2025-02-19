@@ -9,26 +9,36 @@ import { BiCheckCircle } from "react-icons/bi";
 
 const IndividualProjectPage = () => {
   const params = useParams<{ id: string }>();
-  const project = myProjects[parseInt(params.id) - 1];
-  console.log(params);
+  const project = getProjectById(params.id, myProjects);
+
+  function getProjectById(params: string, array: Object[]) {
+    let id = parseInt(params);
+    for (let i = 0; i < array.length; i++) {
+      if (array[i].id === id) {
+        console.log(array[i].id);
+        return array[i];
+      }
+    }
+    return null;
+  }
   return (
     <div className="mx-4 mb-8">
       <div className="mt-10">
         <ProjectImages
-          image1={project.images[0]}
-          image2={project.images[1]}
-          image3={project.images[2]}
-          image4={project.images[3]}
-          image5={project.images[0]}
+          image1={project?.images[0]}
+          image2={project?.images[1]}
+          image3={project?.images[2]}
+          image4={project?.images[3]}
+          image5={project?.images[4]}
         />
 
         <div className="flex gap-2 my-5">
-          <Link href={project.repo}>
+          <Link href={project?.repo}>
             <button className="px-5 py-2 bg-black rounded-md text-white">
               Github Repo
             </button>
           </Link>
-          <Link href={project.liveLink}>
+          <Link href={project?.liveLink}>
             <button className="px-5 py-2 bg-black rounded-md text-white">
               Live Demo
             </button>
@@ -39,7 +49,7 @@ const IndividualProjectPage = () => {
             <h1 className="text-3xl font-semibold">{project.title}</h1>
             <div className="mt-3">
               <p className="max-w-[80%] max-lg:max-w-auto">
-                {project.description}
+                {project?.description}
               </p>
             </div>
 
