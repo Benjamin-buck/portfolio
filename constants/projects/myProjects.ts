@@ -6,7 +6,7 @@ export const myProjects = [
     repo: "https://humanesociety-sigma.vercel.app/",
     description:
       "I designed and developed a modern, user-friendly website for the Kingston Humane Society using Next.js. The platform enhances the adoption process by showcasing adoptable dogs with an interactive image slider and detailed pet information. It also features an engaging blog section, smooth animations, and a visually appealing UI to create a seamless user experience. The project focused on performance, accessibility, and responsiveness, ensuring visitors can easily browse available pets and learn more about the organization on any device.",
-    status: "Done",
+    status: "In Progress",
     images: [
       "https://zor0pdp300.ufs.sh/f/WhvLxAaX5BHQCFLVcArHcZiFSny9MgJ8WRh7IvzmaLkf24Ad",
       "https://www.kingstonist.com/wp-content/uploads/2020/03/KHS-Logo.jpg",
@@ -18,19 +18,18 @@ export const myProjects = [
       {
         heading: "Beautiful Landing Page UI",
         content: [
-          "A beautifully designed homepage that highlights the agency’s vision, mission, and key services.",
-          "Engaging, interactive elements that captivate visitors.",
+          "A beautifully designed homepage that highlights the Kingston Humane Society's vision, mission, and key services.",
+          "A section displaying the most recent donations.",
           "Clear call-to-action (CTA) buttons encouraging user engagement and lead generation.",
-          "Smooth animations and transitions to enhance user experience.",
+          "Elegant design that encorporates the Kingston Humane Society's colors and branding.",
         ],
       },
       {
-        heading: "Static Pages",
+        heading: "Static & Dynamic Pages",
         content: [
-          "A well-structured About Us page detailing the agency’s background, values, and team members.",
-          "A dedicated Services page outlining the various offerings, with a focus on the quality and impact of each service.",
-          "A Portfolio page that showcases the agency’s completed projects, demonstrating the agency’s experience and expertise across various industries.",
-          "Contact page with a dynamic form for inquiries and potential client interactions.",
+          "The website features a mixture of static and dynamic pages.",
+          "The dogs are pulled via API from their internal system to ensure the latest information is up to date.",
+          "The blog section is pulled via API from their internal blog system.",
         ],
       },
     ],

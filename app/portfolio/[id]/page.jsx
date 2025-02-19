@@ -1,13 +1,20 @@
 "use client";
+import Modal from "@/components/Modal";
 import ProjectImages from "@/components/ProjectImages";
 import { myProjects } from "@/constants/projects/myProjects";
+import Image from "next/image";
 
 import Link from "next/link";
 import { useParams } from "next/navigation";
-import React from "react";
+import React, { useState } from "react";
 import { BiCheckCircle } from "react-icons/bi";
 
 const IndividualProjectPage = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const handleClick = () => {
+    return setIsModalOpen(!isModalOpen);
+  };
+
   const params = useParams();
   const project = getProjectById(params.id, myProjects);
 
@@ -23,6 +30,20 @@ const IndividualProjectPage = () => {
   }
   return (
     <div className="mx-4 mb-8">
+      {isModalOpen && (
+        <Modal onClose={handleClick} isOpen={isModalOpen} title="Modal Title">
+          <div className="grid grid-cols-2 gap-3">
+            {project.images.map((image) => (
+              <Image
+                src={image}
+                height={1200}
+                width={1200}
+                className="w-full rounded-lg shadow-md"
+              />
+            ))}
+          </div>
+        </Modal>
+      )}
       <div className="mt-10">
         <ProjectImages
           image1={project?.images[0]}
@@ -30,6 +51,7 @@ const IndividualProjectPage = () => {
           image3={project?.images[2]}
           image4={project?.images[3]}
           image5={project?.images[4]}
+          handleClick={handleClick}
         />
 
         <div className="flex gap-2 my-5">
