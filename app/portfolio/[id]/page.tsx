@@ -17,7 +17,7 @@ const IndividualProjectPage = () => {
   };
 
   function getProjectById(params: string, projectsArray: object[]) {
-    let id = parseInt(params);
+    const id = parseInt(params);
     for (let i = 0; i < projectsArray.length; i++) {
       if (projectsArray[i].id === id) {
         console.log(projectsArray[i].id);
