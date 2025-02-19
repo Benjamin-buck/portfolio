@@ -11,12 +11,17 @@ const IndividualProjectPage = () => {
   const params = useParams<{ id: string }>();
   const project = getProjectById(params.id, myProjects);
 
-  function getProjectById(params: string, array: Object[]) {
+  type getProjectById = {
+    params: string;
+    array: object[];
+  };
+
+  function getProjectById(params: string, projectsArray: object[]) {
     let id = parseInt(params);
-    for (let i = 0; i < array.length; i++) {
-      if (array[i].id === id) {
-        console.log(array[i].id);
-        return array[i];
+    for (let i = 0; i < projectsArray.length; i++) {
+      if (projectsArray[i].id === id) {
+        console.log(projectsArray[i].id);
+        return projectsArray[i];
       }
     }
     return null;
