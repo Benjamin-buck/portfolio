@@ -36,7 +36,7 @@ const Portfolio = () => {
               width={500}
               height={500}
               alt="Image"
-              className="w-full h-[350px] lg:h-[200px] rounded-t-[10px] border border-gray-100 object-cover"
+              className="w-full h-[220px] lg:h-[200px] rounded-t-[10px] border border-gray-100 object-cover"
             />
             <div className="border-b border-gray-100 shadow-sm border-l border-r rounded-b-[10px] px-4 py-2">
               <h3 className="text-lg font-semibold font-lexend">
