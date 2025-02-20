@@ -121,7 +121,19 @@ const Portfolio = () => {
                   >
                     {project.status}
                   </p>
-                  <p className="line-clamp-3">{project.description}</p>
+                  <p className="line-clamp-3 text-gray-500">
+                    {project.description}
+                  </p>
+                  <div className="flex gap-3 mt-3">
+                    {project.projectDetails.technology.map((tech) => (
+                      <div
+                        className="bg-gray-200 text-gray-700 hover:underline px-3 py-[3px] rounded text-sm"
+                        key={tech}
+                      >
+                        #{tech}
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </Link>

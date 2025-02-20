@@ -6,6 +6,7 @@ import { RiNextjsFill } from "react-icons/ri";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { SiMysql } from "react-icons/si";
 import { TbBrandRedux } from "react-icons/tb";
+import { BiLogoPostgresql } from "react-icons/bi";
 
 const Hero = () => {
   return (
@@ -62,8 +63,11 @@ const Hero = () => {
         </div>
         <div className="flex gap-2 items-center">
           <SiMysql />
+        </div>
+        <div className="flex gap-2 items-center">
+          <BiLogoPostgresql />
           <h3 className="text-2xl font-semibold max-lg:hidden max-lg:gap-2">
-            MySQL
+            PostGres
           </h3>
         </div>
         <div className="flex gap-2 items-center">
