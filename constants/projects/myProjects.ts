@@ -112,4 +112,67 @@ export const myProjects = [
       technology: ["Next.js", "React", "Express"],
     },
   },
+  {
+    id: 3,
+    title: "Serenity Landscaping",
+    liveLink: "https://serenity-sage.vercel.app/",
+    repo: "https://github.com/Benjamin-buck/nexdev",
+    description:
+      "A modern, visually appealing website built with Next.js for Serenity Landscaping, showcasing services, past projects, and a seamless user experience.",
+    status: "Done",
+    thumbnail: "https://i.gyazo.com/0a4ba76ed713171d0e1cab17b182d8ef.png",
+    images: [
+      {
+        image: "https://i.gyazo.com/f350331f4bba6ff4c10378ea0f600ddd.jpg",
+        label: "Landing Page",
+      },
+      {
+        image: "https://i.gyazo.com/f844556434c45d44a93d1bc60b2b79c8.jpg",
+        label: "See through sticky navigation bar",
+      },
+      {
+        image: "https://i.gyazo.com/32ffa45f1c68056c4321eee6151c6721.png",
+        label: "Bento Grid",
+      },
+      {
+        image: "https://i.gyazo.com/0dec32610272e33fa19d45707ef10167.jpg",
+        label: "Testimonials & Footer",
+      },
+      {
+        image: "https://i.gyazo.com/42d05671c0aab94cd1f7fc031c7fa8f6.png",
+        label: "Get a Quote form",
+      },
+    ],
+    features: [
+      {
+        heading: "Beautiful Landing Page UI",
+        content: [
+          "A beautifully designed homepage that highlights the agency’s vision, mission, and key services.",
+          "Engaging, interactive elements that captivate visitors.",
+          "Clear call-to-action (CTA) buttons encouraging user engagement and lead generation.",
+          "Smooth animations and transitions to enhance user experience.",
+        ],
+      },
+      {
+        heading: "Responsive & Optimized Performance",
+        content: [
+          "Fully responsive design ensuring a seamless experience across all devices.",
+          "Optimized for speed and performance, ensuring fast load times.",
+          "Accessibility-friendly design following WCAG guidelines.",
+        ],
+      },
+      {
+        heading: "Static Pages",
+        content: [
+          "A well-structured About Us page detailing the agency’s background, values, and team members.",
+          "A dedicated Services page outlining the various offerings, with a focus on the quality and impact of each service.",
+          "A Portfolio page that showcases the agency’s completed projects, demonstrating the agency’s experience and expertise across various industries.",
+          "Contact page with a dynamic form for inquiries and potential client interactions.",
+        ],
+      },
+    ],
+    projectDetails: {
+      technology: ["Next.js", "Tailwind CSS", "GSAP", "Vercel"],
+    },
+  },
 ];
