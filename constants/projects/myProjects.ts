@@ -2,8 +2,8 @@ export const myProjects = [
   {
     id: 2,
     title: "Kingston Humane Society",
-    liveLink: "https://nexdev-silk.vercel.app/",
-    repo: "https://humanesociety-sigma.vercel.app/",
+    liveLink: "https://humanesociety-sigma.vercel.app/",
+    repo: null,
     description:
       "I designed and developed a modern, user-friendly website for the Kingston Humane Society using Next.js. The platform enhances the adoption process by showcasing adoptable dogs with an interactive image slider and detailed pet information. It also features an engaging blog section, smooth animations, and a visually appealing UI to create a seamless user experience. The project focused on performance, accessibility, and responsiveness, ensuring visitors can easily browse available pets and learn more about the organization on any device.",
     status: "In Progress",

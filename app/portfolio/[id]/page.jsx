@@ -2,16 +2,17 @@
 import Modal from "@/components/Modal";
 import ProjectImages from "@/components/ProjectImages";
 import { myProjects } from "@/constants/projects/myProjects";
-import { ImageDownIcon } from "lucide-react";
+import { ChevronLeft, ImageDownIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useParams } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import React, { useState } from "react";
 import { BiCheckCircle } from "react-icons/bi";
 import { BsRecord } from "react-icons/bs";
 import { DiGithubBadge } from "react-icons/di";
 
 const IndividualProjectPage = () => {
+  const router = useRouter();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const handleClick = () => {
     return setIsModalOpen(!isModalOpen);
@@ -54,7 +55,15 @@ const IndividualProjectPage = () => {
           </div>
         </Modal>
       )}
-      <div className="mt-10">
+      <div className=" mt-5">
+        <p
+          className="flex gap-2 items-center cursor-pointer hover:text-blue"
+          onClick={() => router.back()}
+        >
+          <ChevronLeft /> Back
+        </p>
+      </div>
+      <div className="mt-5">
         <ProjectImages
           image1={project?.images[0].image}
           image2={project?.images[1].image}
@@ -65,12 +74,15 @@ const IndividualProjectPage = () => {
         />
 
         <div className="flex gap-2 my-5">
-          <Link href={project?.repo}>
-            <button className="px-5 py-2 flex hover:bg-gray-700  items-center bg-black rounded-md text-white">
-              <DiGithubBadge size={30} />{" "}
-              <span className="md:block hidden">Github Repo</span>
-            </button>
-          </Link>
+          {project.repo && (
+            <Link href={project?.repo}>
+              <button className="px-5 py-2 flex hover:bg-gray-700  items-center bg-black rounded-md text-white">
+                <DiGithubBadge size={30} />{" "}
+                <span className="md:block hidden">Github Repo</span>
+              </button>
+            </Link>
+          )}
+
           <Link href={project?.liveLink}>
             <button className="px-5 flex gap-2 items-center hover:bg-gray-700 py-2 bg-black rounded-md text-white">
               <BsRecord size={30} />{" "}
