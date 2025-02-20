@@ -67,12 +67,14 @@ const IndividualProjectPage = () => {
         <div className="flex gap-2 my-5">
           <Link href={project?.repo}>
             <button className="px-5 py-2 flex hover:bg-gray-700  items-center bg-black rounded-md text-white">
-              <DiGithubBadge size={30} /> Github Repo
+              <DiGithubBadge size={30} />{" "}
+              <span className="md:block hidden">Github Repo</span>
             </button>
           </Link>
           <Link href={project?.liveLink}>
             <button className="px-5 flex gap-2 items-center hover:bg-gray-700 py-2 bg-black rounded-md text-white">
-              <BsRecord size={30} /> Live Demo
+              <BsRecord size={30} />{" "}
+              <span className="md:block hidden">Live Demo</span>
             </button>
           </Link>
 
@@ -80,7 +82,8 @@ const IndividualProjectPage = () => {
             onClick={handleClick}
             className="px-5 flex gap-2 py-2 items-center hover:bg-gray-700 bg-black rounded-md text-white"
           >
-            <ImageDownIcon size={30} /> Image Gallery
+            <ImageDownIcon size={30} />{" "}
+            <span className="md:block hidden">Image Gallery</span>
           </button>
         </div>
         <div className="border-t pt-4 flex gap-3 max-md:flex-col">

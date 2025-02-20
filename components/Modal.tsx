@@ -26,7 +26,7 @@ const Modal: React.FC<Modal> = ({ children, onClose, title, isOpen }) => {
         {/* Static Section */}
         <div className="p-4 border-b flex justify-between items-center">
           <h2 className="font-bold text-xl">{title}</h2>
-          <CgClose onClick={onClose} className="cursor-pointer" />
+          <CgClose size={25} onClick={onClose} className="cursor-pointer" />
         </div>
 
         {/* Modal Body (Scrollable) */}
