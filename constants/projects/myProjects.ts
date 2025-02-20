@@ -111,6 +111,82 @@ export const myProjects = [
       technology: ["Next.js", "React", "Express"],
     },
   },
+
+  {
+    id: 6,
+    title: "Transport Canada",
+    liveLink: "https://tc.canada.ca/en",
+    description:
+      "I've been employed and working with Transport Canada on-going for the past 5 years on various IT infrastructure and software development projects.",
+    status: "On Going",
+    thumbnail:
+      "https://canadianaviator.com/wp-content/uploads/2022/10/TCCA.jpg",
+    images: [
+      {
+        image:
+          "https://www.transportationservices.ca/wp-content/uploads/2018/06/truck-transportation.jpg",
+        label: "Github Landing Page",
+      },
+      {
+        image:
+          "https://www.insidelogistics.ca/wp-content/uploads/sites/3/2024/08/LogisticsModes.jpg",
+        label: "Github Landing Page part 2",
+      },
+      {
+        image:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQthSDjCgbrYr15vpcUDcSdbDhzwwKhCbgqCg&s",
+        label: "Footer",
+      },
+      {
+        image:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRQUjZJ-HFd-E6kumD4MGnSfR-UJpVApHrsg&s",
+        label: "Github Internal Dashboard",
+      },
+      {
+        image:
+          "https://www.fcc-inc.com/wp-content/uploads/FCC-Transportation-Facts.jpg",
+        label: "Account page",
+      },
+    ],
+    features: [
+      {
+        heading: "Business Analysis",
+        content: [
+          "Worked as a Business Analyst / Business Systems Analyst on the following Transport Canada Applications: Client Identification Database (CID), CANUTEC Registration Service (CRS), Regulatory Oversight Management (ROM), Facilities and Design Registrations (FDR), and the TDG Online Portal.",
+        ],
+      },
+      {
+        heading: "User Experience / User Interface Design",
+        content: [
+          "Developed low / high fidelity mockups using Figma to aid the development and product owner teams.",
+          "Optimized for speed and performance, ensuring fast load times.",
+          "Accessibility-friendly design following WCAG guidelines.",
+        ],
+      },
+      {
+        heading: "Agile SCRUM Leader",
+        content: [
+          "Lead all SCRUM ceremonies for the team",
+          "Gathered business requirements from business teams and developed high level BRD's, use cases, and user stories for development.",
+        ],
+      },
+      {
+        heading: "Applications I've Worked On:",
+        content: [
+          "Client Identification Database (CID)",
+          "CANUTEC Registration System (CRS)",
+          "Regulatory Oversight Management (ROM)",
+          "Facilities and Design Registration (FDR)",
+          "TDG Online Portal",
+          "Dangerous Goods Accident Information System (DGAIS)",
+        ],
+      },
+    ],
+    projectDetails: {
+      technology: ["Classified Information"],
+    },
+  },
+
   {
     id: 4,
     title: "GitHub User Interface Clone",
