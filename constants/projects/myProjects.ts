@@ -112,6 +112,70 @@ export const myProjects = [
     },
   },
   {
+    id: 4,
+    title: "GitHub User Interface Clone",
+    liveLink: "https://github.benjaminalan.io",
+    repo: "https://github.com/Benjamin-buck/github-clone",
+    description:
+      "A clone of the popular user interface. This project aimed to challenge my skills at building complex user interfaces. The clone features a full landing page and additional internal pages once the 'Sign in' button is selected.",
+    status: "Done",
+    thumbnail:
+      "https://kinsta.com/wp-content/uploads/2018/04/what-is-github-1-1-1024x512.png",
+    images: [
+      {
+        image: "https://i.gyazo.com/9b6b1da8c74d42a72eb7d062cffc4783.png",
+        label: "Github Landing Page",
+      },
+      {
+        image: "https://i.gyazo.com/616b5ad07206a688836cf4dde9a62676.jpg",
+        label: "Github Landing Page part 2",
+      },
+      {
+        image: "https://i.gyazo.com/65385053f867ce111fb90599f17b573b.png",
+        label: "Footer",
+      },
+      {
+        image: "https://i.gyazo.com/2e14f96e0862f51657b0a4a4fcddf4df.png",
+        label: "Github Internal Dashboard",
+      },
+      {
+        image: "https://i.gyazo.com/f705cf836d5204d1664a693f829d4bc0.png",
+        label: "Account page",
+      },
+      {
+        image: "https://i.gyazo.com/bfd32b1ba380731f7da124a579708a51.png",
+        label: "Issues page",
+      },
+    ],
+    features: [
+      {
+        heading: "Pixel Perfect Landing Page Clone",
+        content: [
+          "Features a pixel perfect clone of the official GitHub website landing page.",
+        ],
+      },
+      {
+        heading: "Responsive & Optimized Performance",
+        content: [
+          "Fully responsive design ensuring a seamless experience across all devices.",
+          "Optimized for speed and performance, ensuring fast load times.",
+          "Accessibility-friendly design following WCAG guidelines.",
+        ],
+      },
+      {
+        heading: "Static Pages",
+        content: [
+          "Well structured static pages with interactive menus and navigation",
+          "Well structured HTML and beaitufully styled with Tailwind CSS",
+        ],
+      },
+    ],
+    projectDetails: {
+      technology: ["Next.js", "Tailwind CSS", "GSAP", "Vercel"],
+    },
+  },
+
+  {
     id: 3,
     title: "Serenity Landscaping",
     liveLink: "https://serenity-sage.vercel.app/",
