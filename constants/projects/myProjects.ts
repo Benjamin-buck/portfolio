@@ -1,4 +1,5 @@
 export const myProjects = [
+  // 1
   {
     id: 2,
     title: "Kingston Humane Society",
@@ -54,6 +55,8 @@ export const myProjects = [
       technology: ["Next.js", "React", "Express"],
     },
   },
+
+  // 2
   {
     id: 1,
     title: "NexDev Design Agency",
@@ -112,6 +115,7 @@ export const myProjects = [
     },
   },
 
+  // 3
   {
     id: 6,
     title: "Transport Canada",
@@ -188,6 +192,67 @@ export const myProjects = [
   },
 
   {
+    id: 7,
+    title: "Bugs.io",
+    liveLink: "",
+    repo: "",
+    description:
+      "A full stack application designed to log system bugs, modify the details / title of the issues, and assign it to users. This app features full authentication, full CRUD functionality for adding, modifying, and deleting issues, etc.",
+    status: "Done",
+    thumbnail: "https://i.gyazo.com/48065c306526f4d9e4a81c035b15bd0d.png",
+    images: [
+      {
+        image: "https://i.gyazo.com/dd658e5ced68879cb9b67d598a4d08dd.png",
+        label: "Github Landing Page",
+      },
+      {
+        image: "https://i.gyazo.com/86120e2a5fc70086731abb9da633ae97.png",
+        label: "Github Landing Page part 2",
+      },
+      {
+        image: "https://i.gyazo.com/dfe619a3bf9a049a466d2f721c535130.png",
+        label: "Footer",
+      },
+      {
+        image: "https://i.gyazo.com/550ffe427d38529a1568d34a5f402ef6.png",
+        label: "Github Internal Dashboard",
+      },
+      {
+        image: "https://i.gyazo.com/2af947a61e635446a5efc06b037130d8.png",
+        label: "Account page",
+      },
+    ],
+    features: [
+      {
+        heading: "User Authentication / Management",
+        content: [
+          "Utilizes authentication providers (google) to authenticate and manage application users.",
+          "Allows for users to assign bugs / issues to either themselves or other users.",
+        ],
+      },
+      {
+        heading: "Responsive & Optimized Performance",
+        content: [
+          "Fully responsive design ensuring a seamless experience across all devices.",
+          "Optimized for speed and performance, ensuring fast load times.",
+          "Accessibility-friendly design following WCAG guidelines.",
+        ],
+      },
+      {
+        heading: "Static Pages",
+        content: [
+          "Well structured static pages with interactive menus and navigation",
+          "Well structured HTML and beaitufully styled with Tailwind CSS",
+        ],
+      },
+    ],
+    projectDetails: {
+      technology: ["Next.js", "Tailwind CSS", "GSAP", "Vercel"],
+    },
+  },
+
+  // 4
+  {
     id: 4,
     title: "GitHub User Interface Clone",
     liveLink: "https://github.benjaminalan.io",
@@ -251,6 +316,7 @@ export const myProjects = [
     },
   },
 
+  // 5
   {
     id: 3,
     title: "Serenity Landscaping",
@@ -314,6 +380,8 @@ export const myProjects = [
       technology: ["Next.js", "Tailwind CSS", "GSAP", "Vercel"],
     },
   },
+
+  // 6
   {
     id: 5,
     title: "Nike Landing Page Clone",
