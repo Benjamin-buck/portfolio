@@ -59,7 +59,7 @@ const Portfolio = () => {
               className="col-span-12 lg:col-span-4 xl:col-span-3"
             >
               <Image
-                src={project.images[0]}
+                src={project.thumbnail}
                 width={500}
                 height={500}
                 alt="Image"
@@ -89,7 +89,7 @@ const Portfolio = () => {
             <Link key={project.id} href={`/portfolio/${project.id}`}>
               <div className="border w-full flex rounded-lg">
                 <Image
-                  src={project.images[0]}
+                  src={project.thumbnail}
                   width={400}
                   height={400}
                   alt="Image"

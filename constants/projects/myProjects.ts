@@ -7,12 +7,29 @@ export const myProjects = [
     description:
       "I designed and developed a modern, user-friendly website for the Kingston Humane Society using Next.js. The platform enhances the adoption process by showcasing adoptable dogs with an interactive image slider and detailed pet information. It also features an engaging blog section, smooth animations, and a visually appealing UI to create a seamless user experience. The project focused on performance, accessibility, and responsiveness, ensuring visitors can easily browse available pets and learn more about the organization on any device.",
     status: "In Progress",
-    images: [
+    thumbnail:
       "https://zor0pdp300.ufs.sh/f/WhvLxAaX5BHQCFLVcArHcZiFSny9MgJ8WRh7IvzmaLkf24Ad",
-      "https://www.kingstonist.com/wp-content/uploads/2020/03/KHS-Logo.jpg",
-      "https://zor0pdp300.ufs.sh/f/WhvLxAaX5BHQ1nIDexoWVw79szU8ZQuM4jalqn0PdARkfNrG",
-      "https://zor0pdp300.ufs.sh/f/WhvLxAaX5BHQg90MdF4tFRVzIGXW3B6dCAxprEQT8iL9q0Db",
-      "https://zor0pdp300.ufs.sh/f/WhvLxAaX5BHQ22wmSDhkjUBtAS1TNu6PMJFnv7eDw0pYlcLm",
+    images: [
+      {
+        image: "https://i.gyazo.com/5c211ee2a6947c743f55ce8685b327d0.jpg",
+        label: "Kingston Humane Society - Home Page",
+      },
+      {
+        image: "https://i.gyazo.com/8003c1e130a52e4315c137a76922c5d1.jpg",
+        label: "Kingston Humane Society - Animal Categories",
+      },
+      {
+        image: "https://i.gyazo.com/79aa4316e7db53e5690fe684083c725f.jpg",
+        label: "Adoptable Dogs / Animals",
+      },
+      {
+        image: "https://i.gyazo.com/f92f836b57479f9a415b00e86195e7b7.jpg",
+        label: "Hot off the Collar Blog",
+      },
+      {
+        image: "https://i.gyazo.com/6eed3675952f0a77a3b5e35eb738e6ab.jpg",
+        label: "Individual Blog Posts",
+      },
     ],
     features: [
       {
@@ -46,12 +63,29 @@ export const myProjects = [
     description:
       "The NexDev Agency Web Application is a modern, responsive website built using Next.js, designed to showcase the agency’s expertise, services, and portfolio. The application features a sleek, user-friendly landing page and includes several additional static and dynamic pages to provide a comprehensive online presence for the agency.",
     status: "Done",
-    images: [
+    thumbnail:
       "https://zor0pdp300.ufs.sh/f/WhvLxAaX5BHQ1LRJ1roWVw79szU8ZQuM4jalqn0PdARkfNrG",
-      "https://zor0pdp300.ufs.sh/f/WhvLxAaX5BHQpaTTKHIpJ9GLfHBSx1wjUKMDEFsWVeaczkX7",
-      "https://zor0pdp300.ufs.sh/f/WhvLxAaX5BHQXuNi32ZQRB1L7m4VKsU8eoY5hNCOwZpgGyzv",
-      "https://zor0pdp300.ufs.sh/f/WhvLxAaX5BHQg90MdF4tFRVzIGXW3B6dCAxprEQT8iL9q0Db",
-      "https://zor0pdp300.ufs.sh/f/WhvLxAaX5BHQ22wmSDhkjUBtAS1TNu6PMJFnv7eDw0pYlcLm",
+    images: [
+      {
+        image: "https://i.gyazo.com/96a95298a0b4a60de972a0a0bb900639.png",
+        label: "Landing Page",
+      },
+      {
+        image: "https://i.gyazo.com/f71593715098c809c96a345132383e38.jpg",
+        label: "See through sticky navigation bar",
+      },
+      {
+        image: "https://i.gyazo.com/aa8fd479cf4625ba0e0442406e291bd8.jpg",
+        label: "Bento Grid",
+      },
+      {
+        image: "https://i.gyazo.com/908ff189ac8967badae476084980a1a0.png",
+        label: "Testimonials & Footer",
+      },
+      {
+        image: "https://i.gyazo.com/dc9c070be98df74ea95dd5c4d3c52f25.png",
+        label: "Get a Quote form",
+      },
     ],
     features: [
       {

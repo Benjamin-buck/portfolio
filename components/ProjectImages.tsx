@@ -18,21 +18,24 @@ const ProjectImages = ({
   handleClick,
 }: Images) => {
   return (
-    <div className="grid grid-cols-12 gap-4 h-[330px] w-full">
+    <div className="grid grid-cols-12 gap-2 h-[500px] w-full">
+      {/* Big Image */}
       <Image
         src={image1}
         width={800}
         height={800}
         alt="Gallery Image"
-        className="col-span-12 md:col-span-6  object-cover w-full rounded-[10px] h-[327px] border border-gray-100 shadow-sm cursor-pointer"
+        className="col-span-12 md:col-span-6  object-scale-down w-full rounded-l-[10px] h-[500px] border border-gray-200 cursor-pointer"
         onClick={handleClick}
       />
-      <div className="col-span-6 grid-cols-2 gap-4 hidden md:grid">
+
+      {/* Image Grid */}
+      <div className="col-span-6 grid-cols-2 gap-2 hidden md:grid">
         <Image
           src={image2}
           height={800}
           width={800}
-          className="w-full h-[150px] object-cover rounded-[10px] border border-gray-100 shadow-sm cursor-pointer"
+          className="w-full h-full object-scale-down border border-gray-200 cursor-pointer"
           alt="Gallery Image"
           onClick={handleClick}
         />
@@ -40,7 +43,7 @@ const ProjectImages = ({
           src={image3}
           height={800}
           width={800}
-          className="w-full h-[150px] object-cover rounded-[10px] border border-gray-100 shadow-sm cursor-pointer"
+          className="w-full h-full object-scale-down rounded-tr-[10px] border border-gray-200 shadow-sm cursor-pointer"
           alt="Gallery Image"
           onClick={handleClick}
         />
@@ -48,7 +51,7 @@ const ProjectImages = ({
           src={image4}
           height={800}
           width={800}
-          className="w-full h-[150px] object-cover rounded-[10px] border border-gray-100 shadow-sm cursor-pointer"
+          className="w-full h-full object-scale-down border border-gray-200 shadow-sm cursor-pointer"
           alt="Gallery Image"
           onClick={handleClick}
         />
@@ -56,7 +59,7 @@ const ProjectImages = ({
           src={image5}
           height={800}
           width={800}
-          className="w-full h-[150px] object-cover rounded-[10px] border border-gray-100 shadow-sm cursor-pointer"
+          className="w-full h-full object-scale-down rounded-br-[10px] border border-gray-200 cursor-pointer"
           alt="Gallery Image"
           onClick={handleClick}
         />

@@ -2,12 +2,14 @@
 import Modal from "@/components/Modal";
 import ProjectImages from "@/components/ProjectImages";
 import { myProjects } from "@/constants/projects/myProjects";
+import { ImageDownIcon } from "lucide-react";
 import Image from "next/image";
-
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import React, { useState } from "react";
 import { BiCheckCircle } from "react-icons/bi";
+import { BsRecord } from "react-icons/bs";
+import { DiGithubBadge } from "react-icons/di";
 
 const IndividualProjectPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -36,40 +38,50 @@ const IndividualProjectPage = () => {
           onClose={handleClick}
           isOpen={isModalOpen}
         >
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 gap-3">
             {project.images.map((image) => (
-              <Image
-                key={image}
-                src={image}
-                height={1200}
-                width={1200}
-                className="w-full rounded-lg shadow-md"
-              />
+              <div key={image} className="my-8 px-[200px]">
+                <h3 className="text-2xl font-bold  mb-2">{image.label}</h3>
+                <Image
+                  src={image.image}
+                  height={1200}
+                  width={1200}
+                  className="w-full rounded-lg shadow-md"
+                  alt="Website Image"
+                />
+              </div>
             ))}
           </div>
         </Modal>
       )}
       <div className="mt-10">
         <ProjectImages
-          image1={project?.images[0]}
-          image2={project?.images[1]}
-          image3={project?.images[2]}
-          image4={project?.images[3]}
-          image5={project?.images[4]}
+          image1={project?.images[0].image}
+          image2={project?.images[1].image}
+          image3={project?.images[2].image}
+          image4={project?.images[3].image}
+          image5={project?.images[4].image}
           handleClick={handleClick}
         />
 
         <div className="flex gap-2 my-5">
           <Link href={project?.repo}>
-            <button className="px-5 py-2 bg-black rounded-md text-white">
-              Github Repo
+            <button className="px-5 py-2 flex hover:bg-gray-700  items-center bg-black rounded-md text-white">
+              <DiGithubBadge size={30} /> Github Repo
             </button>
           </Link>
           <Link href={project?.liveLink}>
-            <button className="px-5 py-2 bg-black rounded-md text-white">
-              Live Demo
+            <button className="px-5 flex gap-2 items-center hover:bg-gray-700 py-2 bg-black rounded-md text-white">
+              <BsRecord size={30} /> Live Demo
             </button>
           </Link>
+
+          <button
+            onClick={handleClick}
+            className="px-5 flex gap-2 py-2 items-center hover:bg-gray-700 bg-black rounded-md text-white"
+          >
+            <ImageDownIcon size={30} /> Image Gallery
+          </button>
         </div>
         <div className="border-t pt-4 flex gap-3 max-md:flex-col">
           <div className="w-[70%] max-lg:w-full">
