@@ -238,4 +238,72 @@ export const myProjects = [
       technology: ["Next.js", "Tailwind CSS", "GSAP", "Vercel"],
     },
   },
+  {
+    id: 5,
+    title: "Nike Landing Page Clone",
+    liveLink: "https://nike.benjaminalan.io",
+    repo: "https://github.com/Benjamin-buck/Nike-Clone",
+    description:
+      "A user interface clone of the popular show brand 'Nike'. This project features a beautiful and responsive clone of the Nike landing page UI.",
+    status: "Done",
+    thumbnail:
+      "https://res.cloudinary.com/dmubfrefi/image/private/s--OPpDHsl3--/c_crop,h_2728,w_4090,x_334,y_0/c_scale,w_3840/f_auto/q_auto/v1/dee-about-cms-prod-medias/cf68f541-fc92-4373-91cb-086ae0fe2f88/002-nike-logos-swoosh-white.jpg?_a=BAAAV6Bs",
+    images: [
+      {
+        image: "https://i.gyazo.com/2837f5419e9f6e8b66a5d5a3ff1f0172.jpg",
+        label: "Hero",
+      },
+      {
+        image: "https://i.gyazo.com/30361be1d415fb2b9de16713ee919534.png",
+        label: "Products",
+      },
+      {
+        image: "https://i.gyazo.com/f14032f9d780e13934a8e8d7ae84e6b1.jpg",
+        label: "Product Showcase",
+      },
+      {
+        image: "https://i.gyazo.com/0d135460ec506b935eec1cce1d964c98.jpg",
+        label: "Showcase section",
+      },
+      {
+        image: "https://i.gyazo.com/f3beedc8b5cfc752b64303c9e7ecb872.png",
+        label: "Testimonials",
+      },
+      {
+        image: "https://i.gyazo.com/c846a69ebf8a42d7ddbf5a5a154ae29d.png",
+        label: "Footer",
+      },
+    ],
+    features: [
+      {
+        heading: "Beautiful Landing Page UI",
+        content: [
+          "A beautifully designed homepage that highlights the agency’s vision, mission, and key services.",
+          "Engaging, interactive elements that captivate visitors.",
+          "Clear call-to-action (CTA) buttons encouraging user engagement and lead generation.",
+          "Smooth animations and transitions to enhance user experience.",
+        ],
+      },
+      {
+        heading: "Responsive & Optimized Performance",
+        content: [
+          "Fully responsive design ensuring a seamless experience across all devices.",
+          "Optimized for speed and performance, ensuring fast load times.",
+          "Accessibility-friendly design following WCAG guidelines.",
+        ],
+      },
+      {
+        heading: "Static Pages",
+        content: [
+          "A well-structured About Us page detailing the agency’s background, values, and team members.",
+          "A dedicated Services page outlining the various offerings, with a focus on the quality and impact of each service.",
+          "A Portfolio page that showcases the agency’s completed projects, demonstrating the agency’s experience and expertise across various industries.",
+          "Contact page with a dynamic form for inquiries and potential client interactions.",
+        ],
+      },
+    ],
+    projectDetails: {
+      technology: ["Next.js", "Tailwind CSS", "GSAP", "Vercel"],
+    },
+  },
 ];
