@@ -40,7 +40,7 @@ const IndividualProjectPage = () => {
         >
           <div className="grid grid-cols-1 gap-3">
             {project.images.map((image) => (
-              <div key={image} className="my-8 px-[200px]">
+              <div key={image} className="my-8 lg:px-[200px]">
                 <h3 className="text-2xl font-bold  mb-2">{image.label}</h3>
                 <Image
                   src={image.image}
