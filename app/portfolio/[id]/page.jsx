@@ -2,7 +2,7 @@
 import Modal from "@/components/Modal";
 import ProjectImages from "@/components/ProjectImages";
 import { myProjects } from "@/constants/projects/myProjects";
-import { ChevronLeft, ImageDownIcon } from "lucide-react";
+import { CheckCheckIcon, ChevronLeft, ImageDownIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
@@ -102,7 +102,7 @@ const IndividualProjectPage = () => {
           <div className="w-[70%] max-lg:w-full">
             <h1 className="text-3xl font-semibold">{project.title}</h1>
             <div className="mt-3">
-              <p className="max-w-[80%] max-lg:max-w-auto">
+              <p className="text-justify lg:max-w-[80%] text-lg max-lg:max-w-auto">
                 {project?.description}
               </p>
             </div>
@@ -115,9 +115,14 @@ const IndividualProjectPage = () => {
                 <div key={feature.heading} className="mt-4">
                   <h2 className="text-lg font-bold">{feature.heading}</h2>
                   {feature.content.map((bullet) => (
-                    <p key={bullet} className="pl-3 py-1">
-                      - {bullet}
-                    </p>
+                    <div key={bullet} className="flex gap-2 items-center">
+                      <p>
+                        <CheckCheckIcon />
+                      </p>
+                      <p key={bullet} className="pl-3 py-1 text-lg">
+                        {bullet}
+                      </p>
+                    </div>
                   ))}
                 </div>
               ))}

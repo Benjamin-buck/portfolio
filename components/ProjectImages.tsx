@@ -18,14 +18,14 @@ const ProjectImages = ({
   handleClick,
 }: Images) => {
   return (
-    <div className="grid grid-cols-12 gap-2 h-[500px] w-full">
+    <div className="grid grid-cols-12 gap-2 h-[300px] lg:h-[500px] w-full">
       {/* Big Image */}
       <Image
         src={image1}
         width={800}
         height={800}
         alt="Gallery Image"
-        className="col-span-12 md:col-span-6  object-scale-down w-full rounded-l-[10px] h-[500px] border border-gray-200 cursor-pointer"
+        className="col-span-12 md:col-span-6  object-scale-down w-full rounded-l-[10px] h-[300px] lg:h-[500px]  border border-gray-200 cursor-pointer"
         onClick={handleClick}
       />
 
