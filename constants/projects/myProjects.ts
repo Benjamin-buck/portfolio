@@ -51,7 +51,6 @@ export const myProjects = [
       },
     ],
     projectDetails: {
-      status: "In Progress",
       technology: ["Next.js", "React", "Express"],
     },
   },
@@ -62,7 +61,7 @@ export const myProjects = [
     repo: "https://github.com/Benjamin-buck/nexdev",
     description:
       "The NexDev Agency Web Application is a modern, responsive website built using Next.js, designed to showcase the agency’s expertise, services, and portfolio. The application features a sleek, user-friendly landing page and includes several additional static and dynamic pages to provide a comprehensive online presence for the agency.",
-    status: "Done",
+    status: "In Progress",
     thumbnail:
       "https://zor0pdp300.ufs.sh/f/WhvLxAaX5BHQ1LRJ1roWVw79szU8ZQuM4jalqn0PdARkfNrG",
     images: [
@@ -116,7 +115,7 @@ export const myProjects = [
     id: 3,
     title: "Serenity Landscaping",
     liveLink: "https://serenity-sage.vercel.app/",
-    repo: "https://github.com/Benjamin-buck/nexdev",
+    repo: "https://github.com/Benjamin-buck/serenity",
     description:
       "A modern, visually appealing website built with Next.js for Serenity Landscaping, showcasing services, past projects, and a seamless user experience.",
     status: "Done",

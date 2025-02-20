@@ -56,7 +56,7 @@ const Portfolio = () => {
           {myProjects.map((project) => (
             <div
               key={project.id}
-              className="col-span-12 lg:col-span-4 xl:col-span-3"
+              className="col-span-12 lg:col-span-4 xl:col-span-3 relative"
             >
               <Image
                 src={project.thumbnail}
@@ -65,10 +65,23 @@ const Portfolio = () => {
                 alt="Image"
                 className="w-full h-[220px] lg:h-[200px] rounded-t-[10px] border border-gray-100 object-cover"
               />
+              <div className="absolute top-0 left-0  w-full h-full">
+                <p
+                  className={`w-fit px-4 py-[3px] rounded m-4 text-sm ${
+                    project.status === "In Progress"
+                      ? "bg-orange-300 text-orange-800"
+                      : "bg-green-300"
+                  }`}
+                >
+                  {project.status}
+                </p>
+              </div>
+
               <div className="border-b border-gray-100 shadow-sm border-l border-r rounded-b-[10px] px-4 py-2">
                 <h3 className="text-lg font-semibold font-lexend">
                   {project.title}
                 </h3>
+
                 <p className="text-gray-500 line-clamp-3">
                   {project.description}
                 </p>
@@ -99,7 +112,15 @@ const Portfolio = () => {
                   <h2 className="font-lexend text-xl font-bold">
                     {project.title}
                   </h2>
-                  <p>Status: {project.status}</p>
+                  <p
+                    className={`w-fit px-4 py-[3px]  my-3 rounded text-sm ${
+                      project.status === "In Progress"
+                        ? "bg-orange-300 text-orange-800"
+                        : "bg-green-300"
+                    }`}
+                  >
+                    {project.status}
+                  </p>
                   <p className="line-clamp-3">{project.description}</p>
                 </div>
               </div>
