@@ -125,27 +125,27 @@ export const myProjects = [
       {
         image:
           "https://www.transportationservices.ca/wp-content/uploads/2018/06/truck-transportation.jpg",
-        label: "Github Landing Page",
+        label: "Transport Canada Image 1",
       },
       {
         image:
           "https://www.insidelogistics.ca/wp-content/uploads/sites/3/2024/08/LogisticsModes.jpg",
-        label: "Github Landing Page part 2",
+        label: "Transport Canada Image 2",
       },
       {
         image:
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQthSDjCgbrYr15vpcUDcSdbDhzwwKhCbgqCg&s",
-        label: "Footer",
+        label: "Transport Canada Image 3",
       },
       {
         image:
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRQUjZJ-HFd-E6kumD4MGnSfR-UJpVApHrsg&s",
-        label: "Github Internal Dashboard",
+        label: "Transport Canada Image 4",
       },
       {
         image:
           "https://www.fcc-inc.com/wp-content/uploads/FCC-Transportation-Facts.jpg",
-        label: "Account page",
+        label: "Transport Canada Image 5",
       },
     ],
     features: [
