@@ -65,7 +65,7 @@ const Portfolio = () => {
                 alt="Image"
                 className="w-full h-[220px] lg:h-[200px] rounded-t-[10px] border border-gray-100 object-cover"
               />
-              <div className="absolute top-0 left-0  w-full h-full">
+              <div className="absolute top-0 left-0  w-full lg:h-[200px] h-[220px]">
                 <p
                   className={`w-fit px-4 py-[3px] rounded m-4 text-sm ${
                     project.status === "In Progress"
