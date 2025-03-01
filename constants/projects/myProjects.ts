@@ -1,4 +1,58 @@
 export const myProjects = [
+  {
+    id: 8,
+    title: "Awada Realestate Group",
+    liveLink: "https://awadagroup.vercel.app/",
+    repo: null,
+    description:
+      "In collaboration with the Awada Realestate Group in Ottawa, I designed and built their new real estate website with one focus in mind: the client. This project was to focus on bringing as much value to the end client as possible, giving them all of the tools they will need in order to determine if and when to buy or sell realestate.",
+    status: "In Progress",
+    thumbnail:
+      "https://scontent-yyz1-1.xx.fbcdn.net/v/t39.30808-6/301253777_5285120931570038_3477588208592547407_n.png?_nc_cat=109&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=7cyWYzABu9sQ7kNvgF8L5ei&_nc_oc=Adihgv_lu0XqNz2aNDg3YEQlhS3rcpqMYU3V1V7RkyCv5kWpcShfJYwZW6tJznhjJm5BcCqNPko73x-TWTV7YqP8&_nc_zt=23&_nc_ht=scontent-yyz1-1.xx&_nc_gid=AJYTVnruENwyRj7rv2askNK&oh=00_AYC-9F0F7pMQo6jAfmpLvZ2vk6DPYbTTBvO7_lc59PYCxw&oe=67C8E1BB",
+    images: [
+      {
+        image: "https://i.gyazo.com/4d541c9d3ad3fb0ac76b2ef185979ee2.jpg",
+        label: "Awada Group - Landing Page",
+      },
+      {
+        image: "https://placehold.co/600x400.png",
+        label: "Coming Soon",
+      },
+      {
+        image: "https://placehold.co/600x400.png",
+        label: "Coming Soon",
+      },
+      {
+        image: "https://placehold.co/600x400.png",
+        label: "Coming Soon",
+      },
+      {
+        image: "https://placehold.co/600x400.png",
+        label: "Coming Soon",
+      },
+    ],
+    features: [
+      {
+        heading: "Beautiful Landing Page UI",
+        content: [
+          "A modern and elegant layout with a minimalistic design.",
+          "Sleek animations to capture the user's attention as the website loads and the user scrolls the page.",
+          "Clear call-to-action (CTA) form encouraging user engagement and lead generation.",
+        ],
+      },
+      {
+        heading: "Mobile Responsive",
+        content: [
+          "Each page and component used was designed and built to not only look great on a desktop view, but is also completely responsive.",
+          "Features fully functional mobile navigation menu",
+          "The 'property search' feature fully collapses on mobile devices and utilizes a pop-up modal to allow a better user experience on mobile devices.",
+        ],
+      },
+    ],
+    projectDetails: {
+      technology: ["Next.js", "React", "GSAP", "next-themes", "TailwindCSS", 'MLS API Integration', 'CRM API Integration'],
+    },
+  },
   // 1
   {
     id: 2,
@@ -59,7 +113,7 @@ export const myProjects = [
   // 2
   {
     id: 1,
-    title: "NexDev Design Agency",
+    title: "The Apex Labs",
     liveLink: "https://nexdev-silk.vercel.app/",
     repo: "https://github.com/Benjamin-buck/nexdev",
     description:
