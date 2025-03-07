@@ -54,61 +54,61 @@ export const myProjects = [
     },
   },
   // 1
-  {
-    id: 2,
-    title: "Kingston Humane Society",
-    liveLink: "https://humanesociety-sigma.vercel.app/",
-    repo: null,
-    description:
-      "I designed and developed a modern, user-friendly website for the Kingston Humane Society using Next.js. The platform enhances the adoption process by showcasing adoptable dogs with an interactive image slider and detailed pet information. It also features an engaging blog section, smooth animations, and a visually appealing UI to create a seamless user experience. The project focused on performance, accessibility, and responsiveness, ensuring visitors can easily browse available pets and learn more about the organization on any device.",
-    status: "In Progress",
-    thumbnail:
-      "https://zor0pdp300.ufs.sh/f/WhvLxAaX5BHQCFLVcArHcZiFSny9MgJ8WRh7IvzmaLkf24Ad",
-    images: [
-      {
-        image: "https://i.gyazo.com/5c211ee2a6947c743f55ce8685b327d0.jpg",
-        label: "Kingston Humane Society - Home Page",
-      },
-      {
-        image: "https://i.gyazo.com/8003c1e130a52e4315c137a76922c5d1.jpg",
-        label: "Kingston Humane Society - Animal Categories",
-      },
-      {
-        image: "https://i.gyazo.com/79aa4316e7db53e5690fe684083c725f.jpg",
-        label: "Adoptable Dogs / Animals",
-      },
-      {
-        image: "https://i.gyazo.com/f92f836b57479f9a415b00e86195e7b7.jpg",
-        label: "Hot off the Collar Blog",
-      },
-      {
-        image: "https://i.gyazo.com/6eed3675952f0a77a3b5e35eb738e6ab.jpg",
-        label: "Individual Blog Posts",
-      },
-    ],
-    features: [
-      {
-        heading: "Beautiful Landing Page UI",
-        content: [
-          "A beautifully designed homepage that highlights the Kingston Humane Society's vision, mission, and key services.",
-          "A section displaying the most recent donations.",
-          "Clear call-to-action (CTA) buttons encouraging user engagement and lead generation.",
-          "Elegant design that encorporates the Kingston Humane Society's colors and branding.",
-        ],
-      },
-      {
-        heading: "Static & Dynamic Pages",
-        content: [
-          "The website features a mixture of static and dynamic pages.",
-          "The dogs are pulled via API from their internal system to ensure the latest information is up to date.",
-          "The blog section is pulled via API from their internal blog system.",
-        ],
-      },
-    ],
-    projectDetails: {
-      technology: ["Next.js", "React", "Express"],
-    },
-  },
+  // {
+  //   id: 2,
+  //   title: "Kingston Humane Society",
+  //   liveLink: "https://humanesociety-sigma.vercel.app/",
+  //   repo: null,
+  //   description:
+  //     "I designed and developed a modern, user-friendly website for the Kingston Humane Society using Next.js. The platform enhances the adoption process by showcasing adoptable dogs with an interactive image slider and detailed pet information. It also features an engaging blog section, smooth animations, and a visually appealing UI to create a seamless user experience. The project focused on performance, accessibility, and responsiveness, ensuring visitors can easily browse available pets and learn more about the organization on any device.",
+  //   status: "In Progress",
+  //   thumbnail:
+  //     "https://zor0pdp300.ufs.sh/f/WhvLxAaX5BHQCFLVcArHcZiFSny9MgJ8WRh7IvzmaLkf24Ad",
+  //   images: [
+  //     {
+  //       image: "https://i.gyazo.com/5c211ee2a6947c743f55ce8685b327d0.jpg",
+  //       label: "Kingston Humane Society - Home Page",
+  //     },
+  //     {
+  //       image: "https://i.gyazo.com/8003c1e130a52e4315c137a76922c5d1.jpg",
+  //       label: "Kingston Humane Society - Animal Categories",
+  //     },
+  //     {
+  //       image: "https://i.gyazo.com/79aa4316e7db53e5690fe684083c725f.jpg",
+  //       label: "Adoptable Dogs / Animals",
+  //     },
+  //     {
+  //       image: "https://i.gyazo.com/f92f836b57479f9a415b00e86195e7b7.jpg",
+  //       label: "Hot off the Collar Blog",
+  //     },
+  //     {
+  //       image: "https://i.gyazo.com/6eed3675952f0a77a3b5e35eb738e6ab.jpg",
+  //       label: "Individual Blog Posts",
+  //     },
+  //   ],
+  //   features: [
+  //     {
+  //       heading: "Beautiful Landing Page UI",
+  //       content: [
+  //         "A beautifully designed homepage that highlights the Kingston Humane Society's vision, mission, and key services.",
+  //         "A section displaying the most recent donations.",
+  //         "Clear call-to-action (CTA) buttons encouraging user engagement and lead generation.",
+  //         "Elegant design that encorporates the Kingston Humane Society's colors and branding.",
+  //       ],
+  //     },
+  //     {
+  //       heading: "Static & Dynamic Pages",
+  //       content: [
+  //         "The website features a mixture of static and dynamic pages.",
+  //         "The dogs are pulled via API from their internal system to ensure the latest information is up to date.",
+  //         "The blog section is pulled via API from their internal blog system.",
+  //       ],
+  //     },
+  //   ],
+  //   projectDetails: {
+  //     technology: ["Next.js", "React", "Express"],
+  //   },
+  // },
 
   // 2
   {
