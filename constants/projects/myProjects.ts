@@ -6,32 +6,56 @@ export const myProjects = [
     repo: null,
     description:
       "In collaboration with the Awada Realestate Group in Ottawa, I designed and built their new real estate website with one focus in mind: the client. This project was to focus on bringing as much value to the end client as possible, giving them all of the tools they will need in order to determine if and when to buy or sell realestate.",
-    status: "In Progress",
-    thumbnail:
-      "https://scontent-yyz1-1.xx.fbcdn.net/v/t39.30808-6/301253777_5285120931570038_3477588208592547407_n.png?_nc_cat=109&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=7cyWYzABu9sQ7kNvgF8L5ei&_nc_oc=Adihgv_lu0XqNz2aNDg3YEQlhS3rcpqMYU3V1V7RkyCv5kWpcShfJYwZW6tJznhjJm5BcCqNPko73x-TWTV7YqP8&_nc_zt=23&_nc_ht=scontent-yyz1-1.xx&_nc_gid=AJYTVnruENwyRj7rv2askNK&oh=00_AYC-9F0F7pMQo6jAfmpLvZ2vk6DPYbTTBvO7_lc59PYCxw&oe=67C8E1BB",
+    status: "Done",
+    thumbnail: "https://i.gyazo.com/fdbf1b018b7d951a07355f27f629347c.jpg",
     images: [
       {
-        image: "https://i.gyazo.com/4d541c9d3ad3fb0ac76b2ef185979ee2.jpg",
+        image: "https://i.gyazo.com/fdbf1b018b7d951a07355f27f629347c.jpg",
         label: "Awada Group - Landing Page",
       },
       {
-        image: "https://placehold.co/600x400.png",
-        label: "Coming Soon",
+        image: "https://i.gyazo.com/72dfcb6f41a2337b2572faafb45385ec.jpg",
+        label: "Awada Group - Featured Areas",
       },
       {
-        image: "https://placehold.co/600x400.png",
-        label: "Coming Soon",
+        image: "https://i.gyazo.com/2607fb22a77927781416fd717c507d46.jpg",
+        label: "Awada Group - Highlights",
       },
       {
-        image: "https://placehold.co/600x400.png",
-        label: "Coming Soon",
+        image: "https://i.gyazo.com/a34bfbc0dac7ad8f78ba9edf856e740f.png",
+        label: "Awada Group - Home Appraisal Tool",
       },
       {
-        image: "https://placehold.co/600x400.png",
-        label: "Coming Soon",
+        image: "https://i.gyazo.com/3c3de862f2871aa1513f3946d1c8c055.jpg",
+        label: "Awada Group - Sellers page",
       },
     ],
     features: [
+      {
+        heading: "Full MLS Integration",
+        content: [
+          "Fully integrated with the MLS DDF API's to securely query property listings, sort properties by types",
+          "Back-end API's created to securely call DDF API on the server and not expose sensitive data to the client.",
+          "Complex query strings which dynamically build the query requests via the use of query parameters.",
+        ],
+      },
+      {
+        heading: "User Authentication / Management Integration using Clerk",
+        content: [
+          "Utilizes Clerk's user authentication management system to successfully authenticate user sessions and securely store them in the Convex database.",
+          "User roles created to allow for different permission sets based on the user's assigned role.",
+          "Use of middleware to protect specific routes which require authentication and / or specific user roles.",
+        ],
+      },
+      {
+        heading: "Convex back-end database integration",
+        content: [
+          "Utilizes a convex database / backend to store user data in a series of related tables.",
+          "Tracks authenticated user's actions and stores them in the table associated to each user.",
+          "Stores MLS listings the user has saved & previously viewed for future reference.",
+          "Utilizes previously viewed listings to suggest 'similar' listings through a custom algorithm",
+        ],
+      },
       {
         heading: "Beautiful Landing Page UI",
         content: [
@@ -50,7 +74,18 @@ export const myProjects = [
       },
     ],
     projectDetails: {
-      technology: ["Next.js", "React", "GSAP", "next-themes", "TailwindCSS", 'MLS API Integration', 'CRM API Integration'],
+      technology: [
+        "Next.js",
+        "React",
+        "GSAP",
+        "Clerk",
+        "Convex",
+        "next-themes",
+        "TailwindCSS",
+        "MLS API Integration",
+        "CRM API Integration",
+        "Google Places API",
+      ],
     },
   },
   // 1
