@@ -15,7 +15,8 @@ const Hero = () => {
         <div className="w-[45%] mt-[120px] max-xl:mt-2 max-xl:w-auto max-xl:px-4 max-md:pt-2">
           <h2 className="text-5xl mt-12 font-lexend font-bold leading-[60px] max-md:text-3xl">
             Hi, Im <span className="gradient-text">Benjamin</span>, a junior
-            React & Next.js Developer.
+            React & Next.js <span className="gradient-text">full-stack</span>{" "}
+            Developer.
           </h2>
           <p className="max-md:pt-5">
             I specialize in building clean, responsive, and intuitive web
