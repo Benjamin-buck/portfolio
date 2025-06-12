@@ -58,7 +58,7 @@ const Portfolio = () => {
               key={project.id}
               className="col-span-12 lg:col-span-4 xl:col-span-3 relative"
             >
-              <Image
+              <img
                 src={project.thumbnail}
                 width={500}
                 height={500}

@@ -49,11 +49,19 @@ export const experience = {
   title: "Experience",
   jobs: [
     {
+      employer: "Novari Health",
+      location: "Kingston, Ontario",
+      team: "Novari ATC",
+      role: "SCRUM Master | Product Designer",
+      duration: "June 16, 2025 - Present",
+      responsibilities: [],
+    },
+    {
       employer: "Transport Canada",
       location: "Ottawa, Ontario",
       team: "Dynamics 365 Maintenance Team",
       role: "Senior Business Analyst / SCRUM Master",
-      duration: "September 2023 - Present",
+      duration: "September 2023 - June 13, 2025",
       responsibilities: [
         "Developed interactive user experience mockups / prototypes to facilitate product enhancements / features.",
         "Hosted / facilitated all SCRUM ceremonies for each sprint: backlog grooming, requirements gathering, sprint planning, daily standup, sprint review, and sprint retrospectives.",
