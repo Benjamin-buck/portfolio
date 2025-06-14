@@ -1,5 +1,48 @@
 export const myProjects = [
   {
+    id: 9,
+    title: "Humane Society",
+    liveLink: "https://humanesociety-sigma.vercel.app/",
+    repo: null,
+    description:
+      "This project was created to showcase a full-stack application geared towards Animal Shelters in order to facilitate the foster / adoption process of applications. The project aims to have a fully functional back-end / database to store animals, integrate a seamless adoption application process, and allow shelter employees to enter and process shelter animals.",
+    status: "In Progress",
+    thumbnail: "https://i.gyazo.com/4caca7c49689c5ac66aebecc2d8c17fe.jpg",
+    images: [
+      {
+        image: "https://i.gyazo.com/4caca7c49689c5ac66aebecc2d8c17fe.jpg",
+        label: "Humane Society - Landing Page",
+      },
+      {
+        image: "https://i.gyazo.com/be2ecb5bff8fc6cd86f58663d636031c.jpg",
+        label: "Humane Society - Landing Page",
+      },
+      {
+        image: "https://i.gyazo.com/13a01cfc3b96421bd9e4db79aac43aa5.jpg",
+        label: "Humane Society - Adopt",
+      },
+      {
+        image: "https://placehold.co/600x400.png",
+        label: "TBD",
+      },
+      {
+        image: "https://placehold.co/600x400.png",
+        label: "TBD",
+      },
+    ],
+    features: [
+      {
+        heading: "Stunning Front End Interface",
+        content: [
+          "Beautifully designed / thought out user experience / user interface.",
+        ],
+      },
+    ],
+    projectDetails: {
+      technology: ["Next.js", "React"],
+    },
+  },
+  {
     id: 8,
     title: "Awada Realestate Group",
     liveLink: "https://awadagroup.vercel.app/",
