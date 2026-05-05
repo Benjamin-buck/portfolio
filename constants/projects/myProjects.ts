@@ -22,7 +22,7 @@ export const myProjects: Project[] = [
     description:
       "Novari Health is a healthcare technology company that provides a comprehensive platform for managing patient care, streamlining operations, and improving healthcare outcomes. The platform offers a range of features including electronic health records (EHR), telemedicine capabilities, appointment scheduling, and patient engagement tools. Novari Health aims to enhance the efficiency and effectiveness of healthcare delivery while prioritizing patient-centered care. Portfolio items are not publicly available for this project due to confidentiality agreements with the employer. Please request more information if you would like to learn more about this project.",
     status: "Current",
-    thumbnail: "/novarihealth-1.JPG",
+    thumbnail: "/novarihealth-1.jpg",
     startDate: "2025-06-16",
     endDate: "Present",
     features: [
@@ -63,6 +63,28 @@ export const myProjects: Project[] = [
         ],
       },
     ],
+    images: [
+      {
+        image: "/sidechat-1.png",
+        label: "Sidechat",
+      },
+      {
+        image: "/sidechat-2.png",
+        label: "Sidechat",
+      },
+      {
+        image: "/sidechat-3.png",
+        label: "Sidechat",
+      },
+      {
+        image: "/sidechat-4.png",
+        label: "Sidechat",
+      },
+      {
+        image: "/sidechat-5.png",
+        label: "Sidechat",
+      },
+    ],
     projectDetails: {
       technology: [
         "React Native",
@@ -85,23 +107,23 @@ export const myProjects: Project[] = [
     images: [
       {
         image: "/bandaccount-1.png",
-        label: "Awada Group - Landing Page",
+        label: "Band Account 1",
       },
       {
         image: "/bandaccount-3.png",
-        label: "Band Account Login Page",
+        label: "Band Account 2",
       },
       {
         image: "/bandaccount-4.png",
-        label: "Awada Group - Highlights",
+        label: "Band Account 3",
       },
       {
         image: "/bandaccount-5.png",
-        label: "Awada Group - Home Appraisal Tool",
+        label: "Band Account 4",
       },
       {
         image: "/bandaccount-6.png",
-        label: "Awada Group - Home Appraisal Tool",
+        label: "Band Account 5",
       },
     ],
     features: [
