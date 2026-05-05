@@ -27,8 +27,7 @@ const Hero = () => {
           </span>
           <h2 className="text-5xl mt-4 font-lexend font-bold leading-[60px] max-md:text-3xl">
             Hi, I&apos;m <span className="gradient-text">Benjamin</span>, a
-            senior UI/UX{" "}
-            <span className="gradient-text">Developer</span>.
+            Senior UI/UX <span className="gradient-text">Developer</span>.
           </h2>
           <p className="mt-4 text-gray-600 leading-relaxed max-md:pt-5">
             6+ years building polished, accessible web applications — from
