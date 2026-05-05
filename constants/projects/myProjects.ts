@@ -1,4 +1,17 @@
-export const myProjects = [
+interface Project {
+  id: number;
+  title: string;
+  liveLink: string;
+  repo?: string | null;
+  description: string;
+  status: string;
+  thumbnail: string;
+  images: { image: string; label: string }[];
+  features: { heading: string; content: string[] }[];
+  projectDetails: { technology: string[] };
+}
+
+export const myProjects: Project[] = [
   // {
   //   id: 9,
   //   title: "Humane Society",
@@ -42,141 +55,6 @@ export const myProjects = [
   //     technology: ["Next.js", "React"],
   //   },
   // },
-  {
-    id: 9,
-    title: "Band Account",
-    liveLink: "https://bandaccount.com/",
-    repo: null,
-    description:
-      "The Band Account app was built with a simple purpose: to make managing a band easier so that musicians can focus on what they do best. This application was developed as a SaaS application and is live in production with real users and bands that rely on it for their management needs. This application was conceptualized, architected, developed, tested, and deplyed as a solo project with lots of love and care at every step of the way. Band Account was built with an API first approach, and has been accompanied by an iOS and Android dedicated mobile application that consumes the same APIs for a seamless experience across all platforms.",
-    status: "In Progress",
-    thumbnail: "sidechat-1.png",
-    images: [
-      {
-        image: "/bandaccount-1.png",
-        label: "Awada Group - Landing Page",
-      },
-      {
-        image: "/bandaccount-3.png",
-        label: "Band Account Login Page",
-      },
-      {
-        image: "/bandaccount-4.png",
-        label: "Awada Group - Highlights",
-      },
-      {
-        image: "/bandaccount-5.png",
-        label: "Awada Group - Home Appraisal Tool",
-      },
-      {
-        image: "/bandaccount-6.png",
-        label: "Awada Group - Home Appraisal Tool",
-      },
-    ],
-    features: [
-      {
-        heading: "Shared Calendar",
-        content: [
-          "Schedule rehearsals, shows, and meetings in one shared band calendar.",
-          "RSVP tracking so you always know who's coming.",
-        ],
-      },
-      {
-        heading: "Setlist Manager",
-        content: [
-          "Build and reorder setlists with drag-and-drop.",
-          "Attach notes per song per show.",
-          "Print your setlists once you're happy with them.",
-        ],
-      },
-      {
-        heading: "Song Library",
-        content: [
-          "Store your full catalogue with audio files, lyrics, tabs, BPM, and key information.",
-          "Link songs to setlists and shows for easy access on the road.",
-          "Audio uploads up to 100 MB per file.",
-        ],
-      },
-      {
-        heading: "Show & Gig Management",
-        content: [
-          "Track venues, guarantees, set times, and setlists for every gig past and present.",
-        ],
-      },
-      {
-        heading: "Band Chat",
-        content: [
-          "Real-time channels with @mentions, unread highlights, and notifications so nothing gets missed.",
-          "Message persistence and email notifications keep the whole band in sync.",
-        ],
-      },
-      {
-        heading: "Task Board",
-        content: [
-          "Five-column Kanban board with drag-and-drop functionality.",
-          "Priorities, assignees, due dates, labels, attachments, and comments on every task.",
-          "Filter and search across all tasks.",
-        ],
-      },
-      {
-        heading: "Member Management",
-        content: [
-          "Invite band members via a shareable link.",
-          "Assign Admin or Member roles with different permission sets.",
-          "See who's in the band at a glance.",
-        ],
-      },
-      {
-        heading: "Finance Tracker",
-        content: [
-          "Log income and expenses, track guarantees, and keep your band's finances transparent.",
-        ],
-      },
-      {
-        heading: "Native Ticketing",
-        content: [
-          "Sell tickets directly from your show page — no third-party platform.",
-          "Multiple ticket types with Stripe integration (2.5% fee).",
-          "QR codes, browser-based door scanner, and a full sales dashboard.",
-          "Revenue goes straight to your bank.",
-        ],
-      },
-      {
-        heading: "Show Marketplace",
-        content: [
-          "Post and browse gig opportunities.",
-          "Connect with promoters and find support slots.",
-        ],
-      },
-      {
-        heading: "Stage Plots & Tech Riders",
-        content: [
-          "Create and manage your stage plot and tech rider.",
-          "Share with venues and update as your setup evolves.",
-        ],
-      },
-      {
-        heading: "And a lot more",
-        content: [
-          "Smart notifications, tour planning, and public links page.",
-          "Social feed, band profiles, and direct messaging.",
-          "File attachments, @mentions, and real-time updates throughout.",
-        ],
-      },
-    ],
-    projectDetails: {
-      technology: [
-        "Next.js",
-        "React",
-        "PostgreSQL",
-        "Prisma",
-        "Stripe API",
-        "Vercel",
-        "Expo",
-        "React Native",
-      ],
-    },
-  },
   {
     id: 9,
     title: "Band Account",
@@ -522,6 +400,7 @@ export const myProjects = [
     id: 6,
     title: "Transport Canada",
     liveLink: "https://tc.canada.ca/en",
+    repo: null,
     description:
       "I was employed and working with Transport Canada on-going for the past 5 years on various IT infrastructure and software development projects.",
     status: "Done",
