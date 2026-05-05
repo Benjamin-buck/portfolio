@@ -10,3 +10,9 @@
 .button-style {
     @apply bg-black text-white font-semibold px-8 py-2 rounded-md hover:bg-gradient-to-r from-cyan-500 to-blue
 }
+
+@media print {
+    .no-print {
+        display: none !important;
+    }
+}

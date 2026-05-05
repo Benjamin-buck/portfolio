@@ -1,145 +1,200 @@
 "use client";
+
 import Modal from "@/components/Modal";
 import ProjectImages from "@/components/ProjectImages";
 import { myProjects } from "@/constants/projects/myProjects";
-import { CheckCheckIcon, ChevronLeft, ImageDownIcon } from "lucide-react";
+import { ChevronLeft } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 import React, { useState } from "react";
-import { BiCheckCircle } from "react-icons/bi";
-import { BsRecord } from "react-icons/bs";
-import { DiGithubBadge } from "react-icons/di";
+import { FaGithub, FaExternalLinkAlt, FaCheckCircle } from "react-icons/fa";
+import { BsImages } from "react-icons/bs";
+
+const statusStyle = (status) => {
+  switch (status) {
+    case "In Progress":
+      return "bg-amber-50 text-amber-700 border-amber-200";
+    case "Done":
+      return "bg-emerald-50 text-emerald-700 border-emerald-200";
+    case "On Going":
+      return "bg-blue-50 text-blue-700 border-blue-200";
+    default:
+      return "bg-gray-100 text-gray-600 border-gray-200";
+  }
+};
 
 const IndividualProjectPage = () => {
   const router = useRouter();
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const handleClick = () => {
-    return setIsModalOpen(!isModalOpen);
-  };
-
   const params = useParams();
-  const project = getProjectById(params.id, myProjects);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  function getProjectById(params, projectsArray) {
-    const id = parseInt(params);
-    for (let i = 0; i < projectsArray.length; i++) {
-      if (projectsArray[i].id === id) {
-        console.log(projectsArray[i].id);
-        return projectsArray[i];
-      }
-    }
-    return null;
+  const id = parseInt(params.id);
+  const project = myProjects.find((p) => p.id === id) ?? null;
+
+  if (!project) {
+    return (
+      <div className="flex flex-col items-center justify-center py-32 text-center">
+        <p className="text-5xl mb-4">🔍</p>
+        <h1 className="text-2xl font-lexend font-bold mb-2">Project not found</h1>
+        <p className="text-gray-500 mb-6">That project doesn&apos;t exist or may have been removed.</p>
+        <Link href="/portfolio">
+          <button className="button-style">Back to Portfolio</button>
+        </Link>
+      </div>
+    );
   }
+
   return (
-    <div className="mx-4 mb-8">
+    <div className="mx-4 md:mx-0 mb-16">
+      {/* Image gallery modal */}
       {isModalOpen && (
         <Modal
-          title="Project Images"
-          onClose={handleClick}
+          title={`${project.title} — Image Gallery`}
+          onClose={() => setIsModalOpen(false)}
           isOpen={isModalOpen}
         >
-          <div className="grid grid-cols-1 gap-3">
-            {project.images.map((image) => (
-              <div key={image} className="my-8 lg:px-[200px]">
-                <h3 className="text-2xl font-bold  mb-2">{image.label}</h3>
+          <div className="flex flex-col gap-10">
+            {project.images.map((img) => (
+              <div key={img.image}>
+                <p className="text-sm font-semibold text-gray-500 mb-2">{img.label}</p>
                 <Image
-                  src={image.image}
+                  src={img.image}
                   height={1200}
                   width={1200}
-                  className="w-full rounded-lg shadow-md"
-                  alt="Website Image"
+                  className="w-full rounded-xl shadow-md object-cover"
+                  alt={img.label}
                 />
               </div>
             ))}
           </div>
         </Modal>
       )}
-      <div className=" mt-5">
-        <p
-          className="flex gap-2 items-center cursor-pointer hover:text-blue"
-          onClick={() => router.back()}
+
+      {/* Back button */}
+      <button
+        onClick={() => router.back()}
+        className="mt-6 mb-5 flex items-center gap-1.5 text-sm font-semibold text-gray-500 hover:text-black transition-colors"
+      >
+        <ChevronLeft size={16} /> Back to Portfolio
+      </button>
+
+      {/* Image gallery grid */}
+      <ProjectImages
+        images={project.images}
+        handleClick={() => setIsModalOpen(true)}
+      />
+
+      {/* Title row */}
+      <div className="mt-6 flex flex-wrap items-center gap-3">
+        <h1 className="text-3xl font-lexend font-bold">{project.title}</h1>
+        <span
+          className={`text-xs font-semibold px-3 py-1 rounded-full border ${statusStyle(project.status)}`}
         >
-          <ChevronLeft /> Back
-        </p>
+          {project.status}
+        </span>
       </div>
-      <div className="mt-5">
-        <ProjectImages
-          image1={project?.images[0].image}
-          image2={project?.images[1].image}
-          image3={project?.images[2].image}
-          image4={project?.images[3].image}
-          image5={project?.images[4].image}
-          handleClick={handleClick}
-        />
 
-        <div className="flex gap-2 my-5">
-          {project.repo && (
-            <Link href={project?.repo}>
-              <button className="px-5 py-2 flex hover:bg-gray-700  items-center bg-black rounded-md text-white">
-                <DiGithubBadge size={30} />{" "}
-                <span className="md:block hidden">Github Repo</span>
-              </button>
-            </Link>
-          )}
-
-          <Link href={project?.liveLink}>
-            <button className="px-5 flex gap-2 items-center hover:bg-gray-700 py-2 bg-black rounded-md text-white">
-              <BsRecord size={30} />{" "}
-              <span className="md:block hidden">Live Demo</span>
+      {/* Action buttons */}
+      <div className="flex gap-3 mt-4 flex-wrap">
+        {project.repo && (
+          <a href={project.repo} target="_blank" rel="noopener noreferrer">
+            <button className="flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-300 text-sm font-semibold hover:border-gray-500 hover:bg-gray-50 transition-all duration-150">
+              <FaGithub size={16} /> GitHub Repo
             </button>
-          </Link>
+          </a>
+        )}
+        {project.liveLink && (
+          <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
+            <button className="flex items-center gap-2 px-4 py-2 rounded-lg bg-black text-white text-sm font-semibold hover:bg-gray-800 transition-colors duration-150">
+              <FaExternalLinkAlt size={13} /> Live Demo
+            </button>
+          </a>
+        )}
+        <button
+          onClick={() => setIsModalOpen(true)}
+          className="flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-200 bg-gray-50 text-sm font-semibold text-gray-600 hover:bg-gray-100 transition-colors duration-150"
+        >
+          <BsImages size={16} /> View Gallery
+        </button>
+      </div>
 
-          <button
-            onClick={handleClick}
-            className="px-5 flex gap-2 py-2 items-center hover:bg-gray-700 bg-black rounded-md text-white"
-          >
-            <ImageDownIcon size={30} />{" "}
-            <span className="md:block hidden">Image Gallery</span>
-          </button>
-        </div>
-        <div className="border-t pt-4 flex gap-3 max-md:flex-col">
-          <div className="w-[70%] max-lg:w-full">
-            <h1 className="text-3xl font-semibold">{project.title}</h1>
-            <div className="mt-3">
-              <p className="text-justify lg:max-w-[80%] text-lg max-lg:max-w-auto">
-                {project?.description}
-              </p>
-            </div>
+      {/* Main content */}
+      <div className="mt-8 flex gap-8 max-md:flex-col">
+        {/* Left — description + features */}
+        <div className="flex-1 min-w-0">
+          <p className="text-gray-600 leading-relaxed text-base">{project.description}</p>
 
-            <div className="my-8">
-              <h2 className="text-2xl font-semibold mt-6 border-b pb-2">
-                Features
-              </h2>
+          <div className="mt-10">
+            <h2 className="text-xl font-lexend font-bold mb-5">Features</h2>
+            <div className="flex flex-col gap-7">
               {project.features.map((feature) => (
-                <div key={feature.heading} className="mt-4">
-                  <h2 className="text-lg font-bold">{feature.heading}</h2>
-                  {feature.content.map((bullet) => (
-                    <div key={bullet} className="flex gap-2 items-center">
-                      <p>
-                        <CheckCheckIcon />
-                      </p>
-                      <p key={bullet} className="pl-3 py-1 text-lg">
+                <div key={feature.heading}>
+                  <h3 className="font-semibold text-base mb-3">{feature.heading}</h3>
+                  <ul className="flex flex-col gap-2">
+                    {feature.content.map((bullet) => (
+                      <li key={bullet} className="flex gap-3 items-start text-gray-600 text-sm leading-relaxed">
+                        <FaCheckCircle className="text-emerald-500 mt-0.5 shrink-0" size={14} />
                         {bullet}
-                      </p>
-                    </div>
-                  ))}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               ))}
             </div>
           </div>
-          <div className="border flex-1 rounded-md border-gray-200 p-4">
-            <h2 className="font-bold text-xl">Project details</h2>
-            <p className="font-bold">Status: {project.status}</p>
-            <p className="font-bold">Technology:</p>
+        </div>
 
-            <ul>
-              {project.projectDetails.technology.map((tech) => (
-                <li key={tech} className="flex gap-2 items-center mt-2">
-                  <BiCheckCircle /> {tech}
-                </li>
-              ))}
-            </ul>
+        {/* Right — project details card */}
+        <div className="w-full md:w-[260px] shrink-0">
+          <div className="sticky top-6 border border-gray-100 rounded-2xl p-5 shadow-sm bg-white">
+            <h2 className="font-lexend font-bold text-base mb-4">Project Details</h2>
+
+            <div className="mb-4">
+              <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">Status</p>
+              <span className={`text-xs font-semibold px-3 py-1 rounded-full border ${statusStyle(project.status)}`}>
+                {project.status}
+              </span>
+            </div>
+
+            <div>
+              <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">Technologies</p>
+              <div className="flex flex-wrap gap-1.5">
+                {project.projectDetails.technology.map((tech) => (
+                  <span
+                    key={tech}
+                    className="text-xs bg-gray-100 text-gray-700 px-2.5 py-1 rounded-full"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {(project.liveLink || project.repo) && (
+              <div className="mt-5 pt-4 border-t border-gray-100 flex flex-col gap-2">
+                {project.liveLink && (
+                  <a
+                    href={project.liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-sm text-gray-600 hover:text-black transition-colors font-medium"
+                  >
+                    <FaExternalLinkAlt size={12} /> Live Site
+                  </a>
+                )}
+                {project.repo && (
+                  <a
+                    href={project.repo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-sm text-gray-600 hover:text-black transition-colors font-medium"
+                  >
+                    <FaGithub size={14} /> GitHub Repo
+                  </a>
+                )}
+              </div>
+            )}
           </div>
         </div>
       </div>
