@@ -284,7 +284,7 @@ export const myProjects: Project[] = [
   {
     id: 2930028,
     title: "Awada Realestate Group",
-    liveLink: "https://awadagroup.vercel.app/",
+    liveLink: "https://awadagroup.com/",
     repo: null,
     description:
       "In collaboration with the Awada Realestate Group in Ottawa, I designed and built their new real estate website with one focus in mind: the client. This project was to focus on bringing as much value to the end client as possible, giving them all of the tools they will need in order to determine if and when to buy or sell realestate.",
