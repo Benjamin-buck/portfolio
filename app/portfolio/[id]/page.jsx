@@ -48,7 +48,7 @@ const IndividualProjectPage = () => {
   return (
     <div className="mx-4 md:mx-0 mb-16">
       {/* Image gallery modal */}
-      {isModalOpen && (
+      {isModalOpen && project.images?.length && (
         <Modal
           title={`${project.title} — Image Gallery`}
           onClose={() => setIsModalOpen(false)}
@@ -80,10 +80,12 @@ const IndividualProjectPage = () => {
       </button>
 
       {/* Image gallery grid */}
-      <ProjectImages
-        images={project.images}
-        handleClick={() => setIsModalOpen(true)}
-      />
+      {project.images?.length && (
+        <ProjectImages
+          images={project.images}
+          handleClick={() => setIsModalOpen(true)}
+        />
+      )}
 
       {/* Title row */}
       <div className="mt-6 flex flex-wrap items-center gap-3">
@@ -111,12 +113,14 @@ const IndividualProjectPage = () => {
             </button>
           </a>
         )}
-        <button
-          onClick={() => setIsModalOpen(true)}
-          className="flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-200 bg-gray-50 text-sm font-semibold text-gray-600 hover:bg-gray-100 transition-colors duration-150"
-        >
-          <BsImages size={16} /> View Gallery
-        </button>
+        {project.images?.length && (
+          <button
+            onClick={() => setIsModalOpen(true)}
+            className="flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-200 bg-gray-50 text-sm font-semibold text-gray-600 hover:bg-gray-100 transition-colors duration-150"
+          >
+            <BsImages size={16} /> View Gallery
+          </button>
+        )}
       </div>
 
       {/* Main content */}
@@ -156,6 +160,15 @@ const IndividualProjectPage = () => {
                 {project.status}
               </span>
             </div>
+
+            {(project.startDate || project.endDate) && (
+              <div className="mb-4">
+                <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">Timeline</p>
+                <p className="text-sm text-gray-700">
+                  {project.startDate ?? "—"} {project.endDate ? `→ ${project.endDate}` : project.startDate ? "→ Present" : ""}
+                </p>
+              </div>
+            )}
 
             <div>
               <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">Technologies</p>
