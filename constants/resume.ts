@@ -1,145 +1,181 @@
 export const details = {
   name: "Benjamin Alan Buck",
-  address: "280 Sydenham St, Kingston Ontario, Canada",
+  title: "Senior UX / UI Front-end Developer",
+  pronouns: "He / Him",
+  location: "Kingston, ON",
   phone: "(613) 266 - 0369",
-  email: "benjamin@benjaminalan.io",
+  email: "benbuck123@gmail.com",
   links: [
-    { label: "LinkdIn", href: "http://www.google.ca/" },
-    { label: "GitHub", href: "http://www.google.ca/" },
-    { label: "Portfolio", href: "http://www.google.ca/" },
-  ],
-};
-
-export const objective = {
-  title: "Objective",
-  description:
-    "Motivated and detail-oriented Junior Web Developer / Senior Business Analyst with a strong foundation in JavaScript, React, TypeScript, and Next.js, etc. Passionate about building dynamic, user-friendly web applications and with stunning user interfaces eager to contribute to a forward-thinking development team.",
-};
-
-export const technicalSkills = {
-  title: "Technical Skills",
-  skills: [
     {
-      label: "Frontend",
-      description:
-        "React, Next.js,  HTML5, CSS3, JavaScript (ES6+), TypeScript, TailwindCSS, GSAP, Wordpress, Vue.js, grafbase",
+      label: "LinkedIn",
+      href: "https://www.linkedin.com/in/benjamin-alan-buck-466514134/",
     },
     {
-      label: "State Management",
-      description: "Redux, React States, React Context API",
+      label: "GitHub",
+      href: "https://github.com/Benjamin-buck",
     },
     {
-      label: "Backend",
-      description:
-        "Node.js, Express.js, REST APIs, Next-Auth, ASP.NET, Wordpress",
-    },
-    { label: "Databases", description: "MongoDB" },
-    { label: "Version Control", description: "Git, GitHub" },
-    { label: "Deployment", description: " Vercel, Hostinger, Azure etc." },
-    { label: "Testing", description: "React Testing Library" },
-    {
-      label: "Tools",
-      description:
-        "Visual Studio Code, Visual Studio, Postman, Figma, Photoshop, ",
+      label: "benjaminalan.io",
+      href: "https://benjaminalan.io",
     },
   ],
 };
 
-export const experience = {
-  title: "Experience",
-  jobs: [
-    {
-      employer: "Novari Health",
-      location: "Kingston, Ontario",
-      team: "Novari ATC",
-      role: "SCRUM Master | Product Designer",
-      duration: "June 16, 2025 - Present",
-      responsibilities: [],
-    },
-    {
-      employer: "Transport Canada",
-      location: "Ottawa, Ontario",
-      team: "Dynamics 365 Maintenance Team",
-      role: "Senior Business Analyst / SCRUM Master",
-      duration: "September 2023 - June 13, 2025",
-      responsibilities: [
-        "Developed interactive user experience mockups / prototypes to facilitate product enhancements / features.",
-        "Hosted / facilitated all SCRUM ceremonies for each sprint: backlog grooming, requirements gathering, sprint planning, daily standup, sprint review, and sprint retrospectives.",
-        "Worked directly with Product Owners for multiple applications to illicit bugs, groom sprint items, define sprint scope, and prioritize sprint requirements.",
-        "Facilitated technical analysis with our technical advisors to analyze business requirements in order to accurately document and scope of work for development sprints.",
-        "Worked with Quality Assurance teams to ensure testing cases are documented and satisfied for each sprint item.",
-        "Gathered feedback from Sprint Retrospectives and worked with Team Leads to implement solutions to improve development standards.",
-        "Worked alongside development and business clients to plan complex application Production launches (CID & CRS) ",
-        "Worked with Team Leads to coordinate maintenance sprint schedules, timelines, and other project management type activities.",
-        "Completed numerous acting periods as a Team Lead managing multiple software development teams of approximately 15 people (software developers, Quality Assurance, Product Owners, etc).",
-        "Worked with a variety of technologies depending on the application such as Windows Forms, EF 6.0, C#.NET, ASP.NET, VB.NET, SQL, Microsoft Dynamics, etc.",
-      ],
-    },
-    {
-      employer: "Transport Canada",
-      location: "Ottawa, Ontario",
-      team: "TDG Project Team",
-      role: "Business Analyst / UX Designer / SCRUM Master",
-      duration: "January 2020 - September 2023",
-      responsibilities: [
-        "Completed requirement gathering for the Client Identification Database (CID) application which included drafting use cases, high level business requirements documents, functional requirements documents, configuration documentation, etc.",
-        "Worked with developers and product owners to conceptualize, design, and architect the CID application by developing use cases, low fi / high fi mockups, user flow diagrams, data models, and design documentation.",
-        "Facilitation of internal and external meetings with clients and developers to alleviate blockers and answer key business decisions.",
-        "Used Microsoft Azure to create and manage the CID Dev-Ops board containing all backlog items.",
-        "Completed SCRUM Master training with Transport Canada Agile Center of Excellence and acted as a SCRUM coach for Transport Canada development teams.",
-        "Lead project team in all SCRUM ceremonies (Daily Standup, Requirements Gathering, Sprint Planning, Sprint Review, Sprint Retrospective).",
-        "Lead development teams to plan, organize,prioritize, and implement project application features from the high-level business requirements / functional requirements documents.",
-        "Facilitated external user beta testing and recorded feedback for software development applications.",
-        "Completed UAT regression testing and end to end testing of the TDG Core applications.",
-      ],
-    },
-  ],
-};
+export const summary =
+  "Experienced front end user experience / user interface designer / developer with 6+ years of experience in both private and public sector positions. I've led multiple teams in highly regulated industries from product ideation to product delivery while managing both the user experience and technical architecture solution designs to application development.";
 
-export const education = [
+export const experience = [
   {
-    type: "College Diploma",
-    program: "Interactive Media and Design",
-    programUrl:
-      "https://www.algonquincollege.com/mediaanddesign/program/interactive-media-design/",
-    school: "Algonquin College",
+    employer: "Novari Health / VitalHub",
+    location: "Kingston, Ontario",
+    duration: "06/2025 – Present",
     description:
-      "Earned a diploma in web development and graphic design from Algonquin College in August of 2020. Focusing primarily on team leadership, UX / UI / Web development, I learned the fundamentals necessary to lead teams of developers to build high-performing software applications.",
-    coursesCompleted: [
-      "MT6130 - Web Development 1",
-      "MTM6201 - Web Development 2",
-      "MTM6231 - Content Management Systems 1",
-      "MTM6162 - Design Foundations",
-      "MTM6260 - User Experience Design 1",
-      "MTM6302 - Web Development 3",
-      "MTM6306 - User Experience Design 2",
-      "MTM6303 - Content Management Systems 2",
-      "MTM6404 - Web Applications",
-      "MTM6407 - Web Development 4",
+      "Novari Health is a Canadian-based healthcare technology company that designs and implements cloud-based software to improve access to care, manage surgical waitlists, and streamline referrals. Acquired by VitalHub Corp in 2025, their platform acts as a digital 'air traffic control' for patient flow, helping hospitals and governments manage surgical wait times and central intake.",
+    roles: [
+      {
+        title: "Product Designer / SCRUM Master",
+        type: "Full-time",
+        summary:
+          "Led the Novari ATC Product Development Team to reconceptualize and rebuild the legacy Waitlist Management Application (Novari ATC) from ColdFusion to a modern React, .NET Web API first application from the ground up, while maintaining backwards compatibility throughout the project.",
+        bullets: [
+          "Facilitated all project Agile SCRUM ceremonies, and reported results to upper management.",
+          "Developed a comprehensive front-end Figma design system, user experience mockups, and high fidelity responsive functional prototypes.",
+          "Led key architectural, technical, and implementation decisions in both backend (.NET Web API) / front-end (React + BFF) decisions.",
+          "Managed the complete Novari ATC Legacy and Novari ATC Rebuild product backlog, working with product owners and technical leads to organize, plan, prioritize, and deliver according to product roadmaps.",
+          "Led critical meetings with Novari ATC clients to facilitate requirements gathering, workflow analysis, and product delivery.",
+        ],
+      },
     ],
   },
   {
-    type: "Self Learning",
-    program: "",
-    programUrl:
-      "https://www.algonquincollege.com/mediaanddesign/program/interactive-media-design/",
-    school: "React / Next.js / Typescript / Web Development",
+    employer: "Transport Canada",
+    location: "Ottawa",
+    duration: "01/2020 – Present",
     description:
-      "Completed various self-learning courses to enhance my skills and abilities.",
-    coursesCompleted: [
-      "Code With Mosh - React 18 for Beginners",
-      "Code With Mosh - React Intermediate Topics",
-      "Code With Mosh - The Ultimate Next.Js Series",
-      "Code With Mosh - Mastering Next.js 13 with Typescript",
-      "Code With Mosh - Next.js Projects: Build an issue tracker",
+      "Transport Canada is the federal department responsible for developing and enforcing transportation policies and regulations to ensure a safe, secure, efficient, and environmentally responsible transportation system in Canada.",
+    roles: [
+      {
+        title: "IT / Business Analyst / SCRUM Master (Maintenance Team)",
+        type: "Full-time",
+        summary:
+          "As a Business Analyst / Scrum Master, I facilitate the successful delivery of software development projects by combining business analysis expertise with Agile leadership. I work closely with stakeholders to elicit, analyze, and document business requirements, translating them into actionable user stories and sprint materials. I work closely with our development team to solve problems and ensure the smooth delivery of well tested, industry level software for use in production.",
+        bullets: [
+          "Facilitated all agile SCRUM ceremonies (backlog grooming, sprint planning, daily standups, sprint retrospectives, sprint review).",
+          "Worked closely with Transport Canada business units to elicit application requirements and provide improvements to already existing business processes.",
+          "Worked with our development team to strategically plan and successfully execute challenging production developments which involves coordinating with many individuals and procedures.",
+        ],
+      },
+      {
+        title: "Business Analyst / User Experience Designer (Project Team)",
+        type: null,
+        summary:
+          "Led the development team as a Business Analyst on a brand-new Transport Canada application.",
+        bullets: [
+          "Worked with Business to document the application's high level business requirements document.",
+        ],
+      },
+      {
+        title: "Co-op Student",
+        type: null,
+        summary:
+          "Worked with the Transportation of Dangerous Goods development team as a user experience / user interface designer on the Regulatory Oversight Management (ROM) application.",
+        bullets: [],
+      },
     ],
   },
 ];
 
+export const projects = [
+  {
+    title: "Waitlist Scheduling",
+    client: "Novari ATC",
+    duration: "06/2025 – Present",
+    description:
+      "Designed and lead development teams on a legacy software product application re-write from ColdFusion into .NET / React.",
+    link: null,
+  },
+  {
+    title: "Band Account",
+    client: "Personal Project",
+    duration: "01/2026 – Present",
+    description:
+      "Designed and developed a full stack band management application including user registration, payment integration, band member invitations, dashboards, task management, song writing tools, setlist organization tools, contact relationship management system, and more.",
+    link: "https://www.bandaccount.com/",
+  },
+  {
+    title: "Real Estate Platform",
+    client: "Awada Group",
+    duration: "01/2025 – 08/2025",
+    description:
+      "Developed a full stack real estate platform for the Awada Group of Realtors. Integrates directly with the MLS, user authentication, contact forms integrated directly with BoldTrail CRM, saving listings, and more.",
+    link: null,
+  },
+  {
+    title: "Storible Website",
+    client: "The Storible Company",
+    duration: "01/2026 – 02/2026",
+    description:
+      "Built and implemented a full stack WordPress application for The Storible Company. Took the project from initial requirements, development, approval, and deployment of the website.",
+    link: null,
+  },
+];
+
+export const education = [
+  {
+    degree: "College Diploma in Interactive Media and Design",
+    school: "Algonquin College",
+    programUrl:
+      "https://www.algonquincollege.com/mediaanddesign/program/interactive-media-design/",
+    description:
+      "Earned a diploma in web development and graphic design from Algonquin College. Focused primarily on team leadership, UX / UI / Web development, and learned the fundamentals necessary to lead teams of developers to build high-performing software applications.",
+  },
+];
+
 export const skills = [
-  "Strong problem-solving skills and attention to detail.",
-  "Excellent communication and teamwork abilities.",
-  "Eager to learn new technologies and frameworks. Can pick up new knowledge quickly and efficiently.",
-  "Ability to work in Agile development environments.",
-  "Excellent visual design skills.",
+  "Agile",
+  "API Design",
+  "APIs",
+  "Azure DevOps",
+  "CI/CD",
+  "C#.NET",
+  "Code Review",
+  "Collaborative",
+  "Cross-functionality",
+  "CRUD",
+  "CSS3",
+  "Deployment",
+  "DevOps",
+  "EF 6.0",
+  "Figma",
+  "Git",
+  "GitHub",
+  "GSAP",
+  "HTML5",
+  "JavaScript (ES6+)",
+  "JavaScript Frameworks",
+  "Jest",
+  "Microsoft Dynamics",
+  "Next.js",
+  "Node.js",
+  "Photoshop",
+  "PostgreSQL",
+  "Postman",
+  "QA Testing",
+  "Quality Assurance",
+  "React",
+  "React Testing Library",
+  "Redux",
+  "SCRUM",
+  "SQL",
+  "TailwindCSS",
+  "Testing Automation",
+  "TypeScript",
+  "User Experience Design",
+  "User Interface Design",
+  "Vercel",
+  "Version Control",
+  "Visual Design",
+  "Visual Studio",
+  "Visual Studio Code",
+  "WordPress",
 ];

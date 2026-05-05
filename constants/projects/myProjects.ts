@@ -1,45 +1,193 @@
-export const myProjects = [
+interface Project {
+  id: number;
+  title: string;
+  liveLink: string;
+  repo?: string | null;
+  description: string;
+  status: string;
+  thumbnail: string;
+  images: { image: string; label: string }[];
+  features: { heading: string; content: string[] }[];
+  projectDetails: { technology: string[] };
+}
+
+export const myProjects: Project[] = [
+  // {
+  //   id: 9,
+  //   title: "Humane Society",
+  //   liveLink: "https://humanesociety-sigma.vercel.app/",
+  //   repo: null,
+  //   description:
+  //     "This project was created to showcase a full-stack application geared towards Animal Shelters in order to facilitate the foster / adoption process of applications. The project aims to have a fully functional back-end / database to store animals, integrate a seamless adoption application process, and allow shelter employees to enter and process shelter animals.",
+  //   status: "In Progress",
+  //   thumbnail: "https://i.gyazo.com/4caca7c49689c5ac66aebecc2d8c17fe.jpg",
+  //   images: [
+  //     {
+  //       image: "https://i.gyazo.com/4caca7c49689c5ac66aebecc2d8c17fe.jpg",
+  //       label: "Humane Society - Landing Page",
+  //     },
+  //     {
+  //       image: "https://i.gyazo.com/be2ecb5bff8fc6cd86f58663d636031c.jpg",
+  //       label: "Humane Society - Landing Page",
+  //     },
+  //     {
+  //       image: "https://i.gyazo.com/13a01cfc3b96421bd9e4db79aac43aa5.jpg",
+  //       label: "Humane Society - Adopt",
+  //     },
+  //     {
+  //       image: "https://placehold.co/600x400.png",
+  //       label: "TBD",
+  //     },
+  //     {
+  //       image: "https://placehold.co/600x400.png",
+  //       label: "TBD",
+  //     },
+  //   ],
+  //   features: [
+  //     {
+  //       heading: "Stunning Front End Interface",
+  //       content: [
+  //         "Beautifully designed / thought out user experience / user interface.",
+  //       ],
+  //     },
+  //   ],
+  //   projectDetails: {
+  //     technology: ["Next.js", "React"],
+  //   },
+  // },
   {
     id: 9,
-    title: "Humane Society",
-    liveLink: "https://humanesociety-sigma.vercel.app/",
+    title: "Band Account",
+    liveLink: "https://bandaccount.com/",
     repo: null,
     description:
-      "This project was created to showcase a full-stack application geared towards Animal Shelters in order to facilitate the foster / adoption process of applications. The project aims to have a fully functional back-end / database to store animals, integrate a seamless adoption application process, and allow shelter employees to enter and process shelter animals.",
-    status: "In Progress",
-    thumbnail: "https://i.gyazo.com/4caca7c49689c5ac66aebecc2d8c17fe.jpg",
+      "The Band Account app was built with a simple purpose: to make managing a band easier so that musicians can focus on what they do best. This application was developed as a SaaS application and is live in production with real users and bands that rely on it for their management needs. This application was conceptualized, architected, developed, tested, and deplyed as a solo project with lots of love and care at every step of the way. Band Account was built with an API first approach, and has been accompanied by an iOS and Android dedicated mobile application that consumes the same APIs for a seamless experience across all platforms.",
+    status: "Done",
+    thumbnail: "bandaccount-1.png",
     images: [
       {
-        image: "https://i.gyazo.com/4caca7c49689c5ac66aebecc2d8c17fe.jpg",
-        label: "Humane Society - Landing Page",
+        image: "/bandaccount-1.png",
+        label: "Awada Group - Landing Page",
       },
       {
-        image: "https://i.gyazo.com/be2ecb5bff8fc6cd86f58663d636031c.jpg",
-        label: "Humane Society - Landing Page",
+        image: "/bandaccount-3.png",
+        label: "Band Account Login Page",
       },
       {
-        image: "https://i.gyazo.com/13a01cfc3b96421bd9e4db79aac43aa5.jpg",
-        label: "Humane Society - Adopt",
+        image: "/bandaccount-4.png",
+        label: "Awada Group - Highlights",
       },
       {
-        image: "https://placehold.co/600x400.png",
-        label: "TBD",
+        image: "/bandaccount-5.png",
+        label: "Awada Group - Home Appraisal Tool",
       },
       {
-        image: "https://placehold.co/600x400.png",
-        label: "TBD",
+        image: "/bandaccount-6.png",
+        label: "Awada Group - Home Appraisal Tool",
       },
     ],
     features: [
       {
-        heading: "Stunning Front End Interface",
+        heading: "Shared Calendar",
         content: [
-          "Beautifully designed / thought out user experience / user interface.",
+          "Schedule rehearsals, shows, and meetings in one shared band calendar.",
+          "RSVP tracking so you always know who's coming.",
+        ],
+      },
+      {
+        heading: "Setlist Manager",
+        content: [
+          "Build and reorder setlists with drag-and-drop.",
+          "Attach notes per song per show.",
+          "Print your setlists once you're happy with them.",
+        ],
+      },
+      {
+        heading: "Song Library",
+        content: [
+          "Store your full catalogue with audio files, lyrics, tabs, BPM, and key information.",
+          "Link songs to setlists and shows for easy access on the road.",
+          "Audio uploads up to 100 MB per file.",
+        ],
+      },
+      {
+        heading: "Show & Gig Management",
+        content: [
+          "Track venues, guarantees, set times, and setlists for every gig past and present.",
+        ],
+      },
+      {
+        heading: "Band Chat",
+        content: [
+          "Real-time channels with @mentions, unread highlights, and notifications so nothing gets missed.",
+          "Message persistence and email notifications keep the whole band in sync.",
+        ],
+      },
+      {
+        heading: "Task Board",
+        content: [
+          "Five-column Kanban board with drag-and-drop functionality.",
+          "Priorities, assignees, due dates, labels, attachments, and comments on every task.",
+          "Filter and search across all tasks.",
+        ],
+      },
+      {
+        heading: "Member Management",
+        content: [
+          "Invite band members via a shareable link.",
+          "Assign Admin or Member roles with different permission sets.",
+          "See who's in the band at a glance.",
+        ],
+      },
+      {
+        heading: "Finance Tracker",
+        content: [
+          "Log income and expenses, track guarantees, and keep your band's finances transparent.",
+        ],
+      },
+      {
+        heading: "Native Ticketing",
+        content: [
+          "Sell tickets directly from your show page — no third-party platform.",
+          "Multiple ticket types with Stripe integration (2.5% fee).",
+          "QR codes, browser-based door scanner, and a full sales dashboard.",
+          "Revenue goes straight to your bank.",
+        ],
+      },
+      {
+        heading: "Show Marketplace",
+        content: [
+          "Post and browse gig opportunities.",
+          "Connect with promoters and find support slots.",
+        ],
+      },
+      {
+        heading: "Stage Plots & Tech Riders",
+        content: [
+          "Create and manage your stage plot and tech rider.",
+          "Share with venues and update as your setup evolves.",
+        ],
+      },
+      {
+        heading: "And a lot more",
+        content: [
+          "Smart notifications, tour planning, and public links page.",
+          "Social feed, band profiles, and direct messaging.",
+          "File attachments, @mentions, and real-time updates throughout.",
         ],
       },
     ],
     projectDetails: {
-      technology: ["Next.js", "React"],
+      technology: [
+        "Next.js",
+        "React",
+        "PostgreSQL",
+        "Prisma",
+        "Stripe API",
+        "Vercel",
+        "Expo",
+        "React Native",
+      ],
     },
   },
   {
@@ -50,7 +198,7 @@ export const myProjects = [
     description:
       "In collaboration with the Awada Realestate Group in Ottawa, I designed and built their new real estate website with one focus in mind: the client. This project was to focus on bringing as much value to the end client as possible, giving them all of the tools they will need in order to determine if and when to buy or sell realestate.",
     status: "Done",
-    thumbnail: "https://i.gyazo.com/fdbf1b018b7d951a07355f27f629347c.jpg",
+    thumbnail: "/awadagroup-1.png",
     images: [
       {
         image: "https://i.gyazo.com/fdbf1b018b7d951a07355f27f629347c.jpg",
@@ -189,72 +337,73 @@ export const myProjects = [
   // },
 
   // 2
-  {
-    id: 1,
-    title: "The Apex Labs",
-    liveLink: "https://nexdev-silk.vercel.app/",
-    repo: "https://github.com/Benjamin-buck/nexdev",
-    description:
-      "The NexDev Agency Web Application is a modern, responsive website built using Next.js, designed to showcase the agency’s expertise, services, and portfolio. The application features a sleek, user-friendly landing page and includes several additional static and dynamic pages to provide a comprehensive online presence for the agency.",
-    status: "In Progress",
-    thumbnail:
-      "https://zor0pdp300.ufs.sh/f/WhvLxAaX5BHQ1LRJ1roWVw79szU8ZQuM4jalqn0PdARkfNrG",
-    images: [
-      {
-        image: "https://i.gyazo.com/96a95298a0b4a60de972a0a0bb900639.png",
-        label: "Landing Page",
-      },
-      {
-        image: "https://i.gyazo.com/f71593715098c809c96a345132383e38.jpg",
-        label: "See through sticky navigation bar",
-      },
-      {
-        image: "https://i.gyazo.com/aa8fd479cf4625ba0e0442406e291bd8.jpg",
-        label: "Bento Grid",
-      },
-      {
-        image: "https://i.gyazo.com/908ff189ac8967badae476084980a1a0.png",
-        label: "Testimonials & Footer",
-      },
-      {
-        image: "https://i.gyazo.com/dc9c070be98df74ea95dd5c4d3c52f25.png",
-        label: "Get a Quote form",
-      },
-    ],
-    features: [
-      {
-        heading: "Beautiful Landing Page UI",
-        content: [
-          "A beautifully designed homepage that highlights the agency’s vision, mission, and key services.",
-          "Engaging, interactive elements that captivate visitors.",
-          "Clear call-to-action (CTA) buttons encouraging user engagement and lead generation.",
-          "Smooth animations and transitions to enhance user experience.",
-        ],
-      },
-      {
-        heading: "Static Pages",
-        content: [
-          "A well-structured About Us page detailing the agency’s background, values, and team members.",
-          "A dedicated Services page outlining the various offerings, with a focus on the quality and impact of each service.",
-          "A Portfolio page that showcases the agency’s completed projects, demonstrating the agency’s experience and expertise across various industries.",
-          "Contact page with a dynamic form for inquiries and potential client interactions.",
-        ],
-      },
-    ],
-    projectDetails: {
-      status: "In Progress",
-      technology: ["Next.js", "React", "Express"],
-    },
-  },
+  // {
+  //   id: 1,
+  //   title: "The Apex Labs",
+  //   liveLink: "https://nexdev-silk.vercel.app/",
+  //   repo: "https://github.com/Benjamin-buck/nexdev",
+  //   description:
+  //     "The NexDev Agency Web Application is a modern, responsive website built using Next.js, designed to showcase the agency’s expertise, services, and portfolio. The application features a sleek, user-friendly landing page and includes several additional static and dynamic pages to provide a comprehensive online presence for the agency.",
+  //   status: "In Progress",
+  //   thumbnail:
+  //     "https://zor0pdp300.ufs.sh/f/WhvLxAaX5BHQ1LRJ1roWVw79szU8ZQuM4jalqn0PdARkfNrG",
+  //   images: [
+  //     {
+  //       image: "https://i.gyazo.com/96a95298a0b4a60de972a0a0bb900639.png",
+  //       label: "Landing Page",
+  //     },
+  //     {
+  //       image: "https://i.gyazo.com/f71593715098c809c96a345132383e38.jpg",
+  //       label: "See through sticky navigation bar",
+  //     },
+  //     {
+  //       image: "https://i.gyazo.com/aa8fd479cf4625ba0e0442406e291bd8.jpg",
+  //       label: "Bento Grid",
+  //     },
+  //     {
+  //       image: "https://i.gyazo.com/908ff189ac8967badae476084980a1a0.png",
+  //       label: "Testimonials & Footer",
+  //     },
+  //     {
+  //       image: "https://i.gyazo.com/dc9c070be98df74ea95dd5c4d3c52f25.png",
+  //       label: "Get a Quote form",
+  //     },
+  //   ],
+  //   features: [
+  //     {
+  //       heading: "Beautiful Landing Page UI",
+  //       content: [
+  //         "A beautifully designed homepage that highlights the agency’s vision, mission, and key services.",
+  //         "Engaging, interactive elements that captivate visitors.",
+  //         "Clear call-to-action (CTA) buttons encouraging user engagement and lead generation.",
+  //         "Smooth animations and transitions to enhance user experience.",
+  //       ],
+  //     },
+  //     {
+  //       heading: "Static Pages",
+  //       content: [
+  //         "A well-structured About Us page detailing the agency’s background, values, and team members.",
+  //         "A dedicated Services page outlining the various offerings, with a focus on the quality and impact of each service.",
+  //         "A Portfolio page that showcases the agency’s completed projects, demonstrating the agency’s experience and expertise across various industries.",
+  //         "Contact page with a dynamic form for inquiries and potential client interactions.",
+  //       ],
+  //     },
+  //   ],
+  //   projectDetails: {
+  //     status: "In Progress",
+  //     technology: ["Next.js", "React", "Express"],
+  //   },
+  // },
 
   // 3
   {
     id: 6,
     title: "Transport Canada",
     liveLink: "https://tc.canada.ca/en",
+    repo: null,
     description:
-      "I've been employed and working with Transport Canada on-going for the past 5 years on various IT infrastructure and software development projects.",
-    status: "On Going",
+      "I was employed and working with Transport Canada on-going for the past 5 years on various IT infrastructure and software development projects.",
+    status: "Done",
     thumbnail:
       "https://canadianaviator.com/wp-content/uploads/2022/10/TCCA.jpg",
     images: [
@@ -323,263 +472,263 @@ export const myProjects = [
     },
   },
 
-  {
-    id: 7,
-    title: "Bugs.io",
-    liveLink: "",
-    repo: "",
-    description:
-      "A full stack application designed to log system bugs, modify the details / title of the issues, and assign it to users. This app features full authentication, full CRUD functionality for adding, modifying, and deleting issues, etc.",
-    status: "Done",
-    thumbnail: "https://i.gyazo.com/48065c306526f4d9e4a81c035b15bd0d.png",
-    images: [
-      {
-        image: "https://i.gyazo.com/dd658e5ced68879cb9b67d598a4d08dd.png",
-        label: "Github Landing Page",
-      },
-      {
-        image: "https://i.gyazo.com/86120e2a5fc70086731abb9da633ae97.png",
-        label: "Github Landing Page part 2",
-      },
-      {
-        image: "https://i.gyazo.com/dfe619a3bf9a049a466d2f721c535130.png",
-        label: "Footer",
-      },
-      {
-        image: "https://i.gyazo.com/550ffe427d38529a1568d34a5f402ef6.png",
-        label: "Github Internal Dashboard",
-      },
-      {
-        image: "https://i.gyazo.com/2af947a61e635446a5efc06b037130d8.png",
-        label: "Account page",
-      },
-    ],
-    features: [
-      {
-        heading: "User Authentication / Management",
-        content: [
-          "Utilizes authentication providers (google) to authenticate and manage application users.",
-          "Allows for users to assign bugs / issues to either themselves or other users.",
-        ],
-      },
-      {
-        heading: "Responsive & Optimized Performance",
-        content: [
-          "Fully responsive design ensuring a seamless experience across all devices.",
-          "Optimized for speed and performance, ensuring fast load times.",
-          "Accessibility-friendly design following WCAG guidelines.",
-        ],
-      },
-      {
-        heading: "Static Pages",
-        content: [
-          "Well structured static pages with interactive menus and navigation",
-          "Well structured HTML and beaitufully styled with Tailwind CSS",
-        ],
-      },
-    ],
-    projectDetails: {
-      technology: ["Next.js", "Tailwind CSS", "GSAP", "Vercel"],
-    },
-  },
+  // {
+  //   id: 7,
+  //   title: "Bugs.io",
+  //   liveLink: "",
+  //   repo: "",
+  //   description:
+  //     "A full stack application designed to log system bugs, modify the details / title of the issues, and assign it to users. This app features full authentication, full CRUD functionality for adding, modifying, and deleting issues, etc.",
+  //   status: "Done",
+  //   thumbnail: "https://i.gyazo.com/48065c306526f4d9e4a81c035b15bd0d.png",
+  //   images: [
+  //     {
+  //       image: "https://i.gyazo.com/dd658e5ced68879cb9b67d598a4d08dd.png",
+  //       label: "Github Landing Page",
+  //     },
+  //     {
+  //       image: "https://i.gyazo.com/86120e2a5fc70086731abb9da633ae97.png",
+  //       label: "Github Landing Page part 2",
+  //     },
+  //     {
+  //       image: "https://i.gyazo.com/dfe619a3bf9a049a466d2f721c535130.png",
+  //       label: "Footer",
+  //     },
+  //     {
+  //       image: "https://i.gyazo.com/550ffe427d38529a1568d34a5f402ef6.png",
+  //       label: "Github Internal Dashboard",
+  //     },
+  //     {
+  //       image: "https://i.gyazo.com/2af947a61e635446a5efc06b037130d8.png",
+  //       label: "Account page",
+  //     },
+  //   ],
+  //   features: [
+  //     {
+  //       heading: "User Authentication / Management",
+  //       content: [
+  //         "Utilizes authentication providers (google) to authenticate and manage application users.",
+  //         "Allows for users to assign bugs / issues to either themselves or other users.",
+  //       ],
+  //     },
+  //     {
+  //       heading: "Responsive & Optimized Performance",
+  //       content: [
+  //         "Fully responsive design ensuring a seamless experience across all devices.",
+  //         "Optimized for speed and performance, ensuring fast load times.",
+  //         "Accessibility-friendly design following WCAG guidelines.",
+  //       ],
+  //     },
+  //     {
+  //       heading: "Static Pages",
+  //       content: [
+  //         "Well structured static pages with interactive menus and navigation",
+  //         "Well structured HTML and beaitufully styled with Tailwind CSS",
+  //       ],
+  //     },
+  //   ],
+  //   projectDetails: {
+  //     technology: ["Next.js", "Tailwind CSS", "GSAP", "Vercel"],
+  //   },
+  // },
 
   // 4
-  {
-    id: 4,
-    title: "GitHub User Interface Clone",
-    liveLink: "https://github.benjaminalan.io",
-    repo: "https://github.com/Benjamin-buck/github-clone",
-    description:
-      "A clone of the popular user interface. This project aimed to challenge my skills at building complex user interfaces. The clone features a full landing page and additional internal pages once the 'Sign in' button is selected.",
-    status: "Done",
-    thumbnail:
-      "https://kinsta.com/wp-content/uploads/2018/04/what-is-github-1-1-1024x512.png",
-    images: [
-      {
-        image: "https://i.gyazo.com/9b6b1da8c74d42a72eb7d062cffc4783.png",
-        label: "Github Landing Page",
-      },
-      {
-        image: "https://i.gyazo.com/616b5ad07206a688836cf4dde9a62676.jpg",
-        label: "Github Landing Page part 2",
-      },
-      {
-        image: "https://i.gyazo.com/65385053f867ce111fb90599f17b573b.png",
-        label: "Footer",
-      },
-      {
-        image: "https://i.gyazo.com/2e14f96e0862f51657b0a4a4fcddf4df.png",
-        label: "Github Internal Dashboard",
-      },
-      {
-        image: "https://i.gyazo.com/f705cf836d5204d1664a693f829d4bc0.png",
-        label: "Account page",
-      },
-      {
-        image: "https://i.gyazo.com/bfd32b1ba380731f7da124a579708a51.png",
-        label: "Issues page",
-      },
-    ],
-    features: [
-      {
-        heading: "Pixel Perfect Landing Page Clone",
-        content: [
-          "Features a pixel perfect clone of the official GitHub website landing page.",
-        ],
-      },
-      {
-        heading: "Responsive & Optimized Performance",
-        content: [
-          "Fully responsive design ensuring a seamless experience across all devices.",
-          "Optimized for speed and performance, ensuring fast load times.",
-          "Accessibility-friendly design following WCAG guidelines.",
-        ],
-      },
-      {
-        heading: "Static Pages",
-        content: [
-          "Well structured static pages with interactive menus and navigation",
-          "Well structured HTML and beaitufully styled with Tailwind CSS",
-        ],
-      },
-    ],
-    projectDetails: {
-      technology: ["Next.js", "Tailwind CSS", "GSAP", "Vercel"],
-    },
-  },
+  // {
+  //   id: 4,
+  //   title: "GitHub User Interface Clone",
+  //   liveLink: "https://github.benjaminalan.io",
+  //   repo: "https://github.com/Benjamin-buck/github-clone",
+  //   description:
+  //     "A clone of the popular user interface. This project aimed to challenge my skills at building complex user interfaces. The clone features a full landing page and additional internal pages once the 'Sign in' button is selected.",
+  //   status: "Done",
+  //   thumbnail:
+  //     "https://kinsta.com/wp-content/uploads/2018/04/what-is-github-1-1-1024x512.png",
+  //   images: [
+  //     {
+  //       image: "https://i.gyazo.com/9b6b1da8c74d42a72eb7d062cffc4783.png",
+  //       label: "Github Landing Page",
+  //     },
+  //     {
+  //       image: "https://i.gyazo.com/616b5ad07206a688836cf4dde9a62676.jpg",
+  //       label: "Github Landing Page part 2",
+  //     },
+  //     {
+  //       image: "https://i.gyazo.com/65385053f867ce111fb90599f17b573b.png",
+  //       label: "Footer",
+  //     },
+  //     {
+  //       image: "https://i.gyazo.com/2e14f96e0862f51657b0a4a4fcddf4df.png",
+  //       label: "Github Internal Dashboard",
+  //     },
+  //     {
+  //       image: "https://i.gyazo.com/f705cf836d5204d1664a693f829d4bc0.png",
+  //       label: "Account page",
+  //     },
+  //     {
+  //       image: "https://i.gyazo.com/bfd32b1ba380731f7da124a579708a51.png",
+  //       label: "Issues page",
+  //     },
+  //   ],
+  //   features: [
+  //     {
+  //       heading: "Pixel Perfect Landing Page Clone",
+  //       content: [
+  //         "Features a pixel perfect clone of the official GitHub website landing page.",
+  //       ],
+  //     },
+  //     {
+  //       heading: "Responsive & Optimized Performance",
+  //       content: [
+  //         "Fully responsive design ensuring a seamless experience across all devices.",
+  //         "Optimized for speed and performance, ensuring fast load times.",
+  //         "Accessibility-friendly design following WCAG guidelines.",
+  //       ],
+  //     },
+  //     {
+  //       heading: "Static Pages",
+  //       content: [
+  //         "Well structured static pages with interactive menus and navigation",
+  //         "Well structured HTML and beaitufully styled with Tailwind CSS",
+  //       ],
+  //     },
+  //   ],
+  //   projectDetails: {
+  //     technology: ["Next.js", "Tailwind CSS", "GSAP", "Vercel"],
+  //   },
+  // },
 
   // 5
-  {
-    id: 3,
-    title: "Serenity Landscaping",
-    liveLink: "https://serenity-sage.vercel.app/",
-    repo: "https://github.com/Benjamin-buck/serenity",
-    description:
-      "A modern, visually appealing website built with Next.js for Serenity Landscaping, showcasing services, past projects, and a seamless user experience.",
-    status: "Done",
-    thumbnail: "https://i.gyazo.com/0a4ba76ed713171d0e1cab17b182d8ef.png",
-    images: [
-      {
-        image: "https://i.gyazo.com/f350331f4bba6ff4c10378ea0f600ddd.jpg",
-        label: "Landing Page",
-      },
-      {
-        image: "https://i.gyazo.com/f844556434c45d44a93d1bc60b2b79c8.jpg",
-        label: "See through sticky navigation bar",
-      },
-      {
-        image: "https://i.gyazo.com/32ffa45f1c68056c4321eee6151c6721.png",
-        label: "Bento Grid",
-      },
-      {
-        image: "https://i.gyazo.com/0dec32610272e33fa19d45707ef10167.jpg",
-        label: "Testimonials & Footer",
-      },
-      {
-        image: "https://i.gyazo.com/42d05671c0aab94cd1f7fc031c7fa8f6.png",
-        label: "Get a Quote form",
-      },
-    ],
-    features: [
-      {
-        heading: "Beautiful Landing Page UI",
-        content: [
-          "A beautifully designed homepage that highlights the agency’s vision, mission, and key services.",
-          "Engaging, interactive elements that captivate visitors.",
-          "Clear call-to-action (CTA) buttons encouraging user engagement and lead generation.",
-          "Smooth animations and transitions to enhance user experience.",
-        ],
-      },
-      {
-        heading: "Responsive & Optimized Performance",
-        content: [
-          "Fully responsive design ensuring a seamless experience across all devices.",
-          "Optimized for speed and performance, ensuring fast load times.",
-          "Accessibility-friendly design following WCAG guidelines.",
-        ],
-      },
-      {
-        heading: "Static Pages",
-        content: [
-          "A well-structured About Us page detailing the agency’s background, values, and team members.",
-          "A dedicated Services page outlining the various offerings, with a focus on the quality and impact of each service.",
-          "A Portfolio page that showcases the agency’s completed projects, demonstrating the agency’s experience and expertise across various industries.",
-          "Contact page with a dynamic form for inquiries and potential client interactions.",
-        ],
-      },
-    ],
-    projectDetails: {
-      technology: ["Next.js", "Tailwind CSS", "GSAP", "Vercel"],
-    },
-  },
+  // {
+  //   id: 3,
+  //   title: "Serenity Landscaping",
+  //   liveLink: "https://serenity-sage.vercel.app/",
+  //   repo: "https://github.com/Benjamin-buck/serenity",
+  //   description:
+  //     "A modern, visually appealing website built with Next.js for Serenity Landscaping, showcasing services, past projects, and a seamless user experience.",
+  //   status: "Done",
+  //   thumbnail: "https://i.gyazo.com/0a4ba76ed713171d0e1cab17b182d8ef.png",
+  //   images: [
+  //     {
+  //       image: "https://i.gyazo.com/f350331f4bba6ff4c10378ea0f600ddd.jpg",
+  //       label: "Landing Page",
+  //     },
+  //     {
+  //       image: "https://i.gyazo.com/f844556434c45d44a93d1bc60b2b79c8.jpg",
+  //       label: "See through sticky navigation bar",
+  //     },
+  //     {
+  //       image: "https://i.gyazo.com/32ffa45f1c68056c4321eee6151c6721.png",
+  //       label: "Bento Grid",
+  //     },
+  //     {
+  //       image: "https://i.gyazo.com/0dec32610272e33fa19d45707ef10167.jpg",
+  //       label: "Testimonials & Footer",
+  //     },
+  //     {
+  //       image: "https://i.gyazo.com/42d05671c0aab94cd1f7fc031c7fa8f6.png",
+  //       label: "Get a Quote form",
+  //     },
+  //   ],
+  //   features: [
+  //     {
+  //       heading: "Beautiful Landing Page UI",
+  //       content: [
+  //         "A beautifully designed homepage that highlights the agency’s vision, mission, and key services.",
+  //         "Engaging, interactive elements that captivate visitors.",
+  //         "Clear call-to-action (CTA) buttons encouraging user engagement and lead generation.",
+  //         "Smooth animations and transitions to enhance user experience.",
+  //       ],
+  //     },
+  //     {
+  //       heading: "Responsive & Optimized Performance",
+  //       content: [
+  //         "Fully responsive design ensuring a seamless experience across all devices.",
+  //         "Optimized for speed and performance, ensuring fast load times.",
+  //         "Accessibility-friendly design following WCAG guidelines.",
+  //       ],
+  //     },
+  //     {
+  //       heading: "Static Pages",
+  //       content: [
+  //         "A well-structured About Us page detailing the agency’s background, values, and team members.",
+  //         "A dedicated Services page outlining the various offerings, with a focus on the quality and impact of each service.",
+  //         "A Portfolio page that showcases the agency’s completed projects, demonstrating the agency’s experience and expertise across various industries.",
+  //         "Contact page with a dynamic form for inquiries and potential client interactions.",
+  //       ],
+  //     },
+  //   ],
+  //   projectDetails: {
+  //     technology: ["Next.js", "Tailwind CSS", "GSAP", "Vercel"],
+  //   },
+  // },
 
   // 6
-  {
-    id: 5,
-    title: "Nike Landing Page Clone",
-    liveLink: "https://nike.benjaminalan.io",
-    repo: "https://github.com/Benjamin-buck/Nike-Clone",
-    description:
-      "A user interface clone of the popular show brand 'Nike'. This project features a beautiful and responsive clone of the Nike landing page UI.",
-    status: "Done",
-    thumbnail:
-      "https://res.cloudinary.com/dmubfrefi/image/private/s--OPpDHsl3--/c_crop,h_2728,w_4090,x_334,y_0/c_scale,w_3840/f_auto/q_auto/v1/dee-about-cms-prod-medias/cf68f541-fc92-4373-91cb-086ae0fe2f88/002-nike-logos-swoosh-white.jpg?_a=BAAAV6Bs",
-    images: [
-      {
-        image: "https://i.gyazo.com/2837f5419e9f6e8b66a5d5a3ff1f0172.jpg",
-        label: "Hero",
-      },
-      {
-        image: "https://i.gyazo.com/30361be1d415fb2b9de16713ee919534.png",
-        label: "Products",
-      },
-      {
-        image: "https://i.gyazo.com/f14032f9d780e13934a8e8d7ae84e6b1.jpg",
-        label: "Product Showcase",
-      },
-      {
-        image: "https://i.gyazo.com/0d135460ec506b935eec1cce1d964c98.jpg",
-        label: "Showcase section",
-      },
-      {
-        image: "https://i.gyazo.com/f3beedc8b5cfc752b64303c9e7ecb872.png",
-        label: "Testimonials",
-      },
-      {
-        image: "https://i.gyazo.com/c846a69ebf8a42d7ddbf5a5a154ae29d.png",
-        label: "Footer",
-      },
-    ],
-    features: [
-      {
-        heading: "Beautiful Landing Page UI",
-        content: [
-          "A beautifully designed homepage that highlights the agency’s vision, mission, and key services.",
-          "Engaging, interactive elements that captivate visitors.",
-          "Clear call-to-action (CTA) buttons encouraging user engagement and lead generation.",
-          "Smooth animations and transitions to enhance user experience.",
-        ],
-      },
-      {
-        heading: "Responsive & Optimized Performance",
-        content: [
-          "Fully responsive design ensuring a seamless experience across all devices.",
-          "Optimized for speed and performance, ensuring fast load times.",
-          "Accessibility-friendly design following WCAG guidelines.",
-        ],
-      },
-      {
-        heading: "Static Pages",
-        content: [
-          "A well-structured About Us page detailing the agency’s background, values, and team members.",
-          "A dedicated Services page outlining the various offerings, with a focus on the quality and impact of each service.",
-          "A Portfolio page that showcases the agency’s completed projects, demonstrating the agency’s experience and expertise across various industries.",
-          "Contact page with a dynamic form for inquiries and potential client interactions.",
-        ],
-      },
-    ],
-    projectDetails: {
-      technology: ["Next.js", "Tailwind CSS", "GSAP", "Vercel"],
-    },
-  },
+  // {
+  //   id: 5,
+  //   title: "Nike Landing Page Clone",
+  //   liveLink: "https://nike.benjaminalan.io",
+  //   repo: "https://github.com/Benjamin-buck/Nike-Clone",
+  //   description:
+  //     "A user interface clone of the popular show brand 'Nike'. This project features a beautiful and responsive clone of the Nike landing page UI.",
+  //   status: "Done",
+  //   thumbnail:
+  //     "https://res.cloudinary.com/dmubfrefi/image/private/s--OPpDHsl3--/c_crop,h_2728,w_4090,x_334,y_0/c_scale,w_3840/f_auto/q_auto/v1/dee-about-cms-prod-medias/cf68f541-fc92-4373-91cb-086ae0fe2f88/002-nike-logos-swoosh-white.jpg?_a=BAAAV6Bs",
+  //   images: [
+  //     {
+  //       image: "https://i.gyazo.com/2837f5419e9f6e8b66a5d5a3ff1f0172.jpg",
+  //       label: "Hero",
+  //     },
+  //     {
+  //       image: "https://i.gyazo.com/30361be1d415fb2b9de16713ee919534.png",
+  //       label: "Products",
+  //     },
+  //     {
+  //       image: "https://i.gyazo.com/f14032f9d780e13934a8e8d7ae84e6b1.jpg",
+  //       label: "Product Showcase",
+  //     },
+  //     {
+  //       image: "https://i.gyazo.com/0d135460ec506b935eec1cce1d964c98.jpg",
+  //       label: "Showcase section",
+  //     },
+  //     {
+  //       image: "https://i.gyazo.com/f3beedc8b5cfc752b64303c9e7ecb872.png",
+  //       label: "Testimonials",
+  //     },
+  //     {
+  //       image: "https://i.gyazo.com/c846a69ebf8a42d7ddbf5a5a154ae29d.png",
+  //       label: "Footer",
+  //     },
+  //   ],
+  //   features: [
+  //     {
+  //       heading: "Beautiful Landing Page UI",
+  //       content: [
+  //         "A beautifully designed homepage that highlights the agency’s vision, mission, and key services.",
+  //         "Engaging, interactive elements that captivate visitors.",
+  //         "Clear call-to-action (CTA) buttons encouraging user engagement and lead generation.",
+  //         "Smooth animations and transitions to enhance user experience.",
+  //       ],
+  //     },
+  //     {
+  //       heading: "Responsive & Optimized Performance",
+  //       content: [
+  //         "Fully responsive design ensuring a seamless experience across all devices.",
+  //         "Optimized for speed and performance, ensuring fast load times.",
+  //         "Accessibility-friendly design following WCAG guidelines.",
+  //       ],
+  //     },
+  //     {
+  //       heading: "Static Pages",
+  //       content: [
+  //         "A well-structured About Us page detailing the agency’s background, values, and team members.",
+  //         "A dedicated Services page outlining the various offerings, with a focus on the quality and impact of each service.",
+  //         "A Portfolio page that showcases the agency’s completed projects, demonstrating the agency’s experience and expertise across various industries.",
+  //         "Contact page with a dynamic form for inquiries and potential client interactions.",
+  //       ],
+  //     },
+  //   ],
+  //   projectDetails: {
+  //     technology: ["Next.js", "Tailwind CSS", "GSAP", "Vercel"],
+  //   },
+  // },
 ];

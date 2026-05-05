@@ -2,35 +2,46 @@
 import React, { useEffect } from "react";
 import { CgClose } from "react-icons/cg";
 
-interface Modal {
+interface ModalProps {
   children: React.ReactNode;
   isOpen: boolean;
   onClose: () => void;
   title?: string;
 }
 
-const Modal: React.FC<Modal> = ({ children, onClose, title, isOpen }) => {
+const Modal: React.FC<ModalProps> = ({ children, onClose, title, isOpen }) => {
   useEffect(() => {
     if (isOpen) {
-      document.body.style.overflow = "hidden"; // Disables background scrolling
-    } else {
-      document.body.style.overflow = "auto"; // Enable background scrolling
+      document.body.style.overflow = "hidden";
     }
     return () => {
-      document.body.style.overflow = "auto"; // Cleanup
+      document.body.style.overflow = "auto";
     };
   }, [isOpen]);
+
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-      <div className="bg-white shadow-lg w-full flex flex-col h-full">
-        {/* Static Section */}
-        <div className="p-4 border-b flex justify-between items-center">
-          <h2 className="font-bold text-xl">{title}</h2>
-          <CgClose size={25} onClick={onClose} className="cursor-pointer" />
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4"
+      onClick={onClose}
+    >
+      <div
+        className="bg-white rounded-2xl shadow-2xl w-full max-w-5xl max-h-[90vh] flex flex-col"
+        onClick={(e) => e.stopPropagation()}
+      >
+        {/* Header */}
+        <div className="px-6 py-4 border-b border-gray-100 flex justify-between items-center shrink-0">
+          <h2 className="font-lexend font-bold text-lg">{title}</h2>
+          <button
+            onClick={onClose}
+            className="p-1.5 rounded-full hover:bg-gray-100 transition-colors"
+            aria-label="Close"
+          >
+            <CgClose size={20} />
+          </button>
         </div>
 
-        {/* Modal Body (Scrollable) */}
-        <div className="p-4 overflow-y-auto flex-1">{children}</div>
+        {/* Scrollable body */}
+        <div className="overflow-y-auto flex-1 px-6 py-6">{children}</div>
       </div>
     </div>
   );
