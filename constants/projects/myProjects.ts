@@ -11,6 +11,7 @@ interface Project {
   endDate?: string;
   features: { heading: string; content: string[] }[];
   projectDetails: { technology: string[] };
+  isPasswordProtected?: boolean;
 }
 
 export const myProjects: Project[] = [
@@ -25,6 +26,7 @@ export const myProjects: Project[] = [
     thumbnail: "/novarihealth-1.jpg",
     startDate: "2025-06-16",
     endDate: "Present",
+    isPasswordProtected: true,
     features: [
       {
         heading: "Legacy Application Rewrite",
@@ -32,6 +34,47 @@ export const myProjects: Project[] = [
           "Reconceptialized the Novari ATC Waitlist Management software from a legacy codebase to a modern, API first approach.",
           "RSVP tracking so you always know who's coming.",
         ],
+      },
+    ],
+    images: [
+      {
+        image: "/novarihealth-1.JPG",
+        label: "Novari Health",
+      },
+      {
+        image: "/atc-1.png",
+        label: "ATC Waitlist ",
+      },
+      {
+        image: "/atc-2.png",
+        label: "Case Details",
+      },
+      {
+        image: "/atc-3.png",
+        label: "Surgical Blocks",
+      },
+      {
+        image: "/atc-4.png",
+        label: "Case Scheduling",
+      },
+      {
+        image: "/atc-5.png",
+        label: "Weekly Surgical Blocks",
+      },
+
+      {
+        image: "/atc-6.png",
+        label: "Case History",
+      },
+
+      {
+        image: "/atc-7.png",
+        label: "Secure Messaging",
+      },
+
+      {
+        image: "/atc-8.png",
+        label: "Notifications",
       },
     ],
     projectDetails: {

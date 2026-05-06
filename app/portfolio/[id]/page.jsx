@@ -8,8 +8,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 import React, { useState } from "react";
-import { FaGithub, FaExternalLinkAlt, FaCheckCircle } from "react-icons/fa";
+import { FaGithub, FaExternalLinkAlt, FaCheckCircle, FaLock } from "react-icons/fa";
 import { BsImages } from "react-icons/bs";
+import { verifyProjectPassword } from "@/app/actions/verifyProjectPassword";
 
 const statusStyle = (status) => {
   switch (status) {
@@ -28,6 +29,10 @@ const IndividualProjectPage = () => {
   const router = useRouter();
   const params = useParams();
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [passwordInput, setPasswordInput] = useState("");
+  const [isUnlocked, setIsUnlocked] = useState(false);
+  const [passwordError, setPasswordError] = useState(false);
+  const [isVerifying, setIsVerifying] = useState(false);
 
   const id = parseInt(params.id);
   const project = myProjects.find((p) => p.id === id) ?? null;
@@ -41,6 +46,68 @@ const IndividualProjectPage = () => {
         <Link href="/portfolio">
           <button className="button-style">Back to Portfolio</button>
         </Link>
+      </div>
+    );
+  }
+
+  if (project.isPasswordProtected && !isUnlocked) {
+    const handleUnlock = async (e) => {
+      e.preventDefault();
+      setIsVerifying(true);
+      const correct = await verifyProjectPassword(project.id, passwordInput);
+      setIsVerifying(false);
+      if (correct) {
+        setIsUnlocked(true);
+        setPasswordError(false);
+      } else {
+        setPasswordError(true);
+        setPasswordInput("");
+      }
+    };
+
+    return (
+      <div className="flex flex-col items-center justify-center py-32 text-center px-4">
+        <div className="w-14 h-14 rounded-full bg-gray-100 flex items-center justify-center mb-5">
+          <FaLock className="text-gray-500 text-xl" />
+        </div>
+        <h1 className="text-2xl font-lexend font-bold mb-2">Password Protected</h1>
+        <p className="text-gray-500 mb-8 max-w-sm text-sm leading-relaxed">
+          This project contains confidential client information. Enter the password to view the full project details.
+        </p>
+        <form onSubmit={handleUnlock} className="w-full max-w-xs flex flex-col gap-3">
+          <input
+            type="password"
+            value={passwordInput}
+            onChange={(e) => {
+              setPasswordInput(e.target.value);
+              setPasswordError(false);
+            }}
+            placeholder="Enter password"
+            autoFocus
+            className={`w-full px-4 py-2.5 rounded-lg border text-sm outline-none transition-colors ${
+              passwordError
+                ? "border-red-300 bg-red-50 focus:border-red-400"
+                : "border-gray-200 focus:border-gray-400"
+            }`}
+          />
+          {passwordError && (
+            <p className="text-red-500 text-xs text-left">Incorrect password. Please try again.</p>
+          )}
+          <button
+            type="submit"
+            disabled={isVerifying}
+            className="w-full py-2.5 rounded-lg bg-black text-white text-sm font-semibold hover:bg-gray-800 transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
+          >
+            {isVerifying ? "Verifying..." : "Unlock Project"}
+          </button>
+          <button
+            type="button"
+            onClick={() => router.back()}
+            className="text-sm text-gray-400 hover:text-gray-600 transition-colors mt-1"
+          >
+            Go back
+          </button>
+        </form>
       </div>
     );
   }

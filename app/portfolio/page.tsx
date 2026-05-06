@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { FaGithub, FaExternalLinkAlt, FaThLarge, FaList } from "react-icons/fa";
+import { FaGithub, FaExternalLinkAlt, FaThLarge, FaList, FaLock } from "react-icons/fa";
 import { RxEnter } from "react-icons/rx";
 
 const statusStyle = (status: string) => {
@@ -87,12 +87,19 @@ const Portfolio = () => {
                   alt={project.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
-                {/* Status */}
-                <span
-                  className={`absolute top-3 left-3 text-xs font-semibold px-2.5 py-0.5 rounded-full border backdrop-blur-sm bg-white/80 ${statusStyle(project.status)}`}
-                >
-                  {project.status}
-                </span>
+                {/* Status + lock badges */}
+                <div className="absolute top-3 left-3 flex items-center gap-1.5">
+                  <span
+                    className={`text-xs font-semibold px-2.5 py-0.5 rounded-full border backdrop-blur-sm bg-white/80 ${statusStyle(project.status)}`}
+                  >
+                    {project.status}
+                  </span>
+                  {project.isPasswordProtected && (
+                    <span className="flex items-center gap-1 text-xs font-semibold px-2 py-0.5 rounded-full border backdrop-blur-sm bg-white/80 text-gray-500 border-gray-200">
+                      <FaLock className="text-[9px]" /> Private
+                    </span>
+                  )}
+                </div>
                 {/* Quick links */}
                 <div className="absolute top-3 right-3 flex gap-1.5">
                   {project.liveLink && (
@@ -189,6 +196,11 @@ const Portfolio = () => {
                     >
                       {project.status}
                     </span>
+                    {project.isPasswordProtected && (
+                      <span className="flex items-center gap-1 text-xs font-semibold px-2.5 py-0.5 rounded-full border border-gray-200 text-gray-500">
+                        <FaLock className="text-[9px]" /> Private
+                      </span>
+                    )}
                   </div>
                   <p className="text-gray-500 text-sm line-clamp-2 leading-relaxed">
                     {project.description}
