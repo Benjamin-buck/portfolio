@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { FaReact, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaReact, FaGithub, FaLinkedin, FaDatabase, FaLayerGroup } from "react-icons/fa";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
-import { SiMysql } from "react-icons/si";
-import { TbBrandRedux } from "react-icons/tb";
+import { SiMysql, SiDotnet } from "react-icons/si";
+import { TbBrandRedux, TbApi } from "react-icons/tb";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { articles } from "@/constants/articles";
 import ArticleCard from "@/components/ArticleCard";
@@ -15,7 +15,11 @@ const techs = [
   { icon: <RiTailwindCssFill />, label: "Tailwind CSS" },
   { icon: <SiMysql />, label: "MySQL" },
   { icon: <BiLogoPostgresql />, label: "PostgreSQL" },
+  { icon: <FaDatabase />, label: "SQL" },
   { icon: <TbBrandRedux />, label: "Redux" },
+  { icon: <SiDotnet />, label: ".NET" },
+  { icon: <TbApi />, label: "Web API" },
+  { icon: <FaLayerGroup />, label: "Entity Framework" },
 ];
 
 const latestArticles = [...articles]

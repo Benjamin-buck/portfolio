@@ -4,6 +4,19 @@ import React from "react";
 import { FaGithub, FaLinkedin, FaGlobe, FaEnvelope, FaPhone, FaMapMarkerAlt, FaExternalLinkAlt, FaCheckCircle } from "react-icons/fa";
 import PrintButton from "@/components/PrintButton";
 
+const parseDuration = (duration: string): string => {
+  const [startStr, endStr] = duration.split("–").map((s) => s.trim());
+  const [startMonth, startYear] = startStr.split("/").map(Number);
+  const end = endStr === "Present" ? new Date() : new Date(Number(endStr.split("/")[1]), Number(endStr.split("/")[0]) - 1);
+  const start = new Date(startYear, startMonth - 1);
+  const totalMonths = (end.getFullYear() - start.getFullYear()) * 12 + (end.getMonth() - start.getMonth());
+  const years = Math.floor(totalMonths / 12);
+  const months = totalMonths % 12;
+  if (years === 0) return `${months} mo`;
+  if (months === 0) return `${years} yr`;
+  return `${years} yr ${months} mo`;
+};
+
 const SectionHeading = ({ children }: { children: React.ReactNode }) => (
   <div className="flex items-center gap-3 mb-5">
     <h2 className="text-xs font-bold uppercase tracking-widest gradient-text shrink-0">
@@ -87,7 +100,12 @@ const ResumePage = () => {
                       {job.employer}
                       <span className="font-normal text-gray-400 text-sm ml-2">• {job.location}</span>
                     </h3>
-                    <span className="text-xs font-semibold text-gray-400 shrink-0">{job.duration}</span>
+                    <span className="text-xs font-semibold text-gray-400 shrink-0 flex items-center gap-2">
+                      {job.duration}
+                      <span className="bg-gray-100 text-gray-500 px-2 py-0.5 rounded-full font-semibold">
+                        {parseDuration(job.duration)}
+                      </span>
+                    </span>
                   </div>
 
                   {/* Company description */}
