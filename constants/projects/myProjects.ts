@@ -102,7 +102,97 @@ export const myProjects: Project[] = [
       {
         heading: "iOS & Android Mobile Application",
         content: [
-          "iOS and Android mobile application built with React Native, Nativewind, and other modern technologies.",
+          "Cross-platform iOS and Android mobile application built with React Native and Expo.",
+          "NativeWind (Tailwind CSS for React Native) for consistent, utility-first styling across both platforms.",
+          "React Native Reanimated for smooth spring and keyframe animations throughout the app.",
+          "Safe area handling, keyboard avoidance, and proper insets for notches and bottom bars on all devices.",
+        ],
+      },
+      {
+        heading: "User Accounts, Login & Onboarding",
+        content: [
+          "Email and password authentication plus Google OAuth single sign-on, powered by Clerk.",
+          "Multi-step registration wizard: email verification, profile photo upload, and age gate (13+).",
+          "Genre selection onboarding step — users choose a minimum of 3 favourite genres from 18 options before entering the app.",
+          "Friend discovery onboarding step to find and follow friends immediately after signing up.",
+          "Edit account screen for updating display name, bio (150 character limit), and profile picture at any time.",
+        ],
+      },
+      {
+        heading: "Movie & TV Show Browsing",
+        content: [
+          "Full TMDB API integration surfaces trending, now playing, top rated, and upcoming movies and TV shows.",
+          "Dedicated Movies and TV Shows tabs with horizontal carousel sections and expandable 'See All' paginated lists.",
+          "Genre filtering across 18+ genres for both movies and TV shows.",
+          "Full-text search for movies and TV shows by title.",
+          "Detail pages show poster, backdrop, overview, cast (top 20 with photos), similar content, TMDB reviews, and community ratings.",
+        ],
+      },
+      {
+        heading: "Synchronized Watch Comments",
+        content: [
+          "Post comments tied to a specific timestamp in a movie or TV episode — comments appear in-sync as other viewers reach that moment.",
+          "Nested reply threads on any timestamped comment.",
+          "Upvote and downvote system on all comments with live vote counts.",
+          "Filter comments to show only friends' reactions or all users watching the same content.",
+          "Full season and episode awareness for TV shows, including an episode picker modal with stills, runtime, air date, and overview.",
+        ],
+      },
+      {
+        heading: "Watch Sessions",
+        content: [
+          "Start, pause, and resume watch sessions with persistent state saved to the database.",
+          "Session tracks started_at, paused_duration, and status (idle / watching / paused).",
+          "Supports both movies and individual TV episodes within a single session model.",
+          "Friend filter mode lets users watch with only selected friends' comments visible.",
+        ],
+      },
+      {
+        heading: "Reviews & Ratings",
+        content: [
+          "Rate any movie or TV show on a 0–5 star scale with 0.1 decimal precision.",
+          "Optional written review accompanies each rating.",
+          "Edit existing reviews at any time — rating and text both updatable.",
+          "Community review feed on every detail page shows all user reviews with expandable long-form text.",
+          "Own review is highlighted with a 'You' badge in community feeds.",
+        ],
+      },
+      {
+        heading: "Points & Rank System",
+        content: [
+          "Ten-tier rank system from Lurker (0 pts) through Legend (8,000 pts), each with a unique icon and colour.",
+          "Earn points for every action: +1 per comment, +5 per new review, +2 per movie watched, +2 per new follower, +3 per friendship formed.",
+          "Rank-up modal celebration triggers automatically when a user crosses a rank threshold.",
+          "Progress bar on profiles shows current rank, points to next rank, and overall standing.",
+          "Top 5 highest-ranked users are surfaced with a recognition badge across the app.",
+        ],
+      },
+      {
+        heading: "Social Features",
+        content: [
+          "Friend request system with send, accept, decline, and cancel flows — two-way confirmation required to become friends.",
+          "One-way follow system independent of friendships, with follower and following counts on every profile.",
+          "User search with case-insensitive full-text lookup by username.",
+          "Public profiles display bio, avatar, stats (reviews, movies watched, followers, following), and a feed of their watch comments and reviews.",
+          "Profile buttons dynamically reflect current relationship: Friends, Follow, Add Friend, Pending, or Unfollow.",
+        ],
+      },
+      {
+        heading: "Notifications",
+        content: [
+          "In-app notifications for comment replies and incoming friend requests.",
+          "Unread badge count on the notifications tab updates in real time.",
+          "Notifications auto-mark as read when the screen is opened.",
+          "Dedicated pending friend requests section with one-tap Accept and Decline actions.",
+          "Notification items link back to the movie or show where the interaction occurred.",
+        ],
+      },
+      {
+        heading: "Watchlist",
+        content: [
+          "Save any movie or TV show to a personal watchlist with a single tap.",
+          "Watchlist screen shows all saved items with movie/TV indicators and quick-remove option.",
+          "Persisted to the database so the watchlist is available across devices.",
         ],
       },
     ],
@@ -131,10 +221,15 @@ export const myProjects: Project[] = [
     projectDetails: {
       technology: [
         "React Native",
-        "Nativewind",
         "Expo",
-        "Prisma",
+        "TypeScript",
+        "NativeWind",
+        "Clerk",
         "PostgreSQL",
+        "Neon",
+        "TMDB API",
+        "React Navigation",
+        "React Native Reanimated",
       ],
     },
   },
@@ -282,28 +377,28 @@ export const myProjects: Project[] = [
       "The Storible Company is a fractional Human Resources based service business. This project was to design and build a modern, sleek, and user-friendly corporate website to showcase the company's services and offerings. The website was built with a focus on providing an engaging user experience, clear communication of the company's value proposition, and easy navigation for potential clients. The project involved creating a visually appealing design, implementing responsive layouts for optimal viewing on various devices, and integrating interactive elements to enhance user engagement.",
     status: "Done",
     thumbnail: "/storible-1.png",
-    // images: [
-    //   {
-    //     image: "https://i.gyazo.com/fdbf1b018b7d951a07355f27f629347c.jpg",
-    //     label: "Landing Page",
-    //   },
-    //   {
-    //     image: "https://i.gyazo.com/72dfcb6f41a2337b2572faafb45385ec.jpg",
-    //     label: "Awada Group - Featured Areas",
-    //   },
-    //   {
-    //     image: "https://i.gyazo.com/2607fb22a77927781416fd717c507d46.jpg",
-    //     label: "Awada Group - Highlights",
-    //   },
-    //   {
-    //     image: "https://i.gyazo.com/a34bfbc0dac7ad8f78ba9edf856e740f.png",
-    //     label: "Awada Group - Home Appraisal Tool",
-    //   },
-    //   {
-    //     image: "https://i.gyazo.com/3c3de862f2871aa1513f3946d1c8c055.jpg",
-    //     label: "Awada Group - Sellers page",
-    //   },
-    // ],
+    images: [
+      {
+        image: "/storible-1.png",
+        label: "Landing Page",
+      },
+      {
+        image: "/storible-2.png",
+        label: "Storible - Landing Page",
+      },
+      {
+        image: "/storible-3.png",
+        label: "Storible - Features",
+      },
+      {
+        image: "/storible-4.png",
+        label: "Storible - Call to Action / Intake Form",
+      },
+      {
+        image: "/storible-5.png",
+        label: "Storible - Contact Us",
+      },
+    ],
     features: [
       {
         heading: "Hero Section with Engaging Animations",

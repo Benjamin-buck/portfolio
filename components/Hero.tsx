@@ -6,6 +6,8 @@ import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { SiMysql } from "react-icons/si";
 import { TbBrandRedux } from "react-icons/tb";
 import { BiLogoPostgresql } from "react-icons/bi";
+import { articles } from "@/constants/articles";
+import ArticleCard from "@/components/ArticleCard";
 
 const techs = [
   { icon: <FaReact />, label: "React" },
@@ -15,6 +17,11 @@ const techs = [
   { icon: <BiLogoPostgresql />, label: "PostgreSQL" },
   { icon: <TbBrandRedux />, label: "Redux" },
 ];
+
+const latestArticles = [...articles]
+  .filter((a) => a.published)
+  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+  .slice(0, 5);
 
 const Hero = () => {
   return (
@@ -82,6 +89,28 @@ const Hero = () => {
           </div>
         ))}
       </div>
+
+      {latestArticles.length > 0 && (
+        <div className="mx-4 mt-16">
+          <div className="flex items-end justify-between mb-1">
+            <h2 className="text-2xl font-lexend font-bold">Latest Articles</h2>
+            <Link
+              href="/articles"
+              className="text-sm font-semibold text-gray-500 hover:text-black transition-colors"
+            >
+              View all →
+            </Link>
+          </div>
+          <p className="text-gray-500 text-sm mb-6">
+            Thoughts on development, design, and building products.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+            {latestArticles.map((article) => (
+              <ArticleCard key={article.slug} article={article} />
+            ))}
+          </div>
+        </div>
+      )}
     </section>
   );
 };
