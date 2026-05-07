@@ -50,7 +50,7 @@ export const experience = [
   {
     employer: "Transport Canada",
     location: "Ottawa",
-    duration: "01/2020 – Present",
+    duration: "01/2020 – 06/2025",
     description:
       "Transport Canada is the federal department responsible for developing and enforcing transportation policies and regulations to ensure a safe, secure, efficient, and environmentally responsible transportation system in Canada.",
     roles: [

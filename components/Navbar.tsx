@@ -17,11 +17,11 @@ const Navbar = () => {
       <div id="logo">
         <Link href="/" className="flex gap-2 items-center">
           <Image
-            src="/logo.png"
-            width={48}
-            height={48}
-            alt="Logo icon"
-            className="z-50"
+            src="/benjamin.jpg"
+            width={52}
+            height={52}
+            alt="Benjamin Alan"
+            className="z-50 rounded-full object-cover ring-2 ring-gray-200"
           />
           <h1 className="font-lexend text-2xl font-bold uppercase max-md:text-xl z-50">
             Benjamin Alan
