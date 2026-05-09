@@ -35,7 +35,7 @@ const ContactPage = () => {
       <div className="mt-8 mx-4 md:mx-0 mb-10">
         <h1 className="text-3xl font-lexend font-bold">Contact</h1>
         <p className="text-gray-500 mt-1 text-sm">
-          Have a project in mind or just want to say hello? Fill out the form and I'll get back to you.
+          Have a project in mind or just want to say hello? Fill out the form and I&apos;ll get back to you.
         </p>
       </div>
 
@@ -47,7 +47,7 @@ const ContactPage = () => {
               <FaCheckCircle className="text-cyan-400" size={40} />
               <h2 className="text-xl font-lexend font-bold text-gray-900">Message sent!</h2>
               <p className="text-gray-500 text-sm max-w-xs">
-                Thanks for reaching out. I'll get back to you as soon as I can.
+                Thanks for reaching out. I&apos;ll get back to you as soon as I can.
               </p>
               <button
                 onClick={() => setStatus("idle")}
@@ -130,7 +130,7 @@ const ContactPage = () => {
             <div>
               <h2 className="font-lexend font-bold text-base text-gray-900 mb-1">Get in touch</h2>
               <p className="text-sm text-gray-500 leading-relaxed">
-                I'm always open to discussing new opportunities, freelance projects, or just connecting with people in the industry.
+                I&apos;m always open to discussing new opportunities, freelance projects, or just connecting with people in the industry.
               </p>
             </div>
             <div className="flex flex-col gap-4">
