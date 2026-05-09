@@ -17,11 +17,11 @@ interface Project {
 export const myProjects: Project[] = [
   {
     id: 9,
-    title: "Novari Health",
+    title: "Novari ATC",
     liveLink: "https://novarihealth.com/",
     repo: null,
     description:
-      "Novari Health is a healthcare technology company that provides a comprehensive platform for managing patient care, streamlining operations, and improving healthcare outcomes. The platform offers a range of features including electronic health records (EHR), telemedicine capabilities, appointment scheduling, and patient engagement tools. Novari Health aims to enhance the efficiency and effectiveness of healthcare delivery while prioritizing patient-centered care. Portfolio items are not publicly available for this project due to confidentiality agreements with the employer. Please request more information if you would like to learn more about this project.",
+      "Novari ATC is a medical waitlist management platform developed by Novari Health. The application focuses on providing a comprehsive solution for managing surgical waitlists. This project was to reconceptualize the Novari ATC Waitlist Management software from a legacy codebase to a modern, API first approach. The new application was built with a focus on providing an engaging user experience, clear communication of the company's value proposition, and easy navigation for potential clients. The project involved creating a visually appealing design, implementing responsive layouts for optimal viewing on various devices, and integrating interactive elements to enhance user engagement.",
     status: "Current",
     thumbnail: "/novarihealth-1.jpg",
     startDate: "2025-06-16",
@@ -31,8 +31,40 @@ export const myProjects: Project[] = [
       {
         heading: "Legacy Application Rewrite",
         content: [
-          "Reconceptialized the Novari ATC Waitlist Management software from a legacy codebase to a modern, API first approach.",
-          "RSVP tracking so you always know who's coming.",
+          "Led the reconceptualization of the Novari ATC Waitlist Management application from a legacy ColdFusion (2003) codebase to a modern, API-first architecture — React front-end consuming a .NET Web API backend via a Backend-for-Frontend (BFF) pattern.",
+          "Maintained full backwards compatibility with existing client integrations throughout the rebuild, ensuring zero disruption to active hospital deployments.",
+        ],
+      },
+      {
+        heading: "Figma Component Library & UI Design System",
+        content: [
+          "Designed and delivered a comprehensive Novari ATC Figma component library — covering typography, colour tokens, spacing, form elements, data tables, modals, and all application-specific components.",
+          "Built high-fidelity, fully responsive Figma prototypes for every screen in the application before a single line of production code was written, enabling stakeholder sign-off and developer handoff with zero ambiguity.",
+          "Established design system standards that ensured visual consistency across the entire rebuilt platform.",
+        ],
+      },
+      {
+        heading: "Technical Solutioning & Architecture",
+        content: [
+          "Contributed to key front-end architecture decisions including component structure, state management strategy, and API integration patterns in React.",
+          "Led technical solutioning sessions for complex backend features, defining CQRS command/query separation patterns within the .NET Web API layer.",
+          "Drove the design and implementation of a full Role-Based Access Control (RBAC) system, mapping user roles to fine-grained permission scopes across the application — ensuring compliance with the multi-client, multi-hospital environment Novari operates in.",
+        ],
+      },
+      {
+        heading: "Stakeholder & Client Engagement",
+        content: [
+          "Facilitated requirements gathering and workflow analysis sessions with hospital clients, product owners, and internal stakeholders to translate clinical workflows into software requirements.",
+          "Led user testing sessions with end users (surgical coordinators, clinicians, administrators) to validate designs and iterate based on real-world feedback before development milestones.",
+          "Produced high-level Business Requirements Documents (BRDs), use cases, and user stories to align development work with client expectations.",
+        ],
+      },
+      {
+        heading: "Agile SCRUM Leadership",
+        content: [
+          "Facilitated all Agile SCRUM ceremonies for the Novari ATC product team — sprint planning, backlog grooming, daily standups, sprint reviews, and retrospectives.",
+          "Managed and maintained the full product backlog across both the legacy ATC and ATC rebuild streams, prioritizing work in alignment with the product roadmap and client commitments.",
+          "Reported sprint progress, risks, and delivery outcomes directly to upper management and product leadership.",
         ],
       },
     ],
@@ -75,6 +107,72 @@ export const myProjects: Project[] = [
       {
         image: "/atc-8.png",
         label: "Notifications",
+      },
+      {
+        image: "/atc-9.png",
+        label: "Notifications",
+      },
+      {
+        image: "/atc-10.png",
+        label: "Notifications",
+      },
+      {
+        image: "/atc-11.png",
+        label: "Notifications",
+      },
+    ],
+    projectDetails: {
+      technology: [
+        "React",
+        ".NET Core",
+        "Entity Framework",
+        "SQL",
+        "Redis",
+        "Redux",
+      ],
+    },
+  },
+  {
+    id: 920392023,
+    title: "Novari eRequest",
+    liveLink: "https://novarihealth.com/",
+    repo: null,
+    description:
+      "Novari eRequest is a modern patient referral management platform developed by Novari Health.",
+    status: "Current",
+    thumbnail: "/erequest.png",
+    startDate: "2025-06-16",
+    endDate: "Present",
+    isPasswordProtected: true,
+    features: [
+      {
+        heading: "Legacy Application Rewrite",
+        content: [
+          "Reconceptialized the Novari ATC Waitlist Management software from a legacy codebase to a modern, API first approach.",
+          "RSVP tracking so you always know who's coming.",
+        ],
+      },
+    ],
+    images: [
+      {
+        image: "/erequest.png",
+        label: "Novari eRequest",
+      },
+      {
+        image: "/erequest-1.png",
+        label: "Novari eRequest - Referral Dashboard",
+      },
+      {
+        image: "/erequest-2.png",
+        label: "Case Details",
+      },
+      {
+        image: "/erequest-3.png",
+        label: "Surgical Blocks",
+      },
+      {
+        image: "/erequest-4.png",
+        label: "Case Scheduling",
       },
     ],
     projectDetails: {
