@@ -1,10 +1,17 @@
 import Hero from "@/components/Hero";
+import SelectedWork from "@/components/SelectedWork";
+import Capabilities from "@/components/Capabilities";
+import Process from "@/components/Process";
+import Experience from "@/components/Experience";
 
 export default function Home() {
   return (
     <main>
       <Hero />
-      <section className="mt-20">{/* <VsCode /> */}</section>
+      <SelectedWork />
+      <Capabilities />
+      <Process />
+      <Experience />
     </main>
   );
 }

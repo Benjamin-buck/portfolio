@@ -1,56 +1,128 @@
 import Image from "next/image";
-import React from "react";
+import Link from "next/link";
+import Reveal from "@/components/motion/Reveal";
+import { education, experience, skills } from "@/constants/resume";
 
-const page = () => {
+export const metadata = {
+  title: "About — Benjamin Alan",
+};
+
+const AboutPage = () => {
   return (
-    <div className="my-8 flex max-md:flex-col">
-      <div className="max-md:flex max-md:flex-col max-md:items-center">
-        <Image
-          src="/benjamin.png"
-          className="w-[250px] rounded-md"
-          height={1000}
-          width={1000}
-          alt="Benjamin Portrait"
-        />
-        <div className="mt-5 max-md:text-center">
-          <h1 className="text-xl font-semibold">Benjamin Alan</h1>
-          <p>React / Next.js Web Developer</p>
+    <main className="shell pt-12 md:pt-20">
+      <p className="eyebrow fade-up mb-4">About</p>
+      <h1 className="display text-[clamp(48px,8.5vw,128px)]">
+        <span className="block overflow-hidden pb-[0.06em]">
+          <span className="word-in">I make complicated</span>
+        </span>
+        <span className="block overflow-hidden pb-[0.06em]">
+          <span className="word-in italic" style={{ "--i": 2 } as React.CSSProperties}>
+            work feel calm.
+          </span>
+        </span>
+      </h1>
+
+      <div className="mt-16 grid gap-12 md:mt-24 md:grid-cols-12">
+        <div className="md:col-span-4">
+          <Reveal variant="wipe" className="relative aspect-[4/5] overflow-hidden rounded-[6px] bg-surface ring-1 ring-line">
+            <div className="absolute inset-0">
+              <Image src="/benjamin.png" alt="Portrait of Benjamin Alan" fill sizes="(max-width: 768px) 100vw, 30vw" className="object-cover" />
+            </div>
+          </Reveal>
+          <p className="eyebrow mt-4">Benjamin Alan Buck · Kingston, ON</p>
+        </div>
+
+        <div className="md:col-span-7 md:col-start-6 space-y-6 text-lg leading-[1.7]">
+          <Reveal>
+            <p>
+              I&apos;m a product designer and front-end developer with 6+ years in the private and public sectors.
+              Most of my work is software for people who can&apos;t afford confusing tools: hospital staff managing
+              surgical waitlists, federal inspectors working through regulation, and musicians running a band
+              between day jobs.
+            </p>
+          </Reveal>
+          <Reveal delay={80}>
+            <p className="text-ink-2">
+              At Novari Health / VitalHub I lead the product team rebuilding Novari ATC, a legacy ColdFusion
+              waitlist platform, as a modern React and .NET Web API application. I own the Figma design system, the
+              prototypes, the backlog and the Scrum ceremonies, and I help make the architecture calls. Before that I
+              spent five years at Transport Canada as a UX designer, business analyst and Scrum Master.
+            </p>
+          </Reveal>
+          <Reveal delay={160}>
+            <p className="text-ink-2">
+              Outside work I design and build my own products end to end. Band Account, a live SaaS for bands, is
+              the biggest of them. It keeps me honest about what &ldquo;shippable&rdquo; actually means.
+            </p>
+          </Reveal>
+          <Reveal delay={220} className="flex flex-wrap gap-3 pt-4">
+            <Link href="/resume" className="btn-primary">
+              Read the résumé
+            </Link>
+            <Link href="/contact" className="btn-ghost">
+              Get in touch
+            </Link>
+          </Reveal>
         </div>
       </div>
-      <div className="flex-1 px-10 py-4">
-        <h2 className="text-3xl font-bold">About Me</h2>
-        <div className="border my-2" />
-        <p className="text-lg">
-          My name is Benjamin Alan and I am a passionate junior full stack web
-          developer from Ontario Canada. I specialize in building clean,
-          responsive, and intuitive web applications using modern front-end
-          technologies like React, Next.js, and Tailwind CSS. Whether youre
-          looking for a simple landing page or a complex interactive platform, I
-          focus on delivering clean code, user-centric design, and seamless
-          functionality.
-        </p>
-        <h2 className="text-3xl font-bold mt-10">Education</h2>
-        <div className="border my-2" />
-        <div>
-          <h3 className="text-2xl">Algonquin College</h3>
-          <h4 className="font-semibold">
-            Interactive Media Design with a specialty in Web Development
-          </h4>
-          <p>
-            Completed a 2 year diploma program at Algonquin College with a focus
-            in User Experience / User Interface Design & Web Development.
+
+      {/* Timeline */}
+      <section className="mt-32 grid gap-8 md:grid-cols-12" aria-labelledby="timeline">
+        <h2 id="timeline" className="eyebrow md:col-span-3">
+          Timeline
+        </h2>
+        <ol className="md:col-span-8 md:col-start-5 border-l border-line">
+          {experience.flatMap((job, ji) =>
+            job.roles.map((role, ri) => (
+              <Reveal as="li" key={`${job.employer}-${role.title}`} delay={(ji + ri) * 60} className="relative pb-10 pl-8 last:pb-0">
+                <span
+                  className={`absolute -left-[5px] top-2 h-[9px] w-[9px] rounded-full border-2 border-paper ${
+                    ji === 0 && ri === 0 ? "bg-accent" : "bg-ink-3"
+                  }`}
+                />
+                {ri === 0 && <p className="eyebrow mb-2">{job.duration}</p>}
+                <h3 className="text-lg font-medium">{role.title}</h3>
+                <p className="text-ink-2">{job.employer}</p>
+                {role.summary && ri === 0 && <p className="mt-3 text-[15px] leading-relaxed text-ink-3">{role.summary}</p>}
+              </Reveal>
+            ))
+          )}
+        </ol>
+      </section>
+
+      {/* Education */}
+      <section className="mt-24 grid gap-8 md:grid-cols-12" aria-labelledby="edu">
+        <h2 id="edu" className="eyebrow md:col-span-3">
+          Education
+        </h2>
+        <div className="md:col-span-8 md:col-start-5">
+          {education.map((e) => (
+            <Reveal key={e.degree}>
+              <h3 className="display text-3xl md:text-4xl">{e.degree}</h3>
+              <p className="mt-2 text-ink-2">{e.school}</p>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+
+      {/* Toolbox */}
+      <section className="mt-24 grid gap-8 md:grid-cols-12" aria-labelledby="toolbox">
+        <h2 id="toolbox" className="eyebrow md:col-span-3">
+          Toolbox
+        </h2>
+        <Reveal className="md:col-span-8 md:col-start-5">
+          <p className="text-lg leading-[1.9] text-ink-2">
+            {skills.map((s, i) => (
+              <span key={s}>
+                <span className="transition-colors hover:text-ink">{s}</span>
+                {i < skills.length - 1 && <span className="mx-2 text-line">/</span>}
+              </span>
+            ))}
           </p>
-        </div>
-        <div className="mt-6">
-          <h3 className="text-2xl">Self Study</h3>
-          <h4 className="font-semibold">
-            Enrolled in online courses to further my web development knowledge /
-            education.
-          </h4>
-        </div>
-      </div>
-    </div>
+        </Reveal>
+      </section>
+    </main>
   );
 };
 
-export default page;
+export default AboutPage;

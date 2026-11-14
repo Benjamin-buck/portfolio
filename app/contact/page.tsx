@@ -1,16 +1,40 @@
 "use client";
+
 import { useState } from "react";
-import { FaEnvelope, FaLinkedin, FaGithub, FaCheckCircle } from "react-icons/fa";
+import CopyEmail from "@/components/CopyEmail";
+import { contact } from "@/constants/data";
+
+const reasons = ["Full-time role", "Contract", "Freelance project", "Just saying hi"];
+
+const Field = ({
+  label,
+  index,
+  children,
+}: {
+  label: string;
+  index: string;
+  children: React.ReactNode;
+}) => (
+  <label className="group block border-b border-line pb-3 pt-6 transition-colors focus-within:border-ink">
+    <span className="eyebrow flex gap-3 transition-colors group-focus-within:text-accent">
+      <span className="tabular-nums">{index}</span>
+      {label}
+    </span>
+    {children}
+  </label>
+);
+
+const inputClass =
+  "mt-2 w-full bg-transparent text-lg md:text-xl outline-none placeholder:text-ink-3/70";
 
 const ContactPage = () => {
-  const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
+  const [form, setForm] = useState({ name: "", email: "", subject: reasons[0], message: "" });
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const set = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-  };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const submit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("sending");
     try {
@@ -21,167 +45,122 @@ const ContactPage = () => {
       });
       if (!res.ok) throw new Error();
       setStatus("success");
-      setForm({ name: "", email: "", subject: "", message: "" });
+      setForm({ name: "", email: "", subject: reasons[0], message: "" });
     } catch {
       setStatus("error");
     }
   };
 
-  const inputClass =
-    "w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-sm text-gray-900 placeholder-gray-400 focus:border-cyan-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-cyan-100 transition-all duration-200";
-
   return (
-    <main className="mb-16">
-      <div className="mt-8 mx-4 md:mx-0 mb-10">
-        <h1 className="text-3xl font-lexend font-bold">Contact</h1>
-        <p className="text-gray-500 mt-1 text-sm">
-          Have a project in mind or just want to say hello? Fill out the form and I&apos;ll get back to you.
-        </p>
-      </div>
+    <main className="shell pt-12 md:pt-20">
+      <p className="eyebrow fade-up mb-4 flex items-center gap-2">
+        <span className="breathe inline-block h-1.5 w-1.5 rounded-full bg-emerald-500" />
+        Open to full-time, contract &amp; freelance
+      </p>
+      <h1 className="display text-[clamp(52px,9vw,140px)]">
+        <span className="block overflow-hidden pb-[0.06em]">
+          <span className="word-in">Let&apos;s talk.</span>
+        </span>
+      </h1>
 
-      <div className="grid grid-cols-12 gap-8 mx-4 md:mx-0">
-        {/* Form */}
-        <div className="col-span-12 lg:col-span-7">
+      <div className="mt-16 grid gap-16 md:grid-cols-12">
+        <aside className="md:col-span-4 space-y-10 fade-up" style={{ "--d": "300ms" } as React.CSSProperties}>
+          <p className="text-lg leading-relaxed text-ink-2">
+            Hiring for a product designer or front-end developer role, or have a product that needs both? Tell me a
+            little about it.
+          </p>
+          <div>
+            <p className="eyebrow mb-3">Email</p>
+            <CopyEmail className="text-base" />
+          </div>
+          <div>
+            <p className="eyebrow mb-3">Elsewhere</p>
+            <ul className="space-y-1.5">
+              <li>
+                <a href={contact.linkedin} target="_blank" rel="noopener noreferrer" className="link-draw">
+                  LinkedIn ↗
+                </a>
+              </li>
+              <li>
+                <a href={contact.github} target="_blank" rel="noopener noreferrer" className="link-draw">
+                  GitHub ↗
+                </a>
+              </li>
+            </ul>
+          </div>
+        </aside>
+
+        <div className="md:col-span-7 md:col-start-6">
           {status === "success" ? (
-            <div className="flex flex-col items-center justify-center gap-4 py-16 text-center rounded-2xl border border-gray-100 bg-white shadow-sm">
-              <FaCheckCircle className="text-cyan-400" size={40} />
-              <h2 className="text-xl font-lexend font-bold text-gray-900">Message sent!</h2>
-              <p className="text-gray-500 text-sm max-w-xs">
-                Thanks for reaching out. I&apos;ll get back to you as soon as I can.
-              </p>
-              <button
-                onClick={() => setStatus("idle")}
-                className="mt-2 text-sm font-semibold text-cyan-500 hover:text-cyan-600 transition-colors"
-              >
-                Send another message
+            <div className="fade-up border-t border-ink pt-10" style={{ "--d": "0ms" } as React.CSSProperties}>
+              <p className="eyebrow mb-4 text-accent">Sent</p>
+              <h2 className="display text-5xl">Thanks. Talk soon.</h2>
+              <p className="mt-4 text-ink-2">Your message is in my inbox. I&apos;ll get back to you shortly.</p>
+              <button onClick={() => setStatus("idle")} className="btn-ghost mt-8">
+                Send another
               </button>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="flex flex-col gap-4 bg-white border border-gray-100 rounded-2xl shadow-sm p-8">
-              <div className="grid grid-cols-2 gap-4">
-                <div className="flex flex-col gap-1.5">
-                  <label className="text-xs font-semibold text-gray-600">Name</label>
-                  <input
-                    name="name"
-                    value={form.name}
-                    onChange={handleChange}
-                    required
-                    placeholder="Benjamin Buck"
-                    className={inputClass}
-                  />
+            <form onSubmit={submit} className="fade-up" style={{ "--d": "400ms" } as React.CSSProperties}>
+              <fieldset>
+                <legend className="eyebrow mb-3">What&apos;s this about?</legend>
+                <div className="flex flex-wrap gap-2">
+                  {reasons.map((r) => (
+                    <button
+                      type="button"
+                      key={r}
+                      onClick={() => setForm((f) => ({ ...f, subject: r }))}
+                      aria-pressed={form.subject === r}
+                      className={`rounded-full border px-4 py-2 text-sm transition-all duration-300 ${
+                        form.subject === r ? "border-ink bg-ink text-paper" : "border-line text-ink-2 hover:border-ink"
+                      }`}
+                    >
+                      {r}
+                    </button>
+                  ))}
                 </div>
-                <div className="flex flex-col gap-1.5">
-                  <label className="text-xs font-semibold text-gray-600">Email</label>
+              </fieldset>
+
+              <div className="mt-4 grid md:grid-cols-2 md:gap-8">
+                <Field label="Your name" index="01">
+                  <input name="name" value={form.name} onChange={set} required autoComplete="name" placeholder="Jane Doe" className={inputClass} />
+                </Field>
+                <Field label="Email" index="02">
                   <input
                     name="email"
                     type="email"
                     value={form.email}
-                    onChange={handleChange}
+                    onChange={set}
                     required
-                    placeholder="you@example.com"
+                    autoComplete="email"
+                    placeholder="jane@company.com"
                     className={inputClass}
                   />
-                </div>
+                </Field>
               </div>
-              <div className="flex flex-col gap-1.5">
-                <label className="text-xs font-semibold text-gray-600">Subject</label>
-                <input
-                  name="subject"
-                  value={form.subject}
-                  onChange={handleChange}
-                  required
-                  placeholder="Project enquiry, collaboration, etc."
-                  className={inputClass}
-                />
-              </div>
-              <div className="flex flex-col gap-1.5">
-                <label className="text-xs font-semibold text-gray-600">Message</label>
+              <Field label="Message" index="03">
                 <textarea
                   name="message"
                   value={form.message}
-                  onChange={handleChange}
+                  onChange={set}
                   required
-                  rows={6}
-                  placeholder="Tell me about your project or what you'd like to discuss..."
+                  rows={5}
+                  placeholder="The role, the team, the product…"
                   className={`${inputClass} resize-none`}
                 />
-              </div>
+              </Field>
 
               {status === "error" && (
-                <p className="text-sm text-red-500">
-                  Something went wrong. Please try again or email me directly.
+                <p className="mt-4 text-sm text-red-600">
+                  Something went wrong. Try again, or email me directly at {contact.email}.
                 </p>
               )}
 
-              <button
-                type="submit"
-                disabled={status === "sending"}
-                className="button-style self-start disabled:opacity-60 disabled:cursor-not-allowed"
-              >
-                {status === "sending" ? "Sending…" : "Send Message"}
+              <button type="submit" disabled={status === "sending"} className="btn-primary mt-10 !px-7 !py-3.5 disabled:opacity-50">
+                {status === "sending" ? "Sending…" : "Send message"} <span aria-hidden>→</span>
               </button>
             </form>
           )}
-        </div>
-
-        {/* Sidebar */}
-        <div className="col-span-12 lg:col-span-5 flex flex-col gap-5">
-          <div className="bg-white border border-gray-100 rounded-2xl shadow-sm p-8 flex flex-col gap-6">
-            <div>
-              <h2 className="font-lexend font-bold text-base text-gray-900 mb-1">Get in touch</h2>
-              <p className="text-sm text-gray-500 leading-relaxed">
-                I&apos;m always open to discussing new opportunities, freelance projects, or just connecting with people in the industry.
-              </p>
-            </div>
-            <div className="flex flex-col gap-4">
-              <a
-                href="mailto:thebenjaminalan@gmail.com"
-                className="flex items-center gap-3 group"
-              >
-                <div className="w-9 h-9 rounded-xl bg-cyan-50 flex items-center justify-center shrink-0 group-hover:bg-cyan-100 transition-colors">
-                  <FaEnvelope className="text-cyan-500" size={15} />
-                </div>
-                <div>
-                  <p className="text-xs text-gray-400 font-semibold">Email</p>
-                  <p className="text-sm text-gray-700 group-hover:text-black transition-colors">thebenjaminalan@gmail.com</p>
-                </div>
-              </a>
-              <a
-                href="https://www.linkedin.com/in/benjamin-alan-buck-466514134/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 group"
-              >
-                <div className="w-9 h-9 rounded-xl bg-blue-50 flex items-center justify-center shrink-0 group-hover:bg-blue-100 transition-colors">
-                  <FaLinkedin className="text-blue-500" size={15} />
-                </div>
-                <div>
-                  <p className="text-xs text-gray-400 font-semibold">LinkedIn</p>
-                  <p className="text-sm text-gray-700 group-hover:text-black transition-colors">Benjamin Alan Buck</p>
-                </div>
-              </a>
-              <a
-                href="https://github.com/Benjamin-buck"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 group"
-              >
-                <div className="w-9 h-9 rounded-xl bg-gray-100 flex items-center justify-center shrink-0 group-hover:bg-gray-200 transition-colors">
-                  <FaGithub className="text-gray-700" size={15} />
-                </div>
-                <div>
-                  <p className="text-xs text-gray-400 font-semibold">GitHub</p>
-                  <p className="text-sm text-gray-700 group-hover:text-black transition-colors">Benjamin-buck</p>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div className="bg-gradient-to-br from-cyan-50 to-blue-50 border border-cyan-100 rounded-2xl p-8">
-            <p className="text-sm text-cyan-800 leading-relaxed font-medium">
-              Currently open to full-time, contract, and freelance opportunities.
-            </p>
-          </div>
         </div>
       </div>
     </main>

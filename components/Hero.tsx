@@ -1,120 +1,55 @@
-import Image from "next/image";
 import Link from "next/link";
-import React from "react";
-import { FaReact, FaGithub, FaLinkedin, FaDatabase, FaLayerGroup } from "react-icons/fa";
-import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
-import { SiMysql, SiDotnet } from "react-icons/si";
-import { TbBrandRedux, TbApi } from "react-icons/tb";
-import { BiLogoPostgresql } from "react-icons/bi";
-import { articles } from "@/constants/articles";
-import ArticleCard from "@/components/ArticleCard";
+import SelectableHeadline from "./SelectableHeadline";
 
-const techs = [
-  { icon: <FaReact />, label: "React" },
-  { icon: <RiNextjsFill />, label: "Next.js" },
-  { icon: <RiTailwindCssFill />, label: "Tailwind CSS" },
-  { icon: <SiMysql />, label: "MySQL" },
-  { icon: <BiLogoPostgresql />, label: "PostgreSQL" },
-  { icon: <FaDatabase />, label: "SQL" },
-  { icon: <TbBrandRedux />, label: "Redux" },
-  { icon: <SiDotnet />, label: ".NET" },
-  { icon: <TbApi />, label: "Web API" },
-  { icon: <FaLayerGroup />, label: "Entity Framework" },
+const facts = [
+  { k: "Now", v: "Product Designer, Novari Health / VitalHub" },
+  { k: "Experience", v: "6+ years, design → production" },
+  { k: "Domains", v: "Healthcare · Government · Music" },
+  { k: "Based", v: "Kingston, Ontario" },
 ];
-
-const latestArticles = [...articles]
-  .filter((a) => a.published)
-  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-  .slice(0, 5);
 
 const Hero = () => {
   return (
-    <section>
-      <div className="flex justify-between max-xl:flex-col-reverse">
-        <div className="w-[45%] mt-[120px] max-xl:mt-2 max-xl:w-auto max-xl:px-4 max-md:pt-2">
-          <span className="inline-flex items-center gap-2 bg-emerald-50 text-emerald-700 border border-emerald-200 text-sm font-semibold px-3 py-1 rounded-full mb-6">
-            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-            Open to work
-          </span>
-          <h2 className="text-5xl mt-4 font-lexend font-bold leading-[60px] max-md:text-3xl">
-            Hi, I&apos;m <span className="gradient-text">Benjamin</span>, a
-            Senior UI/UX <span className="gradient-text">Developer</span>.
-          </h2>
-          <p className="mt-4 text-gray-600 leading-relaxed max-md:pt-5">
-            6+ years building polished, accessible web applications — from
-            pixel-perfect interfaces to full-stack product features.
-          </p>
-          <div className="flex items-center gap-4 mt-8 flex-wrap">
-            <Link href="/portfolio">
-              <button className="button-style">My Portfolio</button>
-            </Link>
-            <a
-              href="https://github.com/Benjamin-buck"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub"
-              className="text-3xl text-gray-700 hover:text-black transition-colors duration-200"
-            >
-              <FaGithub />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/benjamin-alan-buck-466514134/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-              className="text-3xl text-gray-700 hover:text-blue-600 transition-colors duration-200"
-            >
-              <FaLinkedin />
-            </a>
-          </div>
-        </div>
-        <div className="mt-[120px] max-md:mt-12 mx-4 max-xl:flex max-xl:justify-center">
-          <Image
-            src="/hero.png"
-            width={660}
-            height={382}
-            alt="Code screenshot"
-            className="rounded-md"
-          />
-        </div>
+    <section className="shell pt-12 md:pt-20">
+      <p className="eyebrow fade-up flex items-center gap-2" style={{ "--d": "0ms" } as React.CSSProperties}>
+        <span className="breathe inline-block h-1.5 w-1.5 rounded-full bg-emerald-500" />
+        Benjamin Alan — Product Designer &amp; Front-end Developer
+      </p>
+
+      <div className="mt-8 md:mt-10">
+        <SelectableHeadline />
       </div>
 
-      <h2 className="text-2xl mx-4 font-lexend font-bold mt-16">
-        Technologies
-      </h2>
-      <div className="flex mx-4 mt-4 gap-3 flex-wrap">
-        {techs.map(({ icon, label }) => (
-          <div
-            key={label}
-            className="flex items-center gap-2 px-4 py-2 rounded-full border border-gray-200 bg-gray-50 hover:border-cyan-400 hover:bg-cyan-50 transition-colors duration-200 cursor-default"
-          >
-            <span className="text-2xl">{icon}</span>
-            <span className="text-sm font-semibold text-gray-700">{label}</span>
-          </div>
-        ))}
-      </div>
-
-      {latestArticles.length > 0 && (
-        <div className="mx-4 mt-16">
-          <div className="flex items-end justify-between mb-1">
-            <h2 className="text-2xl font-lexend font-bold">Latest Articles</h2>
-            <Link
-              href="/articles"
-              className="text-sm font-semibold text-gray-500 hover:text-black transition-colors"
-            >
-              View all →
+      <div className="mt-12 grid gap-10 md:mt-16 md:grid-cols-12">
+        <div className="md:col-span-6 lg:col-span-5">
+          <p className="fade-up text-lg leading-relaxed text-ink-2 md:text-xl" style={{ "--d": "700ms" } as React.CSSProperties}>
+            I design products for complicated work, like surgical waitlists, federal regulation and running a band,
+            and then I build them in React. You get one person who takes it from research and a Figma design
+            system all the way to production code.
+          </p>
+          <div className="fade-up mt-8 flex flex-wrap gap-3" style={{ "--d": "850ms" } as React.CSSProperties}>
+            <Link href="/portfolio" className="btn-primary">
+              See the work <span aria-hidden>→</span>
+            </Link>
+            <Link href="/resume" className="btn-ghost">
+              Résumé
             </Link>
           </div>
-          <p className="text-gray-500 text-sm mb-6">
-            Thoughts on development, design, and building products.
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
-            {latestArticles.map((article) => (
-              <ArticleCard key={article.slug} article={article} />
-            ))}
-          </div>
         </div>
-      )}
+
+        <dl className="md:col-span-6 lg:col-start-8 lg:col-span-5 grid grid-cols-2 gap-x-6 gap-y-6 self-end border-t border-line pt-6">
+          {facts.map(({ k, v }, i) => (
+            <div key={k} className="fade-up" style={{ "--d": `${950 + i * 80}ms` } as React.CSSProperties}>
+              <dt className="eyebrow mb-1.5">{k}</dt>
+              <dd className="text-sm leading-snug">{v}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+
+      <p className="eyebrow mt-16 hidden md:block fade-up" style={{ "--d": "1300ms" } as React.CSSProperties}>
+        Hover the headline. It&apos;s a canvas.
+      </p>
     </section>
   );
 };

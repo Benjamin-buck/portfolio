@@ -19,29 +19,33 @@ const parseDuration = (duration: string): string => {
 
 const SectionHeading = ({ children }: { children: React.ReactNode }) => (
   <div className="flex items-center gap-3 mb-5">
-    <h2 className="text-xs font-bold uppercase tracking-widest gradient-text shrink-0">
+    <h2 className="eyebrow !text-ink shrink-0">
       {children}
     </h2>
-    <div className="flex-1 h-px bg-gradient-to-r from-cyan-200 to-transparent" />
+    <div className="flex-1 h-px bg-line" />
   </div>
 );
 
 const ResumePage = () => {
   return (
-    <div className="mt-8 mb-16 mx-auto max-w-4xl">
-      <div className="no-print flex justify-end mb-4">
+    <div className="shell pt-10 md:pt-16 max-w-5xl">
+      <div className="no-print flex flex-wrap items-end justify-between gap-4 mb-8">
+        <div>
+          <p className="eyebrow mb-3">Résumé · Updated 2026</p>
+          <h1 className="display text-6xl md:text-8xl">Résumé</h1>
+        </div>
         <PrintButton />
       </div>
-      <div id="resume-card" className="resume-card bg-white border border-gray-100 rounded-2xl shadow-sm overflow-hidden">
+      <div id="resume-card" className="resume-card theme-light bg-white text-ink border border-line rounded-[6px] shadow-[0_30px_80px_-40px_rgba(0,0,0,0.35)] overflow-hidden fade-up">
 
         {/* Header */}
         <div className="px-10 pt-10 pb-8 border-b border-gray-100">
           <div className="flex justify-between items-start gap-8 max-md:flex-col">
             <div>
-              <h1 className="text-4xl font-lexend font-bold text-gray-900 leading-tight">
+              <h2 className="display text-5xl text-ink">
                 {details.name}
-              </h1>
-              <p className="text-base font-semibold gradient-text mt-1">
+              </h2>
+              <p className="text-base font-medium text-accent mt-1">
                 {details.title}
               </p>
               <p className="text-sm text-gray-400 mt-0.5">{details.pronouns}</p>
@@ -96,7 +100,7 @@ const ResumePage = () => {
                 <div key={job.employer}>
                   {/* Employer row */}
                   <div className="flex justify-between items-baseline flex-wrap gap-2 mb-1">
-                    <h3 className="font-lexend font-bold text-base text-gray-900">
+                    <h3 className="font-semibold text-base text-ink">
                       {job.employer}
                       <span className="font-normal text-gray-400 text-sm ml-2">• {job.location}</span>
                     </h3>
@@ -134,7 +138,7 @@ const ResumePage = () => {
                           <ul className="flex flex-col gap-1.5">
                             {role.bullets.map((bullet) => (
                               <li key={bullet} className="flex gap-2.5 items-start text-xs text-gray-600 leading-relaxed">
-                                <FaCheckCircle className="text-cyan-400 mt-0.5 shrink-0" size={11} />
+                                <FaCheckCircle className="text-accent mt-0.5 shrink-0" size={11} />
                                 {bullet}
                               </li>
                             ))}
@@ -163,7 +167,7 @@ const ResumePage = () => {
                           href={project.link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-cyan-500 hover:text-cyan-600 transition-colors"
+                          className="text-accent hover:text-ink transition-colors"
                           aria-label="Visit project"
                         >
                           <FaExternalLinkAlt size={10} />
@@ -204,7 +208,7 @@ const ResumePage = () => {
               {skills.map((skill) => (
                 <span
                   key={skill}
-                  className="text-xs bg-gray-50 text-gray-700 border border-gray-200 px-3 py-1 rounded-full hover:border-cyan-300 hover:bg-cyan-50 transition-colors duration-150"
+                  className="text-xs bg-gray-50 text-gray-700 border border-gray-200 px-3 py-1 rounded-full hover:border-ink transition-colors duration-150"
                 >
                   {skill}
                 </span>
@@ -217,7 +221,7 @@ const ResumePage = () => {
             <SectionHeading>Portfolio</SectionHeading>
             <p className="text-sm text-gray-600">
               All my latest projects are available and updated{" "}
-              <Link href="/portfolio" className="gradient-text font-semibold hover:underline">
+              <Link href="/portfolio" className="text-accent font-semibold hover:underline">
                 here
               </Link>
               .
