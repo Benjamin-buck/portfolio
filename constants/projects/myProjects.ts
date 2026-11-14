@@ -70,7 +70,7 @@ export const myProjects: Project[] = [
     ],
     images: [
       {
-        image: "/novarihealth-1.JPG",
+        image: "/novarihealth-1.jpg",
         label: "Novari Health",
       },
       {
@@ -183,6 +183,457 @@ export const myProjects: Project[] = [
         "SQL",
         "Redis",
         "Redux",
+      ],
+    },
+  },
+  {
+    id: 9000,
+    title: "Band Account",
+    liveLink: "https://bandaccount.com/",
+    repo: null,
+    description:
+      "Band Account is a band management platform that puts a band's shows, setlists, rehearsals, tickets, fans and to-dos in one place the whole band can see. It started as a shared workspace for running a band and has grown into a full platform: a members-only fan club, native ticketing with $0 platform fees, a website builder with custom domains, merch, a CRM, social media scheduling, and a musician community. It is a live SaaS product with Free and Premium plans billed per band, and real bands use it to run their day-to-day. I conceived, designed, built, tested and deployed it on my own. The web app is a Next.js monolith with an API-first backend (475+ API routes over a 200+ model PostgreSQL schema) that also powers a native iOS and Android band app and a separate Fan Account app.",
+    status: "Current",
+    startDate: "2026-03-07",
+    endDate: "Present",
+    thumbnail: "/bandaccount-band-hq.png",
+    images: [
+      {
+        image: "/bandaccount-band-hq.png",
+        label: "Running the band: shows, run of show, setlists and RSVPs",
+      },
+      {
+        image: "/bandaccount-fan-club.png",
+        label: "Members-only fan club with ranks, points and perks",
+      },
+      {
+        image: "/bandaccount-early-listening.png",
+        label: "Early listening: stream-only previews with ratings",
+      },
+      {
+        image: "/bandaccount-website-builder.png",
+        label: "Website builder with themes and custom domains",
+      },
+      {
+        image: "/bandaccount-ticketing.png",
+        label: "Native ticketing with club presales and $0 platform fee",
+      },
+      {
+        image: "/bandaccount-task-board.png",
+        label: "Task board with subtasks, owners and due dates",
+      },
+      {
+        image: "/bandaccount-rehearsal-mode.png",
+        label: "Rehearsal mode: run the set song by song",
+      },
+      {
+        image: "/bandaccount-door-scanning.png",
+        label: "QR ticket scanning at the door",
+      },
+      {
+        image: "/bandaccount-tabs-chords.png",
+        label: "Guitar and bass tabs with chord diagrams",
+      },
+      {
+        image: "/bandaccount-pricing.png",
+        label: "Free and Premium plans, priced per band",
+      },
+    ],
+    features: [
+      {
+        heading: "Band Workspace",
+        content: [
+          "Shared band calendar for rehearsals, shows and meetings, with RSVPs and member availability.",
+          "Real-time band chat with channels, @mentions, reactions, voice notes and song sharing, powered by Pusher.",
+          "Task board with subtasks, owners, due dates, reusable and recurring task templates, and a daily digest of anything due or overdue.",
+          "Band goals, member contributions and analytics so everyone can see where the band is heading.",
+          "Owner, Admin and Member roles, with invite links and a band switcher for musicians in more than one band.",
+        ],
+      },
+      {
+        heading: "Songs, Setlists & Rehearsal Mode",
+        content: [
+          "Song library with keys, tempos, lyrics, notes, audio and voice notes for drafting new ideas.",
+          "Drag-and-drop setlists built from the library, with printable versions and fan-club-only setlists for upcoming shows.",
+          "Rehearsal mode runs the set song by song on any phone or tablet, with synced lyrics, a click track and backing tracks.",
+          "A guitar and bass tab editor with a part per player, any tuning or capo, per-section chord progressions and fretboard diagrams.",
+          "Album planning with tracklists, release readiness checks, track voting and a full listen-through.",
+        ],
+      },
+      {
+        heading: "Shows, Tours & Stage Plots",
+        content: [
+          "A show wizard covering venue, guarantee, contacts, run of show and set times, with venue-local time zones handled correctly.",
+          "Lineup invites so other bands on the bill can be added to the show, plus day sheets, guest lists and gear checklists.",
+          "Post-show settlement reports, with each band's share flowing into Finance.",
+          "Tour planning and a show marketplace for finding gigs and support slots.",
+          "Stage plots and tech riders that can be shared with venues by link or as a PDF.",
+        ],
+      },
+      {
+        heading: "Native Ticketing & Merch",
+        content: [
+          "Sell tickets from the band's own show page with early bird, GA, VIP, pay-what-you-can and club presale tiers, each with its own price and cap.",
+          "Stripe Connect checkout pays bands directly and Band Account takes no platform fee, so a $20 ticket puts $20 in the band's account.",
+          "QR tickets are emailed to fans and scanned at the door from any phone, with a live sales and check-in dashboard.",
+          "Ticket sales from external platforms can be tracked alongside native sales.",
+          "Merch store, inventory and sales tracking from the same workspace.",
+        ],
+      },
+      {
+        heading: "Fan Club & Early Listening",
+        content: [
+          "A members-only fan club with announcements by email, a forum, and perks such as presales and discount codes.",
+          "Fans earn points and climb ranks from Newcomer to Legend, with streaks that reward the ones who keep showing up.",
+          "Stream-only previews of unreleased songs and EPs, with star ratings and comments, that switch off on a date the band sets.",
+          "A dedicated Fan Account mobile app where fans follow bands, buy tickets, find shows nearby and message each other.",
+        ],
+      },
+      {
+        heading: "Website Builder, Blog & Links",
+        content: [
+          "Block-based band website builder covering shows, music, news, members, gallery and a booking form.",
+          "Themes with 7 font pairings, custom colours, light or dark modes and corner styles, served on the band's own domain.",
+          "Shows and tickets keep the site up to date automatically.",
+          "Band blog and press releases, plus a public links page and band profile.",
+        ],
+      },
+      {
+        heading: "CRM, Finance & Social Scheduling",
+        content: [
+          "CRM for promoters, venues and industry contacts, with email campaigns and automations.",
+          "Finance tracker for income, expenses, guarantees and payouts, so the band's money stays transparent.",
+          "Social media scheduler for Instagram, Facebook and TikTok: members draft posts and admins approve and publish them.",
+        ],
+      },
+      {
+        heading: "Community & Venues",
+        content: [
+          "A social network for musicians with a feed, forum, groups, local scenes, opportunities, direct messages and bookmarks.",
+          "A public directory of bands, shows and fan clubs.",
+          "A venue manager where venues can claim their listing and review applications from bands.",
+        ],
+      },
+      {
+        heading: "Platform, Billing & Mobile Apps",
+        content: [
+          "Free and Premium plans billed per band through Stripe on the web and RevenueCat in the mobile apps, with feature gating enforced in the API.",
+          "An API-first backend serving the web app, an Expo/React Native band app with home screen widgets, and the Fan Account app.",
+          "Notifications delivered in-app, by email (Resend) and as push notifications (Expo).",
+          "A platform admin console for users, bands, payments, support tickets, moderation, feedback and system health, with an audit log.",
+          "Help centre with docs and support tickets, a referral program, Sentry error monitoring, and Jest and Playwright tests.",
+        ],
+      },
+    ],
+    projectDetails: {
+      technology: [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "shadcn/ui",
+        "PostgreSQL",
+        "Prisma",
+        "Clerk",
+        "Stripe Connect",
+        "Pusher",
+        "Resend",
+        "Vercel",
+        "Vercel Blob",
+        "Sentry",
+        "Expo",
+        "React Native",
+        "RevenueCat",
+        "Jest",
+        "Playwright",
+      ],
+    },
+  },
+  {
+    id: 7302611,
+    title: "CareChart",
+    repo: null,
+    description:
+      "CareChart is a multi-tenant electronic medical record (EMR) and practice management platform that serves veterinary clinics, human hospitals and dental offices from a single codebase. It began as PatientPets, a veterinary clinic system, and I generalized it into CareChart: each organization picks an industry profile when it is set up, and the profile decides the vocabulary, data fields, modules and workflows its staff see. The same engine now also powers an auto shop profile, where vehicles take the place of patients, and a fitness profile is in development. CareChart has an ASP.NET Core (.NET 10) API built on CQRS with MediatR and Entity Framework Core over SQL Server, and a Next.js 16 / React 19 front end, with real-time features over SignalR. It is deployed to Azure through infrastructure-as-code and GitHub Actions. Patient data is protected by scoped role-based access control, field-level encryption, access logging and break-the-glass controls modelled on HIPAA and PHIPA, and the system exposes an HL7 FHIR R4 API. I designed and built it on my own, writing a spec for each phase before building it.",
+    status: "In Progress",
+    startDate: "2026-06-13",
+    endDate: "Present",
+    thumbnail: "/carechart-dashboard.png",
+    images: [
+      {
+        image: "/carechart-dashboard.png",
+        label: "Customizable dashboard with appointments, census and surgical queue",
+      },
+      {
+        image: "/carechart-patient-chart.png",
+        label: "Patient chart with allergy alerts, latest vitals and vital trends",
+      },
+      {
+        image: "/carechart-surgical-cases.png",
+        label: "Surgical case queue with days-to-target status",
+      },
+      {
+        image: "/carechart-or-block.png",
+        label: "OR block booking with setup, procedure and cleanup times",
+      },
+      {
+        image: "/carechart-census.png",
+        label: "Inpatient census and bed board",
+      },
+      {
+        image: "/carechart-patient-list.png",
+        label: "Patient registry with MRNs and home locations",
+      },
+      {
+        image: "/carechart-appointments-week.png",
+        label: "Weekly appointment calendar across physicians and rooms",
+      },
+      {
+        image: "/carechart-or-schedule-week.png",
+        label: "OR schedule: surgery blocks by room, surgeon and service",
+      },
+      {
+        image: "/carechart-messages.png",
+        label: "Teams-style messaging with channels and patient links",
+      },
+      {
+        image: "/carechart-roles.png",
+        label: "Configurable roles and permissions",
+      },
+      {
+        image: "/carechart-dental-tooth-chart.png",
+        label: "Dental tooth chart with conditions and planned work",
+      },
+      {
+        image: "/carechart-dental-perio.png",
+        label: "Six-site periodontal charting",
+      },
+      {
+        image: "/carechart-dental-treatment-plan.png",
+        label: "Phased dental treatment plan with insurance estimates",
+      },
+    ],
+    features: [
+      {
+        heading: "One Platform, Multiple Industry Profiles",
+        content: [
+          "Data-driven industry profiles for Veterinary, Human (hospital and clinic), Dental and Auto shop organizations, each chosen when the organization is created.",
+          "Veterinary-only data such as species, breed, microchip, adoption and fostering is hidden from human organizations, and human-only data such as MRNs and insurance is hidden from vet clinics.",
+          "Global administrators turn modules on per organization based on its contract, with profile defaults, module dependencies and presets.",
+          "Organizations can rename core labels such as Patient, Contact, Provider, Visit and Room to match their own terminology.",
+          "Fully localized in English and French (Canada), on both the web app and server-generated documents.",
+        ],
+      },
+      {
+        heading: "Patient Records & Clinical Data",
+        content: [
+          "Patient charts with demographics, MRNs, photos, contacts and configurable relationship types (owner, guardian, next of kin, guarantor).",
+          "Structured allergies, problem lists, immunizations, and family and social history.",
+          "Visits and vitals, with a preset vitals profile per patient type stored as typed columns.",
+          "Coded clinical terminologies, with an import tool for terminology sets.",
+          "A merge tool for duplicate patients and contacts that keeps a full record of every merge.",
+        ],
+      },
+      {
+        heading: "Scheduling & Surgical Services",
+        content: [
+          "A slot engine and slot finder that search providers, rooms, appointment-type rules, time off and extra hours for open time before booking.",
+          "Month, week and day calendars, staff schedules and a waitlist.",
+          "Surgical cases with services per location, custom priority sets and a days-to-target status tile (green, yellow, red).",
+          "An OR schedule with recurring surgery blocks per room and drag-and-drop case booking.",
+          "Inpatient admissions, transfers and discharges (ADT), with a location and bed hierarchy and a live census.",
+        ],
+      },
+      {
+        heading: "Dental Practice System",
+        content: [
+          "An interactive tooth chart and periodontal charting.",
+          "Treatment plans built from a procedure catalogue, with dental insurance and guarantors.",
+          "Operatory scheduling, recall management, imaging and lab case tracking.",
+        ],
+      },
+      {
+        heading: "Billing, Insurance & Quotes",
+        content: [
+          "Invoicing with payers, patient coverage and bill-to-insurer support.",
+          "Client quotes built from an admin-managed price list, which convert into treatment plans.",
+          "Payments, billing and email delivery through Resend.",
+        ],
+      },
+      {
+        heading: "Security, Compliance & Interoperability",
+        content: [
+          "Configurable role-based access control: roles are sets of feature and action permissions, assigned at Organization, Location or Provider scope.",
+          "Patients have a primary provider, home location and care team that decide who can see their records.",
+          "Every record view is logged, and break-the-glass access covers emergencies.",
+          "Field-level encryption of PHI with ASP.NET Core Data Protection, blind-index search on health IDs, and private storage for patient files.",
+          "Per-organization idle timeouts and MFA requirements, plus a read-only HL7 FHIR R4 API.",
+        ],
+      },
+      {
+        heading: "Messaging & Dashboards",
+        content: [
+          "Teams-style messaging with direct, group, channel and patient-linked chats, delivered in real time over SignalR.",
+          "Customizable dashboards with a drag-and-drop widget grid and schedule, clinical, follow-up and business widgets.",
+          "Dashboards can be set per role and shared, with platform-wide defaults.",
+          "A patients-seen report with trends and breakdowns by provider, location and appointment type.",
+        ],
+      },
+      {
+        heading: "Auto Shop Profile",
+        content: [
+          "Vehicles take the place of patients, with VIN decoding, repair orders, inspections, and estimates with tax.",
+          "Bay scheduling, service reminders, fleet accounts, manufacturer recall lookups, parts inventory and lot tracking.",
+          "Municipal fleet management with departments, chargebacks, work requests, approvals, budgets and a motor pool.",
+        ],
+      },
+      {
+        heading: "Platform Administration & DevOps",
+        content: [
+          "Platform admins can set up any tenant, deactivate, archive, restore or delete organizations, with an activity record of every action.",
+          "Azure App Service and Azure SQL in Canada Central, provisioned with Bicep.",
+          "GitHub Actions CI/CD builds once, deploys to a Test environment on every push to main, and promotes the same build to Production.",
+          "Over 940 xUnit tests across the CQRS application layer.",
+        ],
+      },
+    ],
+    projectDetails: {
+      technology: [
+        "ASP.NET Core (.NET 10)",
+        "C#",
+        "Entity Framework Core",
+        "SQL Server",
+        "MediatR (CQRS)",
+        "SignalR",
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "HL7 FHIR R4",
+        "Azure App Service",
+        "Azure SQL",
+        "Bicep",
+        "GitHub Actions",
+        "xUnit",
+      ],
+    },
+  },
+  {
+    id: 5118420,
+    title: "Fan Account",
+    repo: null,
+    description:
+      "Fan Account is the fans' side of Band Account: one app and one login for every band fan club a fan belongs to. Fans follow a single feed from all their clubs, watch band stories, stream early-listening releases, claim perks, climb each club's leaderboard, buy tickets and keep their QR codes, find shows near them, and message other fans. I built it with Expo and React Native, so a single TypeScript codebase ships to iOS, Android and the web as an installable PWA. It has no backend of its own: it uses Band Account's API through a typed client and React Query, and shares Band Account's Clerk sign-in so a fan who later joins a band keeps the same login. Joining a club from the app creates the same fan record the band sees in their Band Account workspace, and clubs a fan joined earlier on a band's website are picked up automatically by email.",
+    status: "In Progress",
+    startDate: "2026-10-25",
+    endDate: "Present",
+    thumbnail: "/fanaccount-feed.png",
+    images: [
+      {
+        image: "/fanaccount-feed.png",
+        label: "Home feed with story rings, a band story and a club home with your rank",
+      },
+      {
+        image: "/fanaccount-listen.png",
+        label: "Early-listening album, the Now Playing player and member perks",
+      },
+      {
+        image: "/fanaccount-shows.png",
+        label: "Shows near you, your tickets and a ticket's QR code for the door",
+      },
+      {
+        image: "/fanaccount-community.png",
+        label: "Fan-to-fan messages, a club forum thread and the top fans leaderboard",
+      },
+      {
+        image: "/fanaccount-discover.png",
+        label: "Discover fan clubs, My clubs with points and ranks, and your profile",
+      },
+      {
+        image: "/fanaccount-themes.png",
+        label: "The app in the Amethyst theme, with the theme picker",
+      },
+    ],
+    features: [
+      {
+        heading: "One Feed for Every Club",
+        content: [
+          "Home combines the latest posts from every club the fan has joined into one infinite-scrolling feed.",
+          "Instagram-style story rings for each band, with full-screen stories that play on from one club to the next.",
+          "Discover searches every Band Account fan club by band name or @handle.",
+          "Likes, comments and full post threads, all using the club's existing Band Account features.",
+        ],
+      },
+      {
+        heading: "Fan Club Home",
+        content: [
+          "Each club has a hero header made from the band's photo, with a see-through header that fades into the page.",
+          "Before joining, fans see what members get. After joining, they see their rank and an animated progress bar.",
+          "Tiles open the club's posts, music, perks, setlists, forum and top fans.",
+          "Top-fans leaderboards for all time and this month, switched with an animated segmented control.",
+          "Perks styled like passes: discount codes, presales, links and downloads for members.",
+        ],
+      },
+      {
+        heading: "Early Listening & Audio Player",
+        content: [
+          "Stream unreleased songs and EPs that bands share with their club before release day.",
+          "A persistent mini player and a full Now Playing screen with blurred artwork, a scrubber, 15-second skips and a track list.",
+          "Rate and discuss each release with the band and other fans.",
+        ],
+      },
+      {
+        heading: "Shows & Tickets",
+        content: [
+          "Near You lists every band's upcoming shows within a set distance, soonest first, based on the fan's home area or their current location.",
+          "Buy tickets in the app through Stripe Checkout, with the order confirmed even when Stripe's webhook is slow.",
+          "Your Tickets keeps every ticket a fan holds, whether bought in the app or with their email on a band's website, with QR codes ready for the door.",
+          "Fan-club setlists for upcoming shows.",
+        ],
+      },
+      {
+        heading: "Fan Community & Messaging",
+        content: [
+          "Club forums with categories, threads and new-thread posting.",
+          "Private messages between fans who share a club, with separate Inbox and Requests views.",
+          "Fans start conversations from a club's forum or its top-fans board.",
+        ],
+      },
+      {
+        heading: "Design & Theming",
+        content: [
+          "A custom \"Crimson glow\" design system with a near-black, glass-surfaced UI, an accent gradient, and the Sora and Inter typefaces.",
+          "Nine themes (eight dark and one light) chosen from a grid of live previews, with every theme checked for WCAG contrast in automated tests.",
+          "A floating glass tab bar, haptics, and spring animations built with Reanimated.",
+          "Every colour, gradient, font and radius comes from design tokens, never hard-coded in components.",
+        ],
+      },
+      {
+        heading: "Architecture",
+        content: [
+          "Expo Router file-based navigation across tabs, stacks and sheets.",
+          "A typed API client that mirrors Band Account's response shapes, with React Query hooks for server state and zustand for the audio player.",
+          "Clerk authentication with Google sign-in and secure token storage.",
+          "Environment and form input validated with zod.",
+          "Jest tests covering the app's shared logic and theme contrast.",
+        ],
+      },
+    ],
+    projectDetails: {
+      technology: [
+        "React Native",
+        "Expo",
+        "Expo Router",
+        "TypeScript",
+        "React Query",
+        "Zustand",
+        "Clerk",
+        "Stripe Checkout",
+        "React Native Reanimated",
+        "Expo Audio",
+        "Expo Location",
+        "Zod",
+        "Jest",
       ],
     },
   },
@@ -332,141 +783,6 @@ export const myProjects: Project[] = [
     },
   },
   {
-    id: 9000,
-    title: "Band Account",
-    liveLink: "https://bandaccount.com/",
-    repo: null,
-    description:
-      "The Band Account app was built with a simple purpose: to make managing a band easier so that musicians can focus on what they do best. This application was developed as a SaaS application and is live in production with real users and bands that rely on it for their management needs. This application was conceptualized, architected, developed, tested, and deplyed as a solo project with lots of love and care at every step of the way. Band Account was built with an API first approach, and has been accompanied by an iOS and Android dedicated mobile application that consumes the same APIs for a seamless experience across all platforms.",
-    status: "Done",
-    thumbnail: "/bandaccount-1.png",
-    images: [
-      {
-        image: "/bandaccount-1.png",
-        label: "Band Account 1",
-      },
-      {
-        image: "/bandaccount-3.png",
-        label: "Band Account 2",
-      },
-      {
-        image: "/bandaccount-4.png",
-        label: "Band Account 3",
-      },
-      {
-        image: "/bandaccount-5.png",
-        label: "Band Account 4",
-      },
-      {
-        image: "/bandaccount-6.png",
-        label: "Band Account 5",
-      },
-    ],
-    features: [
-      {
-        heading: "Shared Calendar",
-        content: [
-          "Schedule rehearsals, shows, and meetings in one shared band calendar.",
-          "RSVP tracking so you always know who's coming.",
-        ],
-      },
-      {
-        heading: "Setlist Manager",
-        content: [
-          "Build and reorder setlists with drag-and-drop.",
-          "Attach notes per song per show.",
-          "Print your setlists once you're happy with them.",
-        ],
-      },
-      {
-        heading: "Song Library",
-        content: [
-          "Store your full catalogue with audio files, lyrics, tabs, BPM, and key information.",
-          "Link songs to setlists and shows for easy access on the road.",
-          "Audio uploads up to 100 MB per file.",
-        ],
-      },
-      {
-        heading: "Show & Gig Management",
-        content: [
-          "Track venues, guarantees, set times, and setlists for every gig past and present.",
-        ],
-      },
-      {
-        heading: "Band Chat",
-        content: [
-          "Real-time channels with @mentions, unread highlights, and notifications so nothing gets missed.",
-          "Message persistence and email notifications keep the whole band in sync.",
-        ],
-      },
-      {
-        heading: "Task Board",
-        content: [
-          "Five-column Kanban board with drag-and-drop functionality.",
-          "Priorities, assignees, due dates, labels, attachments, and comments on every task.",
-          "Filter and search across all tasks.",
-        ],
-      },
-      {
-        heading: "Member Management",
-        content: [
-          "Invite band members via a shareable link.",
-          "Assign Admin or Member roles with different permission sets.",
-          "See who's in the band at a glance.",
-        ],
-      },
-      {
-        heading: "Finance Tracker",
-        content: [
-          "Log income and expenses, track guarantees, and keep your band's finances transparent.",
-        ],
-      },
-      {
-        heading: "Native Ticketing",
-        content: [
-          "Sell tickets directly from your show page — no third-party platform.",
-          "Multiple ticket types with Stripe integration (2.5% fee).",
-          "QR codes, browser-based door scanner, and a full sales dashboard.",
-          "Revenue goes straight to your bank.",
-        ],
-      },
-      {
-        heading: "Show Marketplace",
-        content: [
-          "Post and browse gig opportunities.",
-          "Connect with promoters and find support slots.",
-        ],
-      },
-      {
-        heading: "Stage Plots & Tech Riders",
-        content: [
-          "Create and manage your stage plot and tech rider.",
-          "Share with venues and update as your setup evolves.",
-        ],
-      },
-      {
-        heading: "And a lot more",
-        content: [
-          "Smart notifications, tour planning, and public links page.",
-          "Social feed, band profiles, and direct messaging.",
-          "File attachments, @mentions, and real-time updates throughout.",
-        ],
-      },
-    ],
-    projectDetails: {
-      technology: [
-        "Next.js",
-        "React",
-        "PostgreSQL",
-        "Prisma",
-        "Stripe API",
-        "Vercel",
-        "Expo",
-        "React Native",
-      ],
-    },
-  },
-  {
     id: 20901928,
     title: "The Storible Company",
     liveLink: "https://thestoriblecompany.com.",
@@ -514,6 +830,95 @@ export const myProjects: Project[] = [
         "JavaScript",
         "PHP",
         "Elementor",
+      ],
+    },
+  },
+  {
+    id: 4471906,
+    title: "Rootline Advisory & Partners",
+    liveLink: "https://www.rootlineadvisoryandpartners.com/",
+    repo: null,
+    description:
+      "Rootline Advisory & Partners is an Ottawa-based advisory firm that helps business owners buy the right business, structure it on solid ground, and grow it with clarity. I designed and built their corporate website as a headless WordPress project: the client edits all of the copy, services and settings in WordPress, and a Next.js front end renders it as a fast, statically generated site. Content is pulled through WPGraphQL and Advanced Custom Fields and merged over a built-in copy of the client's approved content, so a blank field or a CMS outage falls back gracefully and never breaks a page. Publishing in WordPress triggers on-demand revalidation, so edits go live in seconds. The site presents the firm's three service pillars (Acquisition Advisory, Business Structuring & Design, and Growth Advisory), its story and values, and a contact page with a booking scheduler and an enquiry form.",
+    status: "Done",
+    thumbnail: "/rootline-home.png",
+    images: [
+      {
+        image: "/rootline-home.png",
+        label: "Rootline - Landing Page",
+      },
+      {
+        image: "/rootline-pillars.png",
+        label: "Rootline - Service Pillars",
+      },
+      {
+        image: "/rootline-why.png",
+        label: "Rootline - Why Rootline",
+      },
+      {
+        image: "/rootline-services-pillars.png",
+        label: "Rootline - Services",
+      },
+      {
+        image: "/rootline-service-detail.png",
+        label: "Rootline - Growth Advisory Service Page",
+      },
+      {
+        image: "/rootline-about.png",
+        label: "Rootline - About",
+      },
+      {
+        image: "/rootline-contact.png",
+        label: "Rootline - Contact",
+      },
+    ],
+    features: [
+      {
+        heading: "Headless WordPress CMS",
+        content: [
+          "The client edits every page's copy, the services and the contact details in WordPress, using Advanced Custom Fields from a custom plugin I wrote for the site.",
+          "Next.js reads the content through WPGraphQL into typed objects, so pages never depend on WordPress directly.",
+          "Every field falls back to the client's approved copy, so a blank field never renders empty and a CMS outage never causes an error page.",
+          "Sections such as testimonials can be shown or hidden from WordPress without a code change.",
+        ],
+      },
+      {
+        heading: "Fast, Static Pages with Instant Publishing",
+        content: [
+          "Pages are statically generated with the Next.js App Router and revalidated hourly.",
+          "Publishing in WordPress calls a secured revalidation webhook with a cache tag, so edits go live in seconds.",
+          "Each service gets its own page, generated at build time from WordPress content.",
+          "The sitemap, robots.txt, canonical URLs and Open Graph tags are generated automatically.",
+        ],
+      },
+      {
+        heading: "Bookings & Enquiries",
+        content: [
+          "A booking scheduler on the contact page that supports Calendly or Cal.com, falling back to a button if the widget fails to load.",
+          "An enquiry form validated on the server, with a honeypot field against spam, delivered by email through Resend.",
+          "If email delivery isn't configured in production, visitors see a clear message to email the firm directly, so no enquiry is silently lost.",
+        ],
+      },
+      {
+        heading: "Brand & Design",
+        content: [
+          "An editorial navy, sand and gold design system built with Tailwind CSS v4, pairing serif headlines with a clean sans-serif body.",
+          "Every brand asset was derived from the client's supplied logo and photo: transparent emblem and wordmark versions, a light wordmark for dark backgrounds, and a navy duotone skyline for the hero.",
+          "Fully responsive layouts with clear calls to action for booking a free discovery call.",
+        ],
+      },
+    ],
+    projectDetails: {
+      technology: [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "WordPress",
+        "WPGraphQL",
+        "Advanced Custom Fields",
+        "Resend",
+        "Vercel",
       ],
     },
   },
@@ -805,71 +1210,6 @@ export const myProjects: Project[] = [
         content: [
           "Well structured static pages with interactive menus and navigation",
           "Well structured HTML and beaitufully styled with Tailwind CSS",
-        ],
-      },
-    ],
-    projectDetails: {
-      technology: ["Next.js", "Tailwind CSS", "GSAP", "Vercel"],
-    },
-  },
-
-  // 5
-  {
-    id: 3,
-    title: "Serenity Landscaping",
-    liveLink: "https://serenity-sage.vercel.app/",
-    repo: "https://github.com/Benjamin-buck/serenity",
-    description:
-      "A modern, visually appealing website built with Next.js for Serenity Landscaping, showcasing services, past projects, and a seamless user experience.",
-    status: "Done",
-    thumbnail: "https://i.gyazo.com/0a4ba76ed713171d0e1cab17b182d8ef.png",
-    images: [
-      {
-        image: "https://i.gyazo.com/f350331f4bba6ff4c10378ea0f600ddd.jpg",
-        label: "Landing Page",
-      },
-      {
-        image: "https://i.gyazo.com/f844556434c45d44a93d1bc60b2b79c8.jpg",
-        label: "See through sticky navigation bar",
-      },
-      {
-        image: "https://i.gyazo.com/32ffa45f1c68056c4321eee6151c6721.png",
-        label: "Bento Grid",
-      },
-      {
-        image: "https://i.gyazo.com/0dec32610272e33fa19d45707ef10167.jpg",
-        label: "Testimonials & Footer",
-      },
-      {
-        image: "https://i.gyazo.com/42d05671c0aab94cd1f7fc031c7fa8f6.png",
-        label: "Get a Quote form",
-      },
-    ],
-    features: [
-      {
-        heading: "Beautiful Landing Page UI",
-        content: [
-          "A beautifully designed homepage that highlights the agency’s vision, mission, and key services.",
-          "Engaging, interactive elements that captivate visitors.",
-          "Clear call-to-action (CTA) buttons encouraging user engagement and lead generation.",
-          "Smooth animations and transitions to enhance user experience.",
-        ],
-      },
-      {
-        heading: "Responsive & Optimized Performance",
-        content: [
-          "Fully responsive design ensuring a seamless experience across all devices.",
-          "Optimized for speed and performance, ensuring fast load times.",
-          "Accessibility-friendly design following WCAG guidelines.",
-        ],
-      },
-      {
-        heading: "Static Pages",
-        content: [
-          "A well-structured About Us page detailing the agency’s background, values, and team members.",
-          "A dedicated Services page outlining the various offerings, with a focus on the quality and impact of each service.",
-          "A Portfolio page that showcases the agency’s completed projects, demonstrating the agency’s experience and expertise across various industries.",
-          "Contact page with a dynamic form for inquiries and potential client interactions.",
         ],
       },
     ],
